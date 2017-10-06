@@ -37,7 +37,7 @@
                                 </state>
                                 <connections>
                                     <action selector="setupSecurePinButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CXi-MB-fNP"/>
-                                    <segue destination="fyo-dY-ZAH" kind="show" id="3AQ-gt-MFC"/>
+                                    <segue destination="fyo-dY-ZAH" kind="show" id="bVD-Uy-SPd"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83Q-Fe-0x8">
