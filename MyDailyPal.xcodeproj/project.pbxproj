@@ -14,6 +14,7 @@
 		914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */; };
 		914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE551F7AAFAB00AB6C8D /* MyDailyPalTests.swift */; };
 		914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */; };
+		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		914FFE5C1F7AAFAB00AB6C8D /* MyDailyPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDailyPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDailyPalUITests.swift; sourceTree = "<group>"; };
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		914FFE3F1F7AAFAB00AB6C8D /* MyDailyPal */ = {
 			isa = PBXGroup;
 			children = (
+				964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */,
 				914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */,
 				914FFE421F7AAFAB00AB6C8D /* ViewController.swift */,
 				914FFE441F7AAFAB00AB6C8D /* Main.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
 			);
