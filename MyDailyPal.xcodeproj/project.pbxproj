@@ -58,6 +58,7 @@
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D483F73F1F8BFD4E0063879F /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timer.png; path = ../../../../Downloads/timer.png; sourceTree = "<group>"; };
+		D483F7401F8C34D70063879F /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
 		D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D483F73F1F8BFD4E0063879F /* timer.png */,
+				D483F7401F8C34D70063879F /* timer.png */,
 				964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */,
 				914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */,
 				914FFE421F7AAFAB00AB6C8D /* ViewController.swift */,
