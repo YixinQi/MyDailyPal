@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
-		60E28D6D1F8BEBB800D9F753 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E28D6C1F8BEBB700D9F753 /* home-icon.png */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
 		914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE441F7AAFAB00AB6C8D /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D44616521F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D44616531F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
-		D4A0DF111F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
 		D4A0DF121F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
 		D4A0DF131F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		60E28D6C1F8BEBB700D9F753 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon.png"; path = "../../../Downloads/home-icon.png"; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		914FFE421F7AAFAB00AB6C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +57,7 @@
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
-		D4832EB71F8B758A0054E934 /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timer.png; path = ../../../../Downloads/timer.png; sourceTree = "<group>"; };
+		D483F73F1F8BFD4E0063879F /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timer.png; path = ../../../../Downloads/timer.png; sourceTree = "<group>"; };
 		D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,13 +109,12 @@
 		914FFE3F1F7AAFAB00AB6C8D /* MyDailyPal */ = {
 			isa = PBXGroup;
 			children = (
-				D4832EB71F8B758A0054E934 /* timer.png */,
+				D483F73F1F8BFD4E0063879F /* timer.png */,
 				964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */,
 				914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */,
 				914FFE421F7AAFAB00AB6C8D /* ViewController.swift */,
 				60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */,
 				914FFE441F7AAFAB00AB6C8D /* Main.storyboard */,
-				60E28D6C1F8BEBB700D9F753 /* home-icon.png */,
 				914FFE471F7AAFAB00AB6C8D /* Assets.xcassets */,
 				914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */,
 				914FFE4C1F7AAFAB00AB6C8D /* Info.plist */,
@@ -256,7 +252,6 @@
 				914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */,
 				914FFE481F7AAFAB00AB6C8D /* Assets.xcassets in Resources */,
 				914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */,
-				60E28D6D1F8BEBB800D9F753 /* home-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
