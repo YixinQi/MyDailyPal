@@ -17,6 +17,12 @@
 		914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE551F7AAFAB00AB6C8D /* MyDailyPalTests.swift */; };
 		914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */; };
 		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
+		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
+		D44616521F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
+		D44616531F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
+		D4A0DF111F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
+		D4A0DF121F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
+		D4A0DF131F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,8 @@
 		914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDailyPalUITests.swift; sourceTree = "<group>"; };
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
+		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
+		D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +120,8 @@
 				914FFE471F7AAFAB00AB6C8D /* Assets.xcassets */,
 				914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */,
 				914FFE4C1F7AAFAB00AB6C8D /* Info.plist */,
+				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
+				D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */,
 			);
 			path = MyDailyPal;
 			sourceTree = "<group>";
@@ -269,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
@@ -280,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44616521F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
+				D4A0DF121F8AFF8100962166 /* Screen8ViewController.swift in Sources */,
 				914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44616531F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
+				D4A0DF131F8AFF8100962166 /* Screen8ViewController.swift in Sources */,
 				914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
