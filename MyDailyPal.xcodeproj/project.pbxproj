@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
+		60E28D6D1F8BEBB800D9F753 /* home-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 60E28D6C1F8BEBB700D9F753 /* home-icon.png */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
 		914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE441F7AAFAB00AB6C8D /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		60E28D6C1F8BEBB700D9F753 /* home-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-icon.png"; path = "../../../Downloads/home-icon.png"; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		914FFE421F7AAFAB00AB6C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,7 +106,9 @@
 				964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */,
 				914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */,
 				914FFE421F7AAFAB00AB6C8D /* ViewController.swift */,
+				60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */,
 				914FFE441F7AAFAB00AB6C8D /* Main.storyboard */,
+				60E28D6C1F8BEBB700D9F753 /* home-icon.png */,
 				914FFE471F7AAFAB00AB6C8D /* Assets.xcassets */,
 				914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */,
 				914FFE4C1F7AAFAB00AB6C8D /* Info.plist */,
@@ -238,6 +244,7 @@
 				914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */,
 				914FFE481F7AAFAB00AB6C8D /* Assets.xcassets in Resources */,
 				914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */,
+				60E28D6D1F8BEBB800D9F753 /* home-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +272,7 @@
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
+				60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
