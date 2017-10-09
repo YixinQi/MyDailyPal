@@ -8,8 +8,18 @@
 
 import UIKit
 
-class Screen8ViewController: UIViewController {
-
+class Screen8ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+  
+    //MARK :- Table View Delegate Methods
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
+        
+        
+        return cell
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
