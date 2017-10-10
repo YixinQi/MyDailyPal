@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="21X-1c-cRb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vwY-3U-y95">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -686,29 +686,29 @@ tapping PIN.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DrugsTableViewCell" rowHeight="80" id="nl8-eg-eVL" customClass="DrugsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="DrugsTableViewCell" rowHeight="45" id="nl8-eg-eVL" customClass="DrugsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nl8-eg-eVL" id="0lk-yf-HI8">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer.png" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-QU-l9x">
-                                            <rect key="frame" x="278" y="16" width="52" height="47"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-JY-NFx">
-                                            <rect key="frame" x="8" y="29" width="262" height="21"/>
+                                            <rect key="frame" x="8" y="7" width="262" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-QU-l9x">
+                                            <rect key="frame" x="278" y="0.0" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="drugLabel" destination="Hey-JY-NFx" id="XWm-eD-XJj"/>
-                                    <outlet property="scheduleLabel" destination="x6L-QU-l9x" id="hig-h9-lHe"/>
+                                    <outlet property="scheduleImage" destination="x6L-QU-l9x" id="osf-BN-q5u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -778,7 +778,6 @@ tapping PIN.</string>
     </scenes>
     <resources>
         <image name="Loading-welcome screen image" width="3333" height="5000"/>
-        <image name="timer.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TsX-wp-QqZ"/>
