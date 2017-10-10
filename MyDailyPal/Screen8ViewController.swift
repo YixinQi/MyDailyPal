@@ -2,24 +2,14 @@
 //  Screen8ViewController.swift
 //  MyDailyPal
 //
-//  Created by ROD Shangari on 10/8/17.
+//  Created by ROD Shangari on 10/9/17.
 //  Copyright © 2017 Yixin Qi. All rights reserved.
 //
 
 import UIKit
 
-class Screen8ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
-    //MARK :- Table View Delegate Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UITableViewCell
-        
-        
-        return cell
-    }
+class Screen8ViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

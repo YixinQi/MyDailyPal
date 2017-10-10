@@ -19,8 +19,9 @@
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D44616521F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D44616531F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
-		D4A0DF121F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
-		D4A0DF131F8AFF8100962166 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */; };
+		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
+		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
+		D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,9 @@
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D483F73F1F8BFD4E0063879F /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timer.png; path = ../../../../Downloads/timer.png; sourceTree = "<group>"; };
 		D483F7401F8C34D70063879F /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
-		D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
+		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
+		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
+		D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +124,9 @@
 				914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */,
 				914FFE4C1F7AAFAB00AB6C8D /* Info.plist */,
 				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
-				D4A0DF101F8AFF8100962166 /* Screen8ViewController.swift */,
+				D4D314091F8C730C0069D113 /* Screen8ViewController.swift */,
+				D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */,
+				D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */,
 			);
 			path = MyDailyPal;
 			sourceTree = "<group>";
@@ -279,6 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
+				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
+				D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */,
+				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
@@ -291,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44616521F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
-				D4A0DF121F8AFF8100962166 /* Screen8ViewController.swift in Sources */,
 				914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D44616531F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
-				D4A0DF131F8AFF8100962166 /* Screen8ViewController.swift in Sources */,
 				914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
