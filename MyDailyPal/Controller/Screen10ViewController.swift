@@ -16,6 +16,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @IBOutlet weak var timePicker: UIDatePicker!
   @IBOutlet weak var timePickerBackground: UIView!
   @IBOutlet weak var setTimeLabel: UILabel!
+  @IBOutlet weak var saveTimeButton: UIButton!
   @IBOutlet weak var tabletPicker: UIPickerView!
   @IBOutlet weak var dosagePicker: UIPickerView!
   @IBOutlet weak var setTimeButton: UILabel!
@@ -29,6 +30,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         tabletPicker.dataSource = self
         timePicker.isHidden = true
         timePickerBackground.isHidden = true
+        saveTimeButton.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
         setTimeLabel.addGestureRecognizer(tap)
         setTimeLabel.isUserInteractionEnabled = true
@@ -58,12 +60,18 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 0
   }
   @objc func tap(gestureRecognizer: UITapGestureRecognizer){
-    print("*")
     timePicker.isHidden = false
     timePickerBackground.isHidden = false
+    saveTimeButton.isHidden = false
     //transparentBackground.isHidden = false
   }
-    /*
+
+  @IBAction func clickSaveButton(_ sender: UIButton) {
+    timePicker.isHidden = true
+    timePickerBackground.isHidden = true
+    saveTimeButton.isHidden = true
+  }
+  /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
