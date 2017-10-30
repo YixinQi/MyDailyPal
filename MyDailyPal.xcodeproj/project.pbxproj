@@ -20,6 +20,7 @@
 		967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */; };
 		967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93131FA12385006B3A91 /* SecurityQuestion.swift */; };
 		967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */; };
+		967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E3C1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
@@ -63,6 +64,7 @@
 		967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestionsSetup_VC.swift; sourceTree = "<group>"; };
 		967B93131FA12385006B3A91 /* SecurityQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestion.swift; sourceTree = "<group>"; };
 		967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestionBank.swift; sourceTree = "<group>"; };
+		967C2E3D1FA792FF00CA4A74 /* MyDailyPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDailyPal.xcdatamodel; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				967B930A1FA0E344006B3A91 /* View */,
 				967B93091FA0E306006B3A91 /* Model */,
 				914FFE471F7AAFAB00AB6C8D /* Assets.xcassets */,
+				967C2E3C1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld */,
 				914FFE4C1F7AAFAB00AB6C8D /* Info.plist */,
 			);
 			path = MyDailyPal;
@@ -319,6 +322,7 @@
 				D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */,
 				967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */,
 				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
+				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
@@ -616,6 +620,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		967C2E3C1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				967C2E3D1FA792FF00CA4A74 /* MyDailyPal.xcdatamodel */,
+			);
+			currentVersion = 967C2E3D1FA792FF00CA4A74 /* MyDailyPal.xcdatamodel */;
+			path = MyDailyPal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 914FFE351F7AAFAB00AB6C8D /* Project object */;
 }
