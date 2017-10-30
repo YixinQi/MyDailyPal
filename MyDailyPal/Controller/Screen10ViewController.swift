@@ -13,8 +13,12 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 1
   }
   
+  @IBOutlet weak var timePicker: UIDatePicker!
+  @IBOutlet weak var timePickerBackground: UIView!
+  @IBOutlet weak var setTimeLabel: UILabel!
   @IBOutlet weak var tabletPicker: UIPickerView!
   @IBOutlet weak var dosagePicker: UIPickerView!
+  @IBOutlet weak var setTimeButton: UILabel!
   var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var tabletArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   override func viewDidLoad() {
@@ -23,6 +27,11 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         dosagePicker.dataSource = self
         tabletPicker.delegate = self
         tabletPicker.dataSource = self
+        timePicker.isHidden = true
+        timePickerBackground.isHidden = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
+        setTimeLabel.addGestureRecognizer(tap)
+        setTimeLabel.isUserInteractionEnabled = true
         // Do any additional setup after loading the view.
     }
 
@@ -47,6 +56,12 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
       return tabletArray.count
     }
     return 0
+  }
+  @objc func tap(gestureRecognizer: UITapGestureRecognizer){
+    print("*")
+    timePicker.isHidden = false
+    timePickerBackground.isHidden = false
+    //transparentBackground.isHidden = false
   }
     /*
     // MARK: - Navigation
