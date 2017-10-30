@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
+		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
 		914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE441F7AAFAB00AB6C8D /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		914FFE421F7AAFAB00AB6C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */,
 				967B930F1FA10325006B3A91 /* ConfirmPIN_VC.swift */,
 				967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */,
+				913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
