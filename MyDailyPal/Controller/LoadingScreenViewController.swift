@@ -28,7 +28,7 @@ class LoadingScreenViewController: UIViewController {
                 })
                 
             } else {
-                self.preferences = preferences[0]
+                self.preferences = preferences[preferences.count-1]
                 
                 if self.preferences!.pinActivated == true {
                     print("Here is their PIN: " + self.preferences!.pin!)
