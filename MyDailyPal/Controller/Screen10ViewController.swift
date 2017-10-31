@@ -14,9 +14,11 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   }
   
   @IBOutlet weak var timePicker: UIDatePicker!
+  @IBOutlet weak var transparentBackgound: UIView!
   @IBOutlet weak var timePickerBackground: UIView!
   @IBOutlet weak var setTimeLabel: UILabel!
   @IBOutlet weak var saveTimeButton: UIButton!
+  @IBOutlet weak var cancelTimeButton: UIButton!
   @IBOutlet weak var tabletPicker: UIPickerView!
   @IBOutlet weak var dosagePicker: UIPickerView!
   @IBOutlet weak var setTimeButton: UILabel!
@@ -30,7 +32,9 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         tabletPicker.dataSource = self
         timePicker.isHidden = true
         timePickerBackground.isHidden = true
+        transparentBackgound.isHidden = true
         saveTimeButton.isHidden = true
+        cancelTimeButton.isHidden = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
         setTimeLabel.addGestureRecognizer(tap)
         setTimeLabel.isUserInteractionEnabled = true
@@ -62,7 +66,9 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @objc func tap(gestureRecognizer: UITapGestureRecognizer){
     timePicker.isHidden = false
     timePickerBackground.isHidden = false
+    transparentBackgound.isHidden = false
     saveTimeButton.isHidden = false
+    cancelTimeButton.isHidden = false
     //transparentBackground.isHidden = false
   }
 
@@ -70,6 +76,15 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     timePicker.isHidden = true
     timePickerBackground.isHidden = true
     saveTimeButton.isHidden = true
+    cancelTimeButton.isHidden = true
+    transparentBackgound.isHidden = true
+  }
+  @IBAction func clickCancelButton(_ sender: UIButton) {
+    timePicker.isHidden = true
+    timePickerBackground.isHidden = true
+    saveTimeButton.isHidden = true
+    cancelTimeButton.isHidden = true
+    transparentBackgound.isHidden = true
   }
   /*
     // MARK: - Navigation
