@@ -77,7 +77,7 @@ class ConfirmPIN_VC: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SegueToSecurityQuestions" {
             let securityQuestionsSetupVC = segue.destination as! SecurityQuestionsSetup_VC
-            
+            securityQuestionsSetupVC.code = data
         }
     }
     @IBAction func nextButtonPressed(_ sender: Any) {

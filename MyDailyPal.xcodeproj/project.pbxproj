@@ -22,6 +22,12 @@
 		967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93131FA12385006B3A91 /* SecurityQuestion.swift */; };
 		967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */; };
 		967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E3C1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld */; };
+		967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */; };
+		967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */; };
+		967C2E441FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E421FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift */; };
+		967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */; };
+		967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */; };
+		967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
@@ -67,6 +73,12 @@
 		967B93131FA12385006B3A91 /* SecurityQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestion.swift; sourceTree = "<group>"; };
 		967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestionBank.swift; sourceTree = "<group>"; };
 		967C2E3D1FA792FF00CA4A74 /* MyDailyPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyDailyPal.xcdatamodel; sourceTree = "<group>"; };
+		967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preferences+CoreDataClass.swift"; sourceTree = "<group>"; };
+		967C2E421FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Preferences+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
+		967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPINViewController.swift; sourceTree = "<group>"; };
+		967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPINViewController.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +164,8 @@
 		967B93091FA0E306006B3A91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */,
+				967C2E421FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift */,
 				967B93131FA12385006B3A91 /* SecurityQuestion.swift */,
 				967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */,
 			);
@@ -170,6 +184,7 @@
 		967B930B1FA0E34F006B3A91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */,
 				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
 				D4D314091F8C730C0069D113 /* Screen8ViewController.swift */,
 				D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */,
@@ -181,6 +196,9 @@
 				967B930F1FA10325006B3A91 /* ConfirmPIN_VC.swift */,
 				967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */,
 				913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */,
+				967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */,
+				967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */,
+				967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -319,16 +337,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */,
+				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
+				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
+				967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */,
 				D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */,
+				967C2E441FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift in Sources */,
 				967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */,
 				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
+				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,

@@ -23,6 +23,7 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
     var questionBank = SecurityQuestionBank()
     var questions = [SecurityQuestion]()
     let arrow = "\u{25BC}"
+    var code: String?
 
     @IBOutlet weak var transparentBackground: UIView!
     
@@ -125,6 +126,15 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
             if answer1.text == "" || answer2.text == "" {
               createAlert2()
             } else {
+                let preferences = Preferences(context: PersistenceService.context)
+                preferences.pin = code
+                preferences.question1 = question1.text
+                preferences.question2 = question2.text
+                preferences.answer1 = answer1.text
+                preferences.answer2 = answer2.text
+                preferences.pinActivated = true
+                PersistenceService.saveContext()
+                
                 performSegue(withIdentifier: "FromSecurityQuestionsToMain", sender: self)
             }
         }

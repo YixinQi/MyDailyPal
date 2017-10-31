@@ -12,8 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var skipThisStepLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         navigationController?.setNavigationBarHidden(true, animated: true)// Do any additional setup after loading the view, typically from a nib.
         
     }
@@ -31,6 +33,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func SkipPressed(_ sender: Any) {
+        let preferences = Preferences(context: PersistenceService.context)
+        preferences.pinActivated = false
+        PersistenceService.saveContext()
+        performSegue(withIdentifier: "SkipThisStepPressed", sender: self)
+    }
+    
 }
 
