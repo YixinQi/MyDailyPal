@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BUk-mn-6LA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="21X-1c-cRb">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -782,86 +782,91 @@ tapping PIN.</string>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kib-Yl-1B4">
                                 <rect key="frame" x="25" y="21" width="350" height="646"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-P5-ZD5">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vn0-P5-ZD5">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="184"/>
                                         <color key="backgroundColor" red="0.22429045839094264" green="0.8110851419192715" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="dwp-fP-ZBz"/>
                                             <constraint firstAttribute="height" constant="184" id="mZG-lI-q6n"/>
-                                            <constraint firstAttribute="width" constant="280" id="wn8-B1-UdB"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9so-cI-tGk">
-                                        <rect key="frame" x="0.0" y="204" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9so-cI-tGk">
+                                        <rect key="frame" x="0.0" y="194" width="350" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="2gI-oV-O8E"/>
-                                            <constraint firstAttribute="width" constant="280" id="5UX-tq-JEx"/>
                                             <constraint firstAttribute="height" constant="45" id="OXq-93-mDl"/>
+                                            <constraint firstAttribute="width" constant="350" id="dbr-eJ-FYj"/>
                                         </constraints>
-                                        <state key="normal" title="         Home">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="    Home" image="home-icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLA-nA-gS5">
-                                        <rect key="frame" x="0.0" y="254" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLA-nA-gS5">
+                                        <rect key="frame" x="0.0" y="257" width="350" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="Epz-8w-gXu"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="MHq-pg-Wed"/>
+                                            <constraint firstAttribute="width" constant="350" id="ACU-7i-RlP"/>
                                             <constraint firstAttribute="height" constant="45" id="Sft-4H-Fe2"/>
                                         </constraints>
-                                        <state key="normal" title="         My Tips and Information">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Tips and Information" image="book_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="UhP-fa-xc4" kind="show" id="NQi-sU-3aL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-h5-qaU">
-                                        <rect key="frame" x="0.0" y="304" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-h5-qaU">
+                                        <rect key="frame" x="0.0" y="320" width="350" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="lfg-Qj-f4N"/>
                                             <constraint firstAttribute="height" constant="45" id="nEg-xF-WPv"/>
+                                            <constraint firstAttribute="width" constant="350" id="op6-GY-Cwg"/>
                                         </constraints>
-                                        <state key="normal" title="         My Treatment Plan">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Treatment Plan" image="check_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-A9-cKS">
-                                        <rect key="frame" x="0.0" y="354" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNZ-A9-cKS">
+                                        <rect key="frame" x="0.0" y="383" width="350" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="5xp-pM-K7q"/>
-                                            <constraint firstAttribute="width" constant="280" id="y33-0k-vxL"/>
+                                            <constraint firstAttribute="width" constant="350" id="XAY-xF-jiJ"/>
                                         </constraints>
-                                        <state key="normal" title="         Calendar">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="     Calendar" image="calendar_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-fX-Q9U">
-                                        <rect key="frame" x="0.0" y="404" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0k-fX-Q9U">
+                                        <rect key="frame" x="0.0" y="446" width="350" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="0LB-1k-cGT"/>
+                                            <constraint firstAttribute="width" constant="350" id="1fE-op-n2u"/>
                                             <constraint firstAttribute="height" constant="45" id="gAq-Mu-NsQ"/>
                                         </constraints>
-                                        <state key="normal" title="         My Visits">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92N-ei-vyZ">
-                                        <rect key="frame" x="0.0" y="454" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="92N-ei-vyZ">
+                                        <rect key="frame" x="0.0" y="511" width="350" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="280" id="Jza-3P-8MS"/>
+                                            <constraint firstAttribute="width" constant="350" id="Bl0-DV-Jjk"/>
                                             <constraint firstAttribute="height" constant="45" id="Ya0-FL-Xg0"/>
                                         </constraints>
-                                        <state key="normal" title="         My Side Effects">
+                                        <inset key="imageEdgeInsets" minX="8" minY="2" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-ph-bjU">
-                                        <rect key="frame" x="0.0" y="504" width="350" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBQ-ph-bjU">
+                                        <rect key="frame" x="0.0" y="575" width="350" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="55y-u3-5nQ"/>
-                                            <constraint firstAttribute="width" constant="280" id="zLX-B5-xQy"/>
+                                            <constraint firstAttribute="width" constant="350" id="Apu-hN-BZY"/>
                                         </constraints>
-                                        <state key="normal" title="         Preferences">
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                     </button>
@@ -870,18 +875,23 @@ tapping PIN.</string>
                                 <constraints>
                                     <constraint firstItem="92N-ei-vyZ" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="01R-bU-Zav"/>
                                     <constraint firstAttribute="trailing" secondItem="92N-ei-vyZ" secondAttribute="trailing" id="3Kb-i2-h3G"/>
+                                    <constraint firstItem="x0k-fX-Q9U" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="7SL-OM-W9q"/>
                                     <constraint firstItem="eLA-nA-gS5" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="AEl-VL-pmd"/>
+                                    <constraint firstAttribute="trailing" secondItem="x0k-fX-Q9U" secondAttribute="trailing" id="Asu-rZ-1RS"/>
                                     <constraint firstItem="9so-cI-tGk" firstAttribute="top" secondItem="vn0-P5-ZD5" secondAttribute="bottom" constant="20" id="BOS-oU-bDr"/>
                                     <constraint firstAttribute="trailing" secondItem="aNZ-A9-cKS" secondAttribute="trailing" id="Fj5-W8-y1E"/>
                                     <constraint firstItem="IBQ-ph-bjU" firstAttribute="top" secondItem="92N-ei-vyZ" secondAttribute="bottom" constant="5" id="GFJ-dG-Km9"/>
                                     <constraint firstItem="vn0-P5-ZD5" firstAttribute="top" secondItem="kib-Yl-1B4" secondAttribute="top" id="HeD-SH-X4h"/>
                                     <constraint firstItem="IBQ-ph-bjU" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="IHY-aH-nlh"/>
+                                    <constraint firstItem="9so-cI-tGk" firstAttribute="top" secondItem="vn0-P5-ZD5" secondAttribute="bottom" constant="10" id="MQa-xj-COl"/>
                                     <constraint firstItem="eLA-nA-gS5" firstAttribute="top" secondItem="9so-cI-tGk" secondAttribute="bottom" constant="5" id="PH3-aw-WDL"/>
                                     <constraint firstItem="aEo-h5-qaU" firstAttribute="top" secondItem="eLA-nA-gS5" secondAttribute="bottom" constant="5" id="PjM-bp-AHr"/>
+                                    <constraint firstItem="vn0-P5-ZD5" firstAttribute="top" secondItem="kib-Yl-1B4" secondAttribute="top" id="QHf-eV-Vxr"/>
                                     <constraint firstItem="9so-cI-tGk" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="QVB-A6-IJa"/>
                                     <constraint firstItem="aEo-h5-qaU" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="Sd8-5k-UZg"/>
                                     <constraint firstAttribute="trailing" secondItem="IBQ-ph-bjU" secondAttribute="trailing" id="TYY-eA-JMj"/>
                                     <constraint firstItem="aNZ-A9-cKS" firstAttribute="top" secondItem="aEo-h5-qaU" secondAttribute="bottom" constant="5" id="WY5-cv-JgG"/>
+                                    <constraint firstItem="9so-cI-tGk" firstAttribute="top" secondItem="vn0-P5-ZD5" secondAttribute="bottom" constant="10" id="a0B-ui-4Ul"/>
                                     <constraint firstItem="x0k-fX-Q9U" firstAttribute="leading" secondItem="kib-Yl-1B4" secondAttribute="leading" id="aFa-v6-tg8"/>
                                     <constraint firstAttribute="trailing" secondItem="9so-cI-tGk" secondAttribute="trailing" id="aTZ-mk-syz"/>
                                     <constraint firstAttribute="trailing" secondItem="aEo-h5-qaU" secondAttribute="trailing" id="bGv-3J-pld"/>
@@ -918,7 +928,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2A-UR-zay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346" y="1334"/>
+            <point key="canvasLocation" x="2344.8000000000002" y="1333.7438423645322"/>
         </scene>
         <!--My Tips and Information-->
         <scene sceneID="acg-xf-R0c">
@@ -1433,6 +1443,13 @@ tapping PIN.</string>
     </scenes>
     <resources>
         <image name="Loading-welcome screen image" width="3333" height="5000"/>
+        <image name="book_icon" width="30" height="30"/>
+        <image name="calendar_icon" width="30" height="30"/>
+        <image name="check_icon" width="30" height="30"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="list_icon" width="30" height="30"/>
+        <image name="setting_icon" width="30" height="30"/>
+        <image name="sideeffect_icon" width="30" height="30"/>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
