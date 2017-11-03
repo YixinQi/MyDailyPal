@@ -29,6 +29,8 @@
 		967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */; };
 		967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
+		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
+		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
 		D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */; };
@@ -80,6 +82,8 @@
 		967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPINViewController.swift; sourceTree = "<group>"; };
 		967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPINViewController.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
+		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
+		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
 		D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 				967C2E421FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift */,
 				967B93131FA12385006B3A91 /* SecurityQuestion.swift */,
 				967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */,
+				D49E3DC11FABE25700533846 /* DrugBank.swift */,
+				D49E3DC31FABE50800533846 /* Drug.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,9 +350,11 @@
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
+				D49E3DC41FABE50800533846 /* Drug.swift in Sources */,
 				967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */,
 				D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */,
 				967C2E441FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift in Sources */,
+				D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */,
 				967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */,
 				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
