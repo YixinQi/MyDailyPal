@@ -72,7 +72,25 @@ class DrugBank {
             precautions: "History of Liver disease, Kidney disease, Anaemia or Neutropenia. Contact your doctor immediately if – You get a skin rash or one or more of – fever; shortness of breath, sore throat or cough; nausea, vomiting, diarrhoea, abdominal pain; severe tiredness, aching, feeling ill.",
             drugInteractions: "AVOID – Stavudine, emtricitabine, ribavirin; Use with caution – oral vitamin A related medicines, rifampicin, co-trimoxazole, anti-convulsants, ganciclovir, interferons, lopinavir/r, tipranavir/r, i.v. pentamidine, i.v.dapsone, antifungals, probenecid, methadone, vincristine, vinblastine, doxorubicin, alcohol.",
             pregnancyCategory:" "))
-        
+        //Drug 7: Lamivudine 150mg/ Zidovudine 300mg – Single tablet
+        drugList.append(Drug(
+            name: "Lamivudine 150mg/ Zidovudine 300mg – Single tablet",
+            dosageInformation: "1 Tablet Twice daily.",
+            foodRestrictions:"With or without food.",
+            commonSideEffects:"fatigue, headache, nausea, vomiting, stomach pain, diarrhoea, fever, rash (red, raised or itchy), increase in certain liver enzymes, joint pain, muscle pain and other muscle disorders, dizziness, cough, nasal symptoms, tiredness, difficulty sleeping, hair loss, anaemia (low red blood cell count) and neutropenia (low white blood cell count).",
+            uncommonSideEffects :"flatulence, breathlessness, general aches and pains and decrease of platelets",
+            precautions: "Severe anemia, Neutropenia. Inform the doctor if you have – A history of Liver disease.",
+            drugInteractions: "Avoid – Stavudine, Emtricitabine or Ribavirin. Use with Caution – Phenytoin, Valproic acid, Ganciclovir, Interferons, Co-trimoxazole, i.v. pentamidine, dapsone, antifungals, anti-cancer medicines & probenecid (for gout).",
+            pregnancyCategory:"C (Safety in human pregnancy has not been determined; animal studies either are positive for fetal risk or have not been conducted, and the drug should not be used unless the potential benefit outweighs the potential risk to the fetus)."))
+        //Drug 8: Lopinavir/ritonavir 200/50mg Tablets
+        drugList.append(Drug(
+            name: "Lopinavir/ritonavir 200/50mg Tablets",
+            dosageInformation: "1 Tablet Twice daily.",
+            foodRestrictions:"With or without food.",
+            commonSideEffects:"Changes in fat distribution (loss of fat from legs, increased fat in belly, breasts, neck), Headache, Difficulty in sleeping; Lack of strength and energy; Nausea, vomiting, abdominal pain (possible pancreatitis); Abnormal stools, upset stomach, flatulence,Taste perversion,Pain, Fever, Rash, acne, Tingling, prickling or numbness of the skin;  increased glucose or amylase in blood or abnormal liver function tests.",
+            uncommonSideEffects :"Decrease in red blood cells & white blood cells, enlargement of the lymph nodes; buzzing, ringing or whistling in one or both ears; Abnormal vision; racing of heart, skipping a beat’ or pounding, heart attack, lung oedema, Enlarged abdomen, constipation, dry mouth, difficulty swallowing etc.",
+            precautions: "History of Liver disease, Hemophilia, High cholesterol",
+            drugInteractions: "Use with caution/ Better to Avoid – Antiarrhythmic drugs, Antiallergics, Pimozide, Sedatives, Anxiolytics, Ergot alkaloids, Statins, Opiate analgesics, Anti malarial & Tuberculosis drugs.",
+            pregnancyCategory:"C (Safety in human pregnancy has not been determined; animal studies either are positive for fetal risk or have not been conducted, and the drug should not be used unless the potential benefit outweighs the potential risk to the fetus)."))
     }
-   
 }

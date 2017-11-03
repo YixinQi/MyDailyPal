@@ -49,6 +49,7 @@ class Screen8TableViewController: UITableViewController {
         cell.drugLabel.text = drug.name
         
         cell.scheduleImage.image = sImage
+        cell.drugScheduler.backgroundColor = UIColor.lightGray
         return cell
     }
     
