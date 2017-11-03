@@ -9,10 +9,14 @@
 import UIKit
 
 class Screen8TableViewController: UITableViewController {
-    var drugs = ["drug1","drug2","drug3","drug4","drug5","drug6","drug7","drug8","drug9","drug10","drug11","drug12","drug13","drug14","drug15","drug16","drug17","drug18","drug19","drug20"]
+    
+  
+   var drugBank = DrugBank()
+    var drugs = [Drug]()
     var sImage = UIImage(named: "timer")
     override func viewDidLoad() {
         super.viewDidLoad()
+                
         
         
     }
@@ -30,6 +34,7 @@ class Screen8TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        drugs = drugBank.drugList
         return drugs.count
     }
 
@@ -41,9 +46,10 @@ class Screen8TableViewController: UITableViewController {
 
         // Configure the cell...
         let drug = drugs[indexPath.row]
-        cell.drugLabel.text = drug
+        cell.drugLabel.text = drug.name
         
         cell.scheduleImage.image = sImage
+        cell.drugScheduler.backgroundColor = UIColor.lightGray
         return cell
     }
     
