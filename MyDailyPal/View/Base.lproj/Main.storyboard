@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="viy-TQ-tDL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="21X-1c-cRb">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -933,28 +935,67 @@ tapping PIN.</string>
         <!--My Tips and Information-->
         <scene sceneID="acg-xf-R0c">
             <objects>
-                <viewController id="IUw-LH-sLs" sceneMemberID="viewController">
+                <viewController id="IUw-LH-sLs" customClass="TipsViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xvE-Ok-LBd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gJ-2l-8xV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3gJ-2l-8xV">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipCell" id="EY3-wl-NRX">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tipCell" rowHeight="60" id="EY3-wl-NRX" customClass="TIpsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EY3-wl-NRX" id="jSq-hF-sos">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZ9-vQ-zlL">
+                                                    <rect key="frame" x="76" y="19" width="220" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="2AS-Yr-32y"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qc1-BI-NaP">
+                                                    <rect key="frame" x="7.9999999999999964" y="4" width="51.666666666666657" height="51.666666666666664"/>
+                                                    <color key="backgroundColor" red="0.2242904584" green="0.81108514190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Qc1-BI-NaP" secondAttribute="height" multiplier="1:1" id="1Ba-DX-mvg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qc1-BI-NaP" firstAttribute="leading" secondItem="jSq-hF-sos" secondAttribute="leading" constant="8" id="1Q4-Th-Y7B"/>
+                                                <constraint firstItem="BZ9-vQ-zlL" firstAttribute="leading" secondItem="Qc1-BI-NaP" secondAttribute="trailing" constant="8" id="AWc-m2-wDc"/>
+                                                <constraint firstItem="Qc1-BI-NaP" firstAttribute="top" secondItem="jSq-hF-sos" secondAttribute="top" constant="4" id="Hyg-ku-CfD"/>
+                                                <constraint firstItem="BZ9-vQ-zlL" firstAttribute="centerY" secondItem="jSq-hF-sos" secondAttribute="centerY" id="UJh-Ka-O7r"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qc1-BI-NaP" secondAttribute="bottom" constant="4" id="c5t-5A-RXS"/>
+                                                <constraint firstItem="BZ9-vQ-zlL" firstAttribute="top" secondItem="jSq-hF-sos" secondAttribute="topMargin" constant="11" id="rJF-Or-rrV"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="roundImg" destination="Qc1-BI-NaP" id="TZz-4h-D9K"/>
+                                            <outlet property="tipLabel" destination="BZ9-vQ-zlL" id="tG8-z9-i82"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="IUw-LH-sLs" id="xvl-ZP-os1"/>
+                                    <outlet property="delegate" destination="IUw-LH-sLs" id="0AK-Ne-qxZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3gJ-2l-8xV" firstAttribute="top" secondItem="AHO-am-YK7" secondAttribute="top" id="Nrs-cY-kgH"/>
+                            <constraint firstItem="3gJ-2l-8xV" firstAttribute="bottom" secondItem="AHO-am-YK7" secondAttribute="bottom" id="TTz-vL-L5O"/>
+                            <constraint firstItem="3gJ-2l-8xV" firstAttribute="leading" secondItem="AHO-am-YK7" secondAttribute="leading" id="Z5o-fP-r1Z"/>
+                            <constraint firstItem="3gJ-2l-8xV" firstAttribute="trailing" secondItem="AHO-am-YK7" secondAttribute="trailing" id="zZL-zf-rvC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AHO-am-YK7"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Tips and Information" largeTitleDisplayMode="always" id="qLL-C6-jP3">
@@ -963,7 +1004,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOF-wC-kpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6016.8000000000002" y="151.47783251231527"/>
+            <point key="canvasLocation" x="3420" y="2238.9162561576354"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="S8z-fW-N8C">

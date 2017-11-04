@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A4671FACE28F00A7CCF5 /* TipsViewController.swift */; };
+		6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */; };
+		6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
 		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6004A4671FACE28F00A7CCF5 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIpsTableViewCell.swift; sourceTree = "<group>"; };
+		6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +196,7 @@
 		967B930B1FA0E34F006B3A91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */,
 				967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */,
 				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
 				D4D314091F8C730C0069D113 /* Screen8ViewController.swift */,
@@ -205,6 +212,8 @@
 				967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */,
 				967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */,
 				967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */,
+				6004A4671FACE28F00A7CCF5 /* TipsViewController.swift */,
+				6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,10 +354,12 @@
 			files = (
 				967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */,
 				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
+				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
+				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
 				D49E3DC41FABE50800533846 /* Drug.swift in Sources */,
 				967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */,
@@ -360,6 +371,7 @@
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
+				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,
