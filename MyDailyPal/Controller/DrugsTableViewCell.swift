@@ -19,6 +19,7 @@ class DrugsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var scheduleImage: UIImageView!
     
+    @IBOutlet weak var drugLabelMini: UILabel!
     
     
     override func awakeFromNib() {

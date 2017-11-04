@@ -11,7 +11,8 @@ import UIKit
 class Screen8TableViewController: UITableViewController {
     
   
-   var drugBank = DrugBank()
+    @IBOutlet weak var labelSetupNewTreatment: UILabel!
+    var drugBank = DrugBank()
     var drugs = [Drug]()
     var sImage = UIImage(named: "timer")
     override func viewDidLoad() {
@@ -47,7 +48,7 @@ class Screen8TableViewController: UITableViewController {
         // Configure the cell...
         let drug = drugs[indexPath.row]
         cell.drugLabel.text = drug.name
-        
+        cell.drugLabelMini.text = drug.name
         cell.scheduleImage.image = sImage
         cell.drugScheduler.backgroundColor = UIColor.lightGray
         return cell
