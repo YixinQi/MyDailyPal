@@ -19,6 +19,9 @@
 		914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */; };
 		914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE551F7AAFAB00AB6C8D /* MyDailyPalTests.swift */; };
 		914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */; };
+		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
+		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
+		91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */; };
 		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
 		967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B930F1FA10325006B3A91 /* ConfirmPIN_VC.swift */; };
 		967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */; };
@@ -75,6 +78,9 @@
 		914FFE5C1F7AAFAB00AB6C8D /* MyDailyPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDailyPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDailyPalUITests.swift; sourceTree = "<group>"; };
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
+		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
+		91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4ViewController.swift; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
 		967B930F1FA10325006B3A91 /* ConfirmPIN_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPIN_VC.swift; sourceTree = "<group>"; };
 		967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityQuestionsSetup_VC.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 				967B93151FA1241B006B3A91 /* SecurityQuestionBank.swift */,
 				D49E3DC11FABE25700533846 /* DrugBank.swift */,
 				D49E3DC31FABE50800533846 /* Drug.swift */,
+				91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +205,7 @@
 			children = (
 				6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */,
 				967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */,
+				91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */,
 				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
 				D4D314091F8C730C0069D113 /* Screen8ViewController.swift */,
 				D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */,
@@ -214,6 +222,7 @@
 				967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */,
 				6004A4671FACE28F00A7CCF5 /* TipsViewController.swift */,
 				6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */,
+				91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
 				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
+				91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
@@ -368,11 +378,13 @@
 				D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */,
 				967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */,
 				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
+				91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
+				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
