@@ -11,7 +11,9 @@ import UIKit
 class Screen4ViewController: UIViewController {
   var treatmentPlan: [MyTreatmentPlan] = []
   @IBOutlet weak var treatmentTableView: UITableView!
+  @IBOutlet weak var MyTreatmentProcess: UIImageView!
     override func viewDidLoad() {
+      MyTreatmentProcess.image = UIImage(named: "1")
       super.viewDidLoad()
       treatmentPlan = creatArray()
       treatmentTableView.delegate = self
@@ -20,14 +22,16 @@ class Screen4ViewController: UIViewController {
   
   func creatArray() -> [MyTreatmentPlan] {
     var tempTreatment: [MyTreatmentPlan] = []
-    let treatment1 = MyTreatmentPlan(treatmentPlan: "Plan1")
-    let treatment2 = MyTreatmentPlan(treatmentPlan: "Plan2")
-    let treatment3 = MyTreatmentPlan(treatmentPlan: "Plan3")
+    let treatment1 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Lopinavir/ritonavir 100/25mg Tablets")
+    let treatment2 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Tenofovir/Lamivudine/Efavirenz 300/300/600mg Tablets.")
+    let treatment3 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Lamivudine/Nevirapine/Zidovudine 30/50/60mg Dispersible Tablets")
     tempTreatment.append(treatment1)
     tempTreatment.append(treatment2)
     tempTreatment.append(treatment3)
     return tempTreatment
   }
+  
+
 }
 
 extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -41,4 +45,23 @@ extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
     cell.setTreatment(treatmentplan: treatment)
     return cell
   }
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      let alertController = UIAlertController(title: "Warning", message: "Are you sure you want to delete this item?", preferredStyle: .alert)
+      
+      let deleteAction = UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
+        self.treatmentPlan.remove(at: indexPath.row)
+        self.treatmentTableView.reloadData()
+      })
+      alertController.addAction(deleteAction)
+      
+      let cancelAction = UIAlertAction(title: "No", style: .default, handler: nil)
+      alertController.addAction(cancelAction)
+      
+      present(alertController, animated: true, completion: nil)
+    }
+  }
+  
+  
+
 }

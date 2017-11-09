@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class MyTreatmentPlan {
   var treatmentPlan: String
-  init(treatmentPlan: String) {
+  var icon: UIImage
+
+  init(iconImage: UIImage, treatmentPlan: String) {
     self.treatmentPlan = treatmentPlan
+    self.icon = iconImage
   }
 
 }
