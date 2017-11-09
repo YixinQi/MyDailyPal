@@ -34,7 +34,7 @@ class DrugBank {
             pregnancyCategory:"B (Animal reproduction studies fail to demonstrate a risk to the fetus, and adequate, but well-controlled, studies of pregnant women have not been conducted). Inform doctor immediately if you are pregnant."))
         //Drug 3 : TENOFOVIR/ EMTRICITABINE/ EFAVIRENZ 300/200/600
         drugList.append(Drug(
-            name: "TENOFOVIR/ EMTRICITABINE/ EFAVIRENZ 300/200/600",
+            name: "Tenofovir/ Lamivudine/ Efavirenz 300/300/600mg Tablets.",
             dosageInformation: "1 Tablet Once daily (not for use by children under 12 years of age or weighing less than 40 kg).",
             foodRestrictions:"On empty stomach (1 hour before or 2 hours after a meal).",
             commonSideEffects:"Dizziness, headache, diarrhoea, feeling sick (nausea), vomiting,  rashes, feeling weak, changes in skin colour including darkening of the skin, pain, stomach pain, difficulty sleeping, abnormal dreams, feeling worried or depressed - problems with digestion, loss of appetite - tiredness - itching - disturbances of coordination and balance, allergic reactions.",
