@@ -20,9 +20,9 @@ class Screen4ViewController: UIViewController {
   
   func creatArray() -> [MyTreatmentPlan] {
     var tempTreatment: [MyTreatmentPlan] = []
-    let treatment1 = MyTreatmentPlan(treatmentPlan: "Plan1")
-    let treatment2 = MyTreatmentPlan(treatmentPlan: "Plan2")
-    let treatment3 = MyTreatmentPlan(treatmentPlan: "Plan3")
+    let treatment1 = MyTreatmentPlan(iconImage: UIImage(named: "timer")!, treatmentPlan: "Plan1", deleteIcon: UIImage(named: "timer")!)
+    let treatment2 = MyTreatmentPlan(iconImage: UIImage(named: "timer")!, treatmentPlan: "Plan2", deleteIcon: UIImage(named: "timer")!)
+    let treatment3 = MyTreatmentPlan(iconImage: UIImage(named: "timer")!, treatmentPlan: "Plan3", deleteIcon: UIImage(named: "timer")!)
     tempTreatment.append(treatment1)
     tempTreatment.append(treatment2)
     tempTreatment.append(treatment3)
