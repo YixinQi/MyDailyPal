@@ -12,6 +12,24 @@ class Screen4ViewController: UIViewController {
   var treatmentPlan: [MyTreatmentPlan] = []
   @IBOutlet weak var treatmentTableView: UITableView!
   @IBOutlet weak var MyTreatmentProcess: UIImageView!
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    var showMenu = false
+    @IBAction func menuButton(_ sender: Any) {
+        if(showMenu){
+            trailingConstraint.constant = 375
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingConstraint.constant = 25
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
+    }
     override func viewDidLoad() {
       MyTreatmentProcess.image = UIImage(named: "1")
       super.viewDidLoad()

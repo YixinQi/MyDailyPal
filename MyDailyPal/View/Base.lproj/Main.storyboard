@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tM6-5p-iul">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -41,7 +41,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="SegueToFirstTimeOpeningApp" id="pRn-aK-0a1"/>
                         <segue destination="yI0-zG-9b9" kind="show" identifier="SegueToEnterPINPage" id="Iyb-9F-CJb"/>
-                        <segue destination="tM6-5p-iul" kind="show" identifier="NoPINToMainScreen" id="oU1-p0-Pua"/>
+                        <segue destination="AXT-cV-4Ah" kind="show" identifier="NoPINToMainScreen" id="oU1-p0-Pua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKb-nO-iNw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -148,7 +148,7 @@
                         <outlet property="num2" destination="beg-OT-HI2" id="9sD-on-8ex"/>
                         <outlet property="num3" destination="YUa-HK-2EJ" id="cio-EY-xnj"/>
                         <outlet property="num4" destination="CUk-ea-EZl" id="Mob-4S-rOW"/>
-                        <segue destination="tM6-5p-iul" kind="show" identifier="SuccessfulLogin" id="1Si-kB-ana"/>
+                        <segue destination="AXT-cV-4Ah" kind="show" identifier="SuccessfulLogin" id="1Si-kB-ana"/>
                         <segue destination="7dL-so-3ZK" kind="show" identifier="ForgotPINSegue" id="8WP-Fm-Mjm"/>
                     </connections>
                 </viewController>
@@ -334,7 +334,7 @@ tapping PIN.</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="tM6-5p-iul" kind="show" identifier="SkipThisStepPressed" id="ZiV-7C-pqW"/>
+                        <segue destination="AXT-cV-4Ah" kind="show" identifier="SkipThisStepPressed" id="ZiV-7C-pqW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -742,7 +742,7 @@ tapping PIN.</string>
                         <outlet property="question2" destination="nxc-St-smT" id="C0h-H9-yHp"/>
                         <outlet property="question2arrow" destination="t9F-9i-B1B" id="8cw-ki-1jB"/>
                         <outlet property="transparentBackground" destination="qEZ-iS-UXY" id="ejY-uF-hAg"/>
-                        <segue destination="tM6-5p-iul" kind="show" identifier="FromSecurityQuestionsToMain" id="etm-qG-yWj"/>
+                        <segue destination="AXT-cV-4Ah" kind="show" identifier="FromSecurityQuestionsToMain" id="etm-qG-yWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ztj-OJ-xpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -807,25 +807,158 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HnE-T2-E6u">
-                                <rect key="frame" x="0.0" y="11" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="wrw-vD-ol4"/>
-                                </items>
-                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOI-VI-Ufw">
+                                <rect key="frame" x="400" y="21" width="350" height="646"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoN-G9-e7D">
+                                        <rect key="frame" x="0.0" y="494" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="BeY-Yy-8ia"/>
+                                            <constraint firstAttribute="width" constant="350" id="llr-ei-lIa"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      Preferences" image="setting_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-Gd-Jd1">
+                                        <rect key="frame" x="0.0" y="444" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="DQR-7H-d1X"/>
+                                            <constraint firstAttribute="height" constant="45" id="mm6-Fc-BYc"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="2" maxX="0.0" maxY="2"/>
+                                        <state key="normal" title="      My Side Effects" image="sideeffect_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qn-s1-dZg">
+                                        <rect key="frame" x="0.0" y="394" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="P5K-qL-bkH"/>
+                                            <constraint firstAttribute="width" constant="350" id="f07-ol-ltH"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Visits" image="list_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-Cd-2nq">
+                                        <rect key="frame" x="0.0" y="344" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="UCU-rJ-iu1"/>
+                                            <constraint firstAttribute="width" constant="350" id="dBw-vj-UoG"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="     Calendar" image="calendar_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5D-HR-H9p">
+                                        <rect key="frame" x="0.0" y="294" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="lSk-sx-tbh"/>
+                                            <constraint firstAttribute="height" constant="45" id="mRW-zR-bac"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Treatment Plan" image="check_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="AXT-cV-4Ah" kind="show" id="AAy-rd-YxM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3X-KB-Cc8">
+                                        <rect key="frame" x="0.0" y="244" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="UJn-Ze-h97"/>
+                                            <constraint firstAttribute="height" constant="45" id="hl8-JJ-bVv"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="      My Tips and Information" image="book_icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="IUw-LH-sLs" kind="show" id="rcD-LN-hkq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-t9-ObG">
+                                        <rect key="frame" x="0.0" y="194" width="350" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="Qab-Fh-PYF"/>
+                                            <constraint firstAttribute="height" constant="45" id="itE-5W-cfc"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="    Home" image="home-icon">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eAX-Cr-vR9">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="184"/>
+                                        <color key="backgroundColor" red="0.2242904584" green="0.81108514190000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="350" id="BR4-br-1IC"/>
+                                            <constraint firstAttribute="height" constant="184" id="HM9-l5-IXP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XoN-G9-e7D" firstAttribute="top" secondItem="UcE-Gd-Jd1" secondAttribute="bottom" constant="5" id="0DG-y6-huM"/>
+                                    <constraint firstItem="6Qn-s1-dZg" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="3f2-VP-qEY"/>
+                                    <constraint firstItem="6Qn-s1-dZg" firstAttribute="top" secondItem="0vu-Cd-2nq" secondAttribute="bottom" constant="5" id="53X-H3-n3Q"/>
+                                    <constraint firstItem="0vu-Cd-2nq" firstAttribute="top" secondItem="o5D-HR-H9p" secondAttribute="bottom" constant="5" id="57s-g5-LHx"/>
+                                    <constraint firstItem="T3X-KB-Cc8" firstAttribute="top" secondItem="7eX-t9-ObG" secondAttribute="bottom" constant="5" id="5pI-ny-1FB"/>
+                                    <constraint firstItem="XoN-G9-e7D" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="7NM-Nw-fbT"/>
+                                    <constraint firstItem="UcE-Gd-Jd1" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="7Tj-Zm-fvF"/>
+                                    <constraint firstItem="0vu-Cd-2nq" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="7fO-Vn-xe4"/>
+                                    <constraint firstItem="7eX-t9-ObG" firstAttribute="top" secondItem="eAX-Cr-vR9" secondAttribute="bottom" constant="10" id="IlG-nI-5PW"/>
+                                    <constraint firstItem="T3X-KB-Cc8" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="PPm-Zm-bkv"/>
+                                    <constraint firstItem="o5D-HR-H9p" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="Rqe-Wx-qQg"/>
+                                    <constraint firstItem="T3X-KB-Cc8" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="Vx8-hj-9XN"/>
+                                    <constraint firstItem="0vu-Cd-2nq" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="XCY-uD-fva"/>
+                                    <constraint firstItem="6Qn-s1-dZg" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="YJP-bK-Whe"/>
+                                    <constraint firstItem="6Qn-s1-dZg" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="YM0-Jt-bWC"/>
+                                    <constraint firstItem="o5D-HR-H9p" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="bXa-FD-Ieh"/>
+                                    <constraint firstItem="eAX-Cr-vR9" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="fUX-hC-A2Q"/>
+                                    <constraint firstItem="UcE-Gd-Jd1" firstAttribute="top" secondItem="6Qn-s1-dZg" secondAttribute="bottom" constant="5" id="k8g-M9-eAp"/>
+                                    <constraint firstItem="XoN-G9-e7D" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="kAa-5r-9HY"/>
+                                    <constraint firstItem="UcE-Gd-Jd1" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="lfH-ra-V8A"/>
+                                    <constraint firstItem="eAX-Cr-vR9" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="qul-NJ-U4O"/>
+                                    <constraint firstItem="7eX-t9-ObG" firstAttribute="leading" secondItem="sOI-VI-Ufw" secondAttribute="leading" id="re0-n8-eg0"/>
+                                    <constraint firstItem="eAX-Cr-vR9" firstAttribute="top" secondItem="sOI-VI-Ufw" secondAttribute="top" id="tyq-Ih-G2S"/>
+                                    <constraint firstItem="6Qn-s1-dZg" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="vN1-ik-nID"/>
+                                    <constraint firstItem="7eX-t9-ObG" firstAttribute="trailing" secondItem="sOI-VI-Ufw" secondAttribute="trailing" id="vlh-Yh-M0d"/>
+                                    <constraint firstItem="o5D-HR-H9p" firstAttribute="top" secondItem="T3X-KB-Cc8" secondAttribute="bottom" constant="5" id="xfF-SF-ZEL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sOI-VI-Ufw" firstAttribute="trailing" secondItem="oce-Tb-gh9" secondAttribute="trailing" constant="375" id="8n8-Zf-UW8"/>
+                            <constraint firstItem="sOI-VI-Ufw" firstAttribute="bottom" secondItem="QpJ-HK-pkR" secondAttribute="bottom" id="v3E-n7-cZI"/>
+                            <constraint firstItem="sOI-VI-Ufw" firstAttribute="top" secondItem="QpJ-HK-pkR" secondAttribute="top" constant="21" id="vY4-Db-Kki"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oce-Tb-gh9"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Vtd-gq-JvC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="jxS-2a-sOZ">
+                            <connections>
+                                <action selector="menuButton:" destination="tM6-5p-iul" id="Hfp-BY-968"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MyTreatmentProcess" destination="IlH-AG-vnO" id="vfq-XG-ZQh"/>
+                        <outlet property="trailingConstraint" destination="8n8-Zf-UW8" id="ffS-3U-y1t"/>
                         <outlet property="treatmentTableView" destination="Bkm-ss-ZZb" id="42Y-6F-s6x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhW-fP-drE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4744.8000000000002" y="-170.46476761619192"/>
+            <point key="canvasLocation" x="6190" y="1491"/>
         </scene>
         <!--My Treatment Plan-->
         <scene sceneID="71E-jk-woD">
@@ -1102,6 +1235,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Treatment Plan" image="check_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="AXT-cV-4Ah" kind="show" id="Gzp-Ww-FNA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOu-c0-yG9">
                                         <rect key="frame" x="0.0" y="244" width="350" height="45"/>
@@ -1124,6 +1260,9 @@ tapping PIN.</string>
                                         <state key="normal" title="    Home" image="home-icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="AXT-cV-4Ah" kind="show" id="etO-aC-p2M"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4UT-MV-cgl">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="184"/>
@@ -1352,7 +1491,7 @@ tapping PIN.</string>
                                     </state>
                                     <connections>
                                         <action selector="NavigateToScreen4:" destination="viy-TQ-tDL" eventType="touchUpInside" id="20m-Yn-uBW"/>
-                                        <segue destination="tM6-5p-iul" kind="show" id="dFZ-vU-C3e"/>
+                                        <segue destination="AXT-cV-4Ah" kind="show" id="dFZ-vU-C3e"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup New Treatment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-wy-cJq">
@@ -1627,6 +1766,24 @@ tapping PIN.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xof-vf-T5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yDA-TS-IYg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AXT-cV-4Ah" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vV6-KI-Kod">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tM6-5p-iul" kind="relationship" relationship="rootViewController" id="drF-mK-4BT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9r2-Hk-eAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5382.3999999999996" y="1491.4542728635683"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Loading-welcome screen image" width="3333" height="5000"/>
@@ -1640,7 +1797,8 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZiV-7C-pqW"/>
+        <segue reference="AAy-rd-YxM"/>
+        <segue reference="rcD-LN-hkq"/>
         <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
 </document>
