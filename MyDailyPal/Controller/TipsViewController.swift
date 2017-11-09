@@ -10,7 +10,25 @@ import UIKit
 
 class TipsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let list = ["Take your medicines as prescribed by the doctor, same time every day.",
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    var showMenu = false
+    @IBAction func openMenu(_ sender: Any) {
+        if(showMenu){
+            trailingConstraint.constant = 375
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingConstraint.constant = 25
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
+    }
+    var tipList = ["Take your medicines as prescribed by the doctor, same time every day.",
                 "Adherence is nothing but 'taking your medicines at the same time every day'.",
                 "When you miss 1 dose, it is not just 1 dose that you missed. But you actually gave the virus 1 chance to multiply further.",
                 "Never miss a dose of your HIV medication. Remember, by taking every dose every day you are as good as someone who does not have HIV.",
@@ -45,17 +63,25 @@ class TipsViewController: UIViewController, UITableViewDelegate, UITableViewData
                 "Adherence to ART has been shown to be the main determinant of measuring the outcomes in HIV, including HIV RNA level, CD4 lymphocyte count and genotypic resistance.",
                 "In the Mannheimer study (2005), participants who reported 100% ART adherence achieved significantly higher QOL scores at 12 months of follow-up when compared to those with poorer ART adherence, and QOL improved with ART treatment and ART adherence.",
                 "Factors associated with low adherence to HIV medicines include - Psychological factors, such as drug abuse, alcohol addiction and mental health problems like depression."]
+    var colorList = Array(repeating: 0, count: 35)
+    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return(list.count)
+        return(tipList.count)
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as! TIpsTableViewCell
-        cell.tipLabel.text = list[indexPath.row]
+        cell.tipLabel.text = tipList[indexPath.row]
         cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
         cell.roundImg.clipsToBounds = true
+        let colorDigit = colorList[indexPath.row]
+        if colorDigit == 1 {
+            cell.roundImg.backgroundColor = UIColor.gray
+        } else if colorDigit == 0 {
+            cell.roundImg.backgroundColor = UIColor(red: 66/255.0, green: 209/255.0, blue: 244/255.0, alpha: 1.0)
+        }
         return(cell)
     }
     
@@ -74,8 +100,22 @@ class TipsViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "TipDetail") as! TipDetailViewController
-        DetailVC.getText = list[indexPath.row] as! String
+        DetailVC.getText = tipList[indexPath.row] as! String
         self.navigationController?.pushViewController(DetailVC, animated: true)
+        colorList[indexPath.row] = 1
+        let listSize = tipList.count
+        let tempVal = tipList[indexPath.row]
+        let tempDigit = colorList[indexPath.row]
+        for index in indexPath.row...listSize-2{
+            tipList[index] = tipList[index+1]
+            colorList[index] = colorList[index+1]
+        }
+        tipList[listSize-1] = tempVal
+        colorList[listSize-1] = 1
+        tableView.reloadData()
+        for num in colorList{
+            print(num)
+        }
     }
     
 
