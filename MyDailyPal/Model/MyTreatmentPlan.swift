@@ -12,11 +12,10 @@ import UIKit
 class MyTreatmentPlan {
   var treatmentPlan: String
   var icon: UIImage
-  var deleteIcon: UIImage
-  init(iconImage: UIImage, treatmentPlan: String, deleteIcon: UIImage) {
+
+  init(iconImage: UIImage, treatmentPlan: String) {
     self.treatmentPlan = treatmentPlan
     self.icon = iconImage
-    self.deleteIcon = deleteIcon
   }
 
 }
