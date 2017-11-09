@@ -14,6 +14,7 @@ class TIpsTableViewCell: UITableViewCell {
     @IBOutlet weak var roundImg: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

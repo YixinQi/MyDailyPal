@@ -71,6 +71,13 @@ class TipsViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Dispose of any resources that can be recreated.
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DetailVC = storyboard.instantiateViewController(withIdentifier: "TipDetail") as! TipDetailViewController
+        DetailVC.getText = list[indexPath.row] as! String
+        self.navigationController?.pushViewController(DetailVC, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation
