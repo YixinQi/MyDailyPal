@@ -36,6 +36,7 @@
 		967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */; };
 		967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
+		D48C93381FB548F300141969 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48C93371FB548F300141969 /* Screen9ViewController.swift */; };
 		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
 		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
@@ -96,6 +97,7 @@
 		967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPINViewController.swift; sourceTree = "<group>"; };
 		967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPINViewController.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
+		D48C93371FB548F300141969 /* Screen9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen9ViewController.swift; sourceTree = "<group>"; };
 		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
 		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */,
 				91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */,
 				6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */,
+				D48C93371FB548F300141969 /* Screen9ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
+				D48C93381FB548F300141969 /* Screen9ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
 				60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */,

@@ -54,7 +54,23 @@ class Screen8TableViewController: UITableViewController {
         return cell
     }
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PushMedicineSegue" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let controller = segue.destination as! Screen9ViewController
+                let drug = drugs[indexPath.row]
+                controller.MedicineName = drug.name
+                controller.dosageInformation = drug.dosageInformation
+                controller.foodRestrictions = drug.foodRestrictions
+                controller.commonSideEffects = drug.commonSideEffects
+                controller.uncommonSideEffects = drug.uncommonSideEffects
+                controller.precautions = drug.precautions
+                controller.drugInteractions = drug.drugInteractions
+                controller.pregnancyCategory = drug.pregnancyCategory
+            }
+    }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

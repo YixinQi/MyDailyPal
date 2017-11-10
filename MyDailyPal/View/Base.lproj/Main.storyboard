@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,40 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Screen9 View Controller-->
+        <scene sceneID="Kp5-fd-FGw">
+            <objects>
+                <viewController storyboardIdentifier="Screen9ViewController" id="wlA-He-WXO" customClass="Screen9ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6x-rj-Hat">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCH-Me-dp4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.83792954704724076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-yD-s5G">
+                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TxV-js-UN3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FGa-LP-FsU"/>
+                    <connections>
+                        <outlet property="medicineDescription" destination="zX3-yD-s5G" id="Ojy-id-XWy"/>
+                        <outlet property="staticImageView" destination="mCH-Me-dp4" id="JBF-Lw-2UO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nO-Dt-bzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1482" y="957"/>
+        </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="89I-yK-okG">
             <objects>
@@ -154,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="heg-l0-O0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="483"/>
+            <point key="canvasLocation" x="1972" y="482.60869565217394"/>
         </scene>
         <!--ForgotPIN View Controller-->
         <scene sceneID="YkK-hg-Zhn">
@@ -247,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8AH-lk-guT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3597.5999999999999" y="544.58128078817731"/>
+            <point key="canvasLocation" x="3936.8000000000002" y="543.77811094452773"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -409,7 +443,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="548-wJ-QmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="1187"/>
+            <point key="canvasLocation" x="1972" y="1186.9565217391305"/>
         </scene>
         <!--Title-->
         <scene sceneID="dgr-tl-aQA">
@@ -961,7 +995,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhW-fP-drE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6409" y="1457"/>
+            <point key="canvasLocation" x="6748" y="1456.8215892053975"/>
         </scene>
         <!--My Treatment Plan-->
         <scene sceneID="71E-jk-woD">
@@ -1413,7 +1447,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mm2-aU-PV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="231" y="1187"/>
+            <point key="canvasLocation" x="568.79999999999995" y="1186.9565217391305"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3tV-Fx-Ozd">
@@ -1559,11 +1593,12 @@ tapping PIN.</string>
                     <navigationItem key="navigationItem" title="Setup New Treatment" id="K5f-3k-KBW"/>
                     <connections>
                         <outlet property="labelSetupNewTreatment" destination="CpK-wy-cJq" id="WE5-Hi-Syh"/>
+                        <segue destination="wlA-He-WXO" kind="push" identifier="PushMedicineSegue" id="Iqg-1L-8Xx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3u-ie-T4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-882.39999999999998" y="956.89655172413802"/>
+            <point key="canvasLocation" x="-607" y="940"/>
         </scene>
         <!--Screen10 View Controller-->
         <scene sceneID="geX-Ty-IMi">
@@ -1771,6 +1806,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xof-vf-T5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-882" y="155"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yDA-TS-IYg">
@@ -1788,7 +1824,7 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9r2-Hk-eAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5382.3999999999996" y="1491.4542728635683"/>
+            <point key="canvasLocation" x="5720.8000000000002" y="1491.0044977511245"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uC7-WZ-7km">
@@ -1822,7 +1858,7 @@ tapping PIN.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="a2N-mc-jF8"/>
-        <segue reference="etO-aC-p2M"/>
+        <segue reference="dFZ-vU-C3e"/>
         <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
 </document>
