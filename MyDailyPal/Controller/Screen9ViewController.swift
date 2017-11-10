@@ -14,10 +14,10 @@ class Screen9ViewController: UICollectionViewController {
 
     @IBOutlet weak var SetuoNewTreatmentLabel: UILabel!
     @IBAction func ToScreen8(_ sender: UIButton) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func ToScreen10(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "ToScreen10Segue", sender: self)
     }
     @IBOutlet weak var staticImageView: UIImageView!
     @IBOutlet weak var medicineDescription: UITextView!
