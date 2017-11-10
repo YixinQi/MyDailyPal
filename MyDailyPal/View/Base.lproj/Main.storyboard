@@ -791,6 +791,14 @@ tapping PIN.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVm-hB-eDn">
+                                <rect key="frame" x="16" y="309" width="319" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-BJ-jlS">
+                                <rect key="frame" x="327" y="299" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bkm-ss-ZZb">
                                 <rect key="frame" x="0.0" y="348" width="375" height="319"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -989,6 +997,8 @@ tapping PIN.</string>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MyTreatmentProcess" destination="IlH-AG-vnO" id="vfq-XG-ZQh"/>
+                        <outlet property="line" destination="vVm-hB-eDn" id="AdA-Ny-S5K"/>
+                        <outlet property="plusButton" destination="bKl-BJ-jlS" id="VQc-ow-rPg"/>
                         <outlet property="trailingConstraint" destination="8n8-Zf-UW8" id="ffS-3U-y1t"/>
                         <outlet property="treatmentTableView" destination="Bkm-ss-ZZb" id="42Y-6F-s6x"/>
                     </connections>
@@ -1513,7 +1523,7 @@ tapping PIN.</string>
         <!--Setup New Treatment-->
         <scene sceneID="9MB-7G-jee">
             <objects>
-                <tableViewController id="viy-TQ-tDL" customClass="Screen8TableViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Screen8" id="viy-TQ-tDL" customClass="Screen8TableViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B1q-Ng-jJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -12,7 +12,9 @@ class Screen4ViewController: UIViewController {
   var treatmentPlan: [MyTreatmentPlan] = []
   @IBOutlet weak var treatmentTableView: UITableView!
   @IBOutlet weak var MyTreatmentProcess: UIImageView!
-    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+  @IBOutlet weak var line: UIImageView!
+  @IBOutlet weak var plusButton: UIImageView!
+  @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     var showMenu = false
     @IBAction func menuButton(_ sender: Any) {
         if(showMenu){
@@ -32,11 +34,22 @@ class Screen4ViewController: UIViewController {
     }
     override func viewDidLoad() {
       MyTreatmentProcess.image = UIImage(named: "1")
+      line.image = UIImage(named: "line")
+      plusButton.image = UIImage(named: "plusButton")
+      let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
+      plusButton.addGestureRecognizer(tap)
+      plusButton.isUserInteractionEnabled = true
       super.viewDidLoad()
       treatmentPlan = creatArray()
       treatmentTableView.delegate = self
       treatmentTableView.dataSource = self
     }
+  
+  @objc func tap(gestureRecognizer: UITapGestureRecognizer){
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "Screen8")
+    self.present(vc, animated: true, completion: nil)
+  }
   
   func creatArray() -> [MyTreatmentPlan] {
     var tempTreatment: [MyTreatmentPlan] = []
