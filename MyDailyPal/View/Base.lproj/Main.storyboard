@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCH-Me-dp4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="196"/>
+                                <rect key="frame" x="0.0" y="35" width="375" height="161"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.83792954704724076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
@@ -37,19 +37,49 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shY-4k-why">
+                                <rect key="frame" x="320" y="8" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextButtonToScreen10:" destination="wlA-He-WXO" eventType="touchUpInside" id="ZjD-va-aVX"/>
+                                    <action selector="ToScreen10:" destination="wlA-He-WXO" eventType="touchUpInside" id="xi2-Js-7BI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-qG-to3">
+                                <rect key="frame" x="16" y="8" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButtonToScreen8:" destination="wlA-He-WXO" eventType="touchUpInside" id="YJ7-Sw-im4"/>
+                                    <action selector="ToScreen8:" destination="wlA-He-WXO" eventType="touchUpInside" id="bET-q9-mUP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup New Treatment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8c-ng-Az4">
+                                <rect key="frame" x="77" y="13" width="220" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TxV-js-UN3"/>
                     </view>
                     <navigationItem key="navigationItem" id="FGa-LP-FsU"/>
                     <connections>
+                        <outlet property="SetuoNewTreatmentLabel" destination="T8c-ng-Az4" id="oyW-eF-sZN"/>
                         <outlet property="medicineDescription" destination="zX3-yD-s5G" id="Ojy-id-XWy"/>
                         <outlet property="staticImageView" destination="mCH-Me-dp4" id="JBF-Lw-2UO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nO-Dt-bzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1482" y="957"/>
+            <point key="canvasLocation" x="-1309.5999999999999" y="939.58020989505258"/>
         </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="89I-yK-okG">
@@ -1532,18 +1562,6 @@ tapping PIN.</string>
                             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHC-bO-tcq">
-                                    <rect key="frame" x="11" y="13" width="49" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <state key="normal" title="BACK">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="NavigateToScreen4:" destination="viy-TQ-tDL" eventType="touchUpInside" id="20m-Yn-uBW"/>
-                                        <segue destination="AXT-cV-4Ah" kind="show" id="dFZ-vU-C3e"/>
-                                    </connections>
-                                </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setup New Treatment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpK-wy-cJq">
                                     <rect key="frame" x="77" y="18" width="220" height="21"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1551,6 +1569,19 @@ tapping PIN.</string>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHC-bO-tcq">
+                                    <rect key="frame" x="0.0" y="13" width="49" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="BACK">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="NavigateToScreen4:" destination="viy-TQ-tDL" eventType="touchUpInside" id="20m-Yn-uBW"/>
+                                        <action selector="ToScreen4:" destination="viy-TQ-tDL" eventType="touchUpInside" id="QQU-J7-ltj"/>
+                                        <segue destination="AXT-cV-4Ah" kind="show" id="dFZ-vU-C3e"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -1604,6 +1635,7 @@ tapping PIN.</string>
                     <connections>
                         <outlet property="labelSetupNewTreatment" destination="CpK-wy-cJq" id="WE5-Hi-Syh"/>
                         <segue destination="wlA-He-WXO" kind="push" identifier="PushMedicineSegue" id="Iqg-1L-8Xx"/>
+                        <segue destination="aLD-Bd-Xg6" kind="show" identifier="ToScreen10Segue" id="GnT-Ia-FlT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3u-ie-T4w" userLabel="First Responder" sceneMemberID="firstResponder"/>

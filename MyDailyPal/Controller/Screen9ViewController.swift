@@ -12,9 +12,16 @@ private let reuseIdentifier = "Cell"
 
 class Screen9ViewController: UICollectionViewController {
 
+    @IBOutlet weak var SetuoNewTreatmentLabel: UILabel!
+    @IBAction func ToScreen8(_ sender: UIButton) {
+        
+    }
+    @IBAction func ToScreen10(_ sender: UIButton) {
+        
+    }
     @IBOutlet weak var staticImageView: UIImageView!
     @IBOutlet weak var medicineDescription: UITextView!
-    var MedicineName = String()
+    var MedicineName = String() 
     var dosageInformation = String()
     var foodRestrictions = String()
     var commonSideEffects = String()
@@ -36,6 +43,14 @@ class Screen9ViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func BackButtonToScreen8(_ sender: UIButton) {
+         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func NextButtonToScreen10(_ sender: UIButton) {
+         performSegue(withIdentifier: "ToScreen10Segue", sender: self)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

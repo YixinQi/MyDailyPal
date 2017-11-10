@@ -10,7 +10,10 @@ import UIKit
 
 class Screen8TableViewController: UITableViewController {
     
-  
+    @IBAction func ToScreen4(_ sender: UIButton) {
+         self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var labelSetupNewTreatment: UILabel!
     var drugBank = DrugBank()
     var drugs = [Drug]()
