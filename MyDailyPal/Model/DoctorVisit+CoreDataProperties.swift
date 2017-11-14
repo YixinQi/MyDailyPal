@@ -10,7 +10,8 @@
 import Foundation
 import CoreData
 
-
+//This is created as an NSManaged Object and required to save and load data using CoreData functionality
+//Data structure to hold visit information
 extension DoctorVisit {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DoctorVisit> {
