@@ -48,6 +48,14 @@ class ForgotPINViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToResetPIN" {
+            let resetPIN = segue.destination as! Screen18ViewController
+            
+            resetPIN.resettingPin = true
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

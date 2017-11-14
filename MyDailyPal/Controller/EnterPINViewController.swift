@@ -10,21 +10,25 @@ import UIKit
 
 class EnterPINViewController: UIViewController, UITextFieldDelegate {
 
+//Inbput fields for user
     @IBOutlet weak var num1: UITextField!
     @IBOutlet weak var num2: UITextField!
     @IBOutlet weak var num3: UITextField!
     @IBOutlet weak var num4: UITextField!
     
+//object to store user preferences
     var preferences: Preferences?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("storedPIN is : " + preferences!.pin!)
+//set the delegates of the textfields to edit and access the data
         num1.delegate = self
         num2.delegate = self
         num3.delegate = self
         num4.delegate = self
+//Prevent user form entering alpha characters as PIN digits
         num1.keyboardType = UIKeyboardType.numberPad
         num2.keyboardType = UIKeyboardType.numberPad
         num3.keyboardType = UIKeyboardType.numberPad
