@@ -10,7 +10,8 @@
 import Foundation
 import CoreData
 
-
+//This is created as an NSManaged Object and required to save and load data using CoreData functionality
+//Data Structure to hold Preference information
 extension Preferences {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Preferences> {

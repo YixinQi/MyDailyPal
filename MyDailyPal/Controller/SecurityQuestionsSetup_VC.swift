@@ -10,6 +10,8 @@ import UIKit
 
 class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    
+//UI Screen elements
     @IBOutlet weak var q2arrow: UILabel!
     @IBOutlet weak var q1arrow: UILabel!
     @IBOutlet weak var q2DropDown: UIPickerView!
@@ -23,12 +25,17 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
     var questionBank = SecurityQuestionBank()
     var questions = [SecurityQuestion]()
     let arrow = "\u{25BC}"
+    
+//This is the pin passed from the previous confirm PIN screen
     var code: String?
 
+//This is used to black out screen when alert comes up
     @IBOutlet weak var transparentBackground: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//Have to set delegates and datasources for inputs
         q1DropDown.delegate = self
         q1DropDown.dataSource = self
         q1DropDown.backgroundColor = UIColor.white
@@ -41,6 +48,7 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         
         transparentBackground.isHidden = true
         
+//Assign what happens when the text fields are clicked (to ultimately make the drop down PickerView of questions appear)
         let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
         question1.addGestureRecognizer(tap)
         question1.isUserInteractionEnabled = true
@@ -49,6 +57,7 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         question2.addGestureRecognizer(tap2)
         question2.isUserInteractionEnabled = true
         
+//Initially set the two questions
         questions = questionBank.securityQuestions
         question1.text = questions[0].question
         question2.text = questions[1].question
@@ -57,36 +66,40 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         
         answer2.delegate = self
         answer1.delegate = self
-
-        
-        // Do any additional setup after loading the view.
     }
 
+//BoilerPlate Xcode
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
     
+//Makes DropDown with Questions appear for question 2
     @objc func tap2(gestureRecognizer: UITapGestureRecognizer){
         print("tap2 hit")
         q2DropDown.isHidden = false
         transparentBackground.isHidden = false
     }
     
+//Makes DropDown with Questions appear for question 1
     @objc func tap(gestureRecognizer: UITapGestureRecognizer){
         print("*")
         q1DropDown.isHidden = false
         transparentBackground.isHidden = false
     }
-    
+  
+//method must be overriden to conform to PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
+
+//method must be overriden to conform to PickerView
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return questions.count
     }
     
+//method must be overriden to conform to PickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
             question1.text = questions[row].question
@@ -95,16 +108,19 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         }
         self.view.endEditing(true)
     }
-    
+ 
+//method must be overriden to conform to PickerView
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return questions[row].question
     }
-    
+ 
+//Closes pickerView when user taps away
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
+ 
+//Closes pickerView when user taps away
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         q1DropDown.isHidden = true
         q2DropDown.isHidden = true
@@ -112,14 +128,14 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         self.view.endEditing(true)
         
     }
-    
+   
+//pop view off stack return to previous view
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+//Validates user input then creates new preference object and saves it to device locally and navigates to next screen
     @IBAction func NextButtonPressed(_ sender: Any) {
-        
-        
         if question1.text == question2.text {
             createAlert()
         } else {
@@ -140,6 +156,7 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         }
     }
     
+//Handles if the user tries to select the same question for both slots
     func createAlert(){
         let alert = UIAlertController(title: "Incorrect Entry", message: "Questions must be different", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
@@ -152,6 +169,7 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         }
     }
     
+//Handles if the user doesn't provide and answer to one or more questions
     func createAlert2(){
         let alert = UIAlertController(title: "Incorrect Entry", message: "Answers to each question much be provided", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
@@ -164,15 +182,6 @@ class SecurityQuestionsSetup_VC: UIViewController, UITextFieldDelegate, UIPicker
         }
     }
     
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

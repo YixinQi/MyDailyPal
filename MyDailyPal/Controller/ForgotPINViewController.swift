@@ -10,6 +10,7 @@ import UIKit
 
 class ForgotPINViewController: UIViewController, UITextFieldDelegate {
     
+//Holds a preference object where we retrieve security questions
     var preferences: Preferences?
     
     @IBOutlet weak var question1: UILabel!
@@ -18,7 +19,7 @@ class ForgotPINViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var answer1: UITextField!
     @IBOutlet weak var answer2: UITextField!
     
-    
+//When screen is loaded, we set the 2 questions and set up delegates for user to enter answers
     override func viewDidLoad() {
         super.viewDidLoad()
         question1.text = preferences!.question1
@@ -27,18 +28,21 @@ class ForgotPINViewController: UIViewController, UITextFieldDelegate {
         answer2.delegate = self
         answer1.delegate = self
 
-        // Do any additional setup after loading the view.
     }
 
+//Xcode boilerplate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+//Pops view off the stack to navigate to the previous view
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+//If user tries to reset, it checks if the answers to the security questions are correct and if they are, moves to reset PIN
     @IBAction func resetPINButtonPressed(_ sender: Any) {
         if answer1.text == preferences!.answer1 && answer2.text == preferences!.answer2
         {
@@ -47,11 +51,22 @@ class ForgotPINViewController: UIViewController, UITextFieldDelegate {
             createAlert()
         }
     }
+
+//Passes a flag to next page indicating that PIN is being reset
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SegueToResetPIN" {
+            let resetPIN = segue.destination as! Screen18ViewController
+            
+            resetPIN.resettingPin = true
+        }
+    }
     
+//Closes input keyboard when user taps somewhere else on the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
+//Alerts user if they entered security answers incorrectly
     func createAlert(){
         let alert = UIAlertController(title: "Incorrect Entry", message: "Entered Security Questions Answers are Wrong", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
