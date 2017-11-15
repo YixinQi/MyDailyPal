@@ -7,20 +7,19 @@
 //
 
 import UIKit
-
+import WebKit
 class Screen9ViewController: UIViewController {
 
-    @IBOutlet weak var DrugNameLabel: UILabel!
-    @IBOutlet weak var medicineTextView: UITextView!
+  
+    @IBOutlet weak var DrugWebView: WKWebView!
     @IBOutlet weak var SetupNewTreatmentLabel: UILabel!
     @IBOutlet weak var staticImageView: UIImageView!
     var drugDetails = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DrugNameLabel.text! = drugDetails[0]
         
-        medicineTextView.text! =   "  \u{2022} "+drugDetails[1]
+        
         
         // Do any additional setup after loading the view.
     }
@@ -31,11 +30,6 @@ class Screen9ViewController: UIViewController {
     }
     
     
-    
-    func stringManipulation(detail: String) -> String {
-        
-        return "Hey"
-    }
 
     /*
     // MARK: - Navigation
