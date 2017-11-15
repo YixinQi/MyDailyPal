@@ -2,58 +2,39 @@
 //  Screen9ViewController.swift
 //  MyDailyPal
 //
-//  Created by ROD Shangari on 11/9/17.
+//  Created by ROD Shangari on 11/13/17.
 //  Copyright © 2017 Yixin Qi. All rights reserved.
 //
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+class Screen9ViewController: UIViewController {
 
-class Screen9ViewController: UICollectionViewController {
-
-    @IBOutlet weak var SetuoNewTreatmentLabel: UILabel!
-    @IBAction func ToScreen8(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func ToScreen10(_ sender: UIButton) {
-        performSegue(withIdentifier: "ToScreen10Segue", sender: self)
-    }
+    @IBOutlet weak var DrugNameLabel: UILabel!
+    @IBOutlet weak var medicineTextView: UITextView!
+    @IBOutlet weak var SetupNewTreatmentLabel: UILabel!
     @IBOutlet weak var staticImageView: UIImageView!
-    @IBOutlet weak var medicineDescription: UITextView!
-    var MedicineName = String() 
-    var dosageInformation = String()
-    var foodRestrictions = String()
-    var commonSideEffects = String()
-    var uncommonSideEffects = String()
-    var precautions = String()
-    var drugInteractions = String()
-    var pregnancyCategory = String()
+    var drugDetails = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        medicineDescription.text! = MedicineName + "\n" + dosageInformation + "/n" + foodRestrictions + "/n" + commonSideEffects + "/n" + uncommonSideEffects +
-            "/n" + precautions + "/n" + drugInteractions + "/n" + pregnancyCategory
+        DrugNameLabel.text! = drugDetails[0]
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        medicineTextView.text! =   "  \u{2022} "+drugDetails[1]
+        
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func BackButtonToScreen8(_ sender: UIButton) {
-         self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func NextButtonToScreen10(_ sender: UIButton) {
-         performSegue(withIdentifier: "ToScreen10Segue", sender: self)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    func stringManipulation(detail: String) -> String {
+        
+        return "Hey"
     }
 
     /*
@@ -61,60 +42,8 @@ class Screen9ViewController: UICollectionViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
+        // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
-    }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
     }
     */
 
