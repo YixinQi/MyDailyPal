@@ -1207,9 +1207,9 @@ tapping PIN.</string>
                                     <navigationItem title="Preferences" id="yFB-ux-von"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-Fq-GiO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Security" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ng-Fq-GiO">
                                 <rect key="frame" x="16" y="74" width="343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1374,6 +1374,17 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-FO-z9U">
+                                <rect key="frame" x="259" y="567" width="100" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="3me-g8-fWt"/>
+                                    <constraint firstAttribute="height" constant="35" id="put-4s-nUA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="9:00 AM">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1394,6 +1405,7 @@ tapping PIN.</string>
                             <constraint firstItem="NgX-24-w3x" firstAttribute="top" secondItem="Xoe-2J-c6i" secondAttribute="bottom" constant="30" id="JY9-Xv-Bnf"/>
                             <constraint firstItem="pJG-66-djf" firstAttribute="top" secondItem="Pwh-LM-QdY" secondAttribute="bottom" constant="30" id="JzO-xJ-bkb"/>
                             <constraint firstItem="UGS-T1-EyA" firstAttribute="top" secondItem="F8m-5c-9Su" secondAttribute="bottom" constant="10" id="LaU-ET-gIa"/>
+                            <constraint firstItem="S5G-of-pca" firstAttribute="trailing" secondItem="k5e-FO-z9U" secondAttribute="trailing" constant="16" id="MV7-tL-uQD"/>
                             <constraint firstItem="cVE-u1-NQW" firstAttribute="leading" secondItem="S5G-of-pca" secondAttribute="leading" constant="16" id="PFj-8B-fGA"/>
                             <constraint firstItem="8oP-cs-t90" firstAttribute="leading" secondItem="F8m-5c-9Su" secondAttribute="trailing" constant="18" id="Pdf-x1-R7g"/>
                             <constraint firstItem="lzy-qN-5Mf" firstAttribute="leading" secondItem="Pwh-LM-QdY" secondAttribute="trailing" constant="18" id="R63-uS-RIc"/>
@@ -1405,6 +1417,7 @@ tapping PIN.</string>
                             <constraint firstItem="nCv-sX-kbI" firstAttribute="leading" secondItem="Xoe-2J-c6i" secondAttribute="trailing" constant="18" id="bJX-9G-pce"/>
                             <constraint firstItem="nCv-sX-kbI" firstAttribute="centerY" secondItem="Xoe-2J-c6i" secondAttribute="centerY" id="cVJ-tH-hbz"/>
                             <constraint firstItem="NgX-24-w3x" firstAttribute="leading" secondItem="S5G-of-pca" secondAttribute="leading" constant="16" id="cuB-6Q-wZB"/>
+                            <constraint firstItem="k5e-FO-z9U" firstAttribute="centerY" secondItem="QvS-94-jUa" secondAttribute="centerY" id="djh-XU-KK6"/>
                             <constraint firstItem="6NO-AW-4tQ" firstAttribute="leading" secondItem="S5G-of-pca" secondAttribute="leading" constant="16" id="eOD-RI-WJY"/>
                             <constraint firstItem="F8m-5c-9Su" firstAttribute="leading" secondItem="S5G-of-pca" secondAttribute="leading" constant="16" id="eaK-KK-3Xw"/>
                             <constraint firstItem="cVE-u1-NQW" firstAttribute="top" secondItem="6NO-AW-4tQ" secondAttribute="bottom" constant="60" id="fQY-OR-Dko"/>
@@ -2320,8 +2333,8 @@ tapping PIN.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dlp-wf-iWd"/>
-        <segue reference="dlU-hg-WeK"/>
-        <segue reference="etm-qG-yWj"/>
+        <segue reference="a2N-mc-jF8"/>
+        <segue reference="etO-aC-p2M"/>
         <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
 </document>
