@@ -11,6 +11,7 @@
 		6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */; };
 		6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */; };
 		6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */; };
+		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
 		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
@@ -102,6 +103,7 @@
 		6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIpsTableViewCell.swift; sourceTree = "<group>"; };
 		6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
+		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +307,7 @@
 				91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */,
 				6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */,
 				D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */,
+				6032371D1FC14A5800661D31 /* PreferenceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				962DB3011FBA387D00A5553B /* VisitsViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
+				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
