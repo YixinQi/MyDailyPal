@@ -956,7 +956,7 @@ tapping PIN.</string>
                                             <constraint firstAttribute="height" constant="45" id="itE-5W-cfc"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="    Home" image="home-icon">
+                                        <state key="normal" title="      Home" image="home-icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
