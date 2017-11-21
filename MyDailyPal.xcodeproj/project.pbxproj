@@ -24,6 +24,8 @@
 		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
 		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
 		91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */; };
+		91FBF7AA1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */; };
+		91FBF7AB1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */; };
 		962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */; };
 		962DB3091FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */; };
 		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
@@ -119,6 +121,8 @@
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
 		91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4ViewController.swift; sourceTree = "<group>"; };
+		91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				D445F6E51FBCC6B100171402 /* MedicinesHTML */,
+				91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */,
+				91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */,
 				962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */,
 				962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */,
 				967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */,
@@ -526,6 +532,7 @@
 				91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
+				91FBF7AB1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
@@ -542,6 +549,7 @@
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
+				91FBF7AA1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift in Sources */,
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
