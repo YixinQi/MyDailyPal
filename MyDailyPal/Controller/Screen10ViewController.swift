@@ -45,6 +45,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func next(_ sender: Any) {
     treatmentPlan.medication = "a"
+    treatmentPlan.attribute = "b"
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     PersistenceService.saveContext()
@@ -90,7 +91,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    var myTreatmentViewControler = segue.destination as! Screen4ViewController
+    let myTreatmentViewControler = segue.destination as! Screen4ViewController
     myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
   }
   

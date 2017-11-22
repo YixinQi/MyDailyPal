@@ -18,6 +18,7 @@ extension TreatmentPlan {
     }
 
     @NSManaged public var medication: String?
+    @NSManaged public var attribute: String?
     @NSManaged public var noOfDosage: Int16
     @NSManaged public var noOfTablet: Int16
     @NSManaged public var startDate: NSDate?

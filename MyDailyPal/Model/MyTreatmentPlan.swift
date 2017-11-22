@@ -11,9 +11,11 @@ import UIKit
 
 class MyTreatmentPlan {
   var treatmentPlan: String
+  var attribute: String
   var icon: UIImage
 
-  init(iconImage: UIImage, treatmentPlan: String) {
+  init(iconImage: UIImage, treatmentPlan: String, descriptionText: String) {
+    self.attribute = descriptionText
     self.treatmentPlan = treatmentPlan
     self.icon = iconImage
   }
