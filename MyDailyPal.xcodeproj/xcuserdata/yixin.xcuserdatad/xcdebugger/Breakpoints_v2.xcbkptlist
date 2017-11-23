@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/Screen10ViewController.swift"
+            timestampString = "533011746.956026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "Screen10ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.Screen10ViewController.dosageArray.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yixin/Documents/MyDailyPal/MyDailyPal/Controller/Screen10ViewController.swift"
+                  timestampString = "531078857.539172"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "109">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.Screen10ViewController.dosageArray.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yixin/Documents/MyDailyPal/MyDailyPal/Controller/Screen10ViewController.swift"
+                  timestampString = "531078857.543268"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.Screen10ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MyDailyPal.Screen10ViewController"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yixin/Documents/MyDailyPal/MyDailyPal/Controller/Screen10ViewController.swift"
+                  timestampString = "531078857.546663"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1205">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.Screen10ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyDailyPal.Screen10ViewController&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yixin/Documents/MyDailyPal/MyDailyPal/Controller/Screen10ViewController.swift"
+                  timestampString = "531078857.548994"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/SecurityQuestionsSetup_VC.swift"
+            timestampString = "532982583.726295"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "NextButtonPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
