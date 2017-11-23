@@ -17,7 +17,7 @@ class DrugsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var drugLabel: UILabel!
     
-    @IBOutlet weak var scheduleImage: UIImageView!
+ 
     
     @IBOutlet weak var drugLabelMini: UILabel!
     

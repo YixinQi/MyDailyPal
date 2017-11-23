@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLD-Bd-Xg6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLD-Bd-Xg6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1752,7 +1752,7 @@ tapping PIN.</string>
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nl8-eg-eVL" id="0lk-yf-HI8">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-JY-NFx">
@@ -1762,10 +1762,6 @@ tapping PIN.</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timer" translatesAutoresizingMaskIntoConstraints="NO" id="x6L-QU-l9x">
-                                            <rect key="frame" x="307" y="0.0" width="35" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EPw-rd-IbC">
                                             <rect key="frame" x="8" y="0.0" width="39" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1778,13 +1774,23 @@ tapping PIN.</string>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfw-vm-U9L">
+                                            <rect key="frame" x="308" y="0.0" width="32" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                            </accessibility>
+                                            <state key="normal" title="Button" backgroundImage="timer"/>
+                                            <connections>
+                                                <action selector="ScheduleButton:" destination="viy-TQ-tDL" eventType="touchUpInside" id="Rfe-8J-5Ha"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="drugLabel" destination="Hey-JY-NFx" id="XWm-eD-XJj"/>
                                     <outlet property="drugLabelMini" destination="P3F-Og-cZk" id="RgC-LA-j7M"/>
                                     <outlet property="drugScheduler" destination="EPw-rd-IbC" id="1YM-wC-ayV"/>
-                                    <outlet property="scheduleImage" destination="x6L-QU-l9x" id="osf-BN-q5u"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1805,7 +1811,7 @@ tapping PIN.</string>
         <!--Screen10 View Controller-->
         <scene sceneID="geX-Ty-IMi">
             <objects>
-                <viewController id="aLD-Bd-Xg6" customClass="Screen10ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Screen10ViewController" id="aLD-Bd-Xg6" customClass="Screen10ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DmU-5H-C1y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2083,7 +2089,7 @@ tapping PIN.</string>
     <inferredMetricsTieBreakers>
         <segue reference="dlp-wf-iWd"/>
         <segue reference="a2N-mc-jF8"/>
-        <segue reference="etm-qG-yWj"/>
+        <segue reference="oU1-p0-Pua"/>
         <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
 </document>
