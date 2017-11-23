@@ -13,7 +13,7 @@ class Screen8TableViewController: UITableViewController {
     
     var drugBank = DrugBank()
     var drugs = [[String]]()
-    var sImage = UIImage(named: "timer")
+    //var sImage = UIImage(named: "timer")
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -46,22 +46,31 @@ class Screen8TableViewController: UITableViewController {
 
         // Configure the cell...
         let drug = drugs[indexPath.row]
+        if drug[0] != "mystyle.css" {
         cell.drugLabel.text = drug[0]
         cell.drugLabelMini.text = drug[0]
-        cell.scheduleImage.image = sImage
+        //cell.scheduleImage.image = sImage
         cell.drugScheduler.backgroundColor = UIColor.lightGray
+        }
         return cell
     }
-    
+    var drugName = String()
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen9ViewController") as! Screen9ViewController
         let drug = drugs[indexPath.row]
+        drugName = drug[0]
         DetailVC.drugDetails = drug
         self.navigationController?.pushViewController(DetailVC, animated: true)
         
     }
     
+    @IBAction func ScheduleButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name:"Main", bundle:nil)
+        let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
+        DetailVC.Medication = drugName
+        self.navigationController?.pushViewController(DetailVC, animated: true)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

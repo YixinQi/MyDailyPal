@@ -27,8 +27,6 @@
 		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
 		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
 		91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */; };
-		91FBF7AA1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */; };
-		91FBF7AB1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */; };
 		962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */; };
 		962DB3091FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */; };
 		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
@@ -43,42 +41,14 @@
 		967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */; };
 		967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */; };
 		967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */; };
-		D445F7051FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6E61FBCC6D900171402 /* LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html */; };
-		D445F7061FBCC6DE00171402 /* LAMIVUDINE_150.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6E71FBCC6D900171402 /* LAMIVUDINE_150.html */; };
-		D445F7071FBCC6DE00171402 /* NEVIRAPINE_200.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6E81FBCC6D900171402 /* NEVIRAPINE_200.html */; };
-		D445F7081FBCC6DE00171402 /* TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6E91FBCC6DA00171402 /* TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html */; };
-		D445F7091FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6EA1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html */; };
-		D445F70A1FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6EB1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html */; };
-		D445F70B1FBCC6DE00171402 /* mystyle.css in Resources */ = {isa = PBXBuildFile; fileRef = D445F6EC1FBCC6DA00171402 /* mystyle.css */; };
-		D445F70C1FBCC6DE00171402 /* TENOFOVIR_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6ED1FBCC6DA00171402 /* TENOFOVIR_300.html */; };
-		D445F70D1FBCC6DE00171402 /* RITONAVIR_100.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6EE1FBCC6DA00171402 /* RITONAVIR_100.html */; };
-		D445F70E1FBCC6DE00171402 /* TENOFOVIR_LAMIVUDINE_300_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6EF1FBCC6DA00171402 /* TENOFOVIR_LAMIVUDINE_300_300.html */; };
-		D445F70F1FBCC6DE00171402 /* TERMS_CONDITIONS.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F01FBCC6DB00171402 /* TERMS_CONDITIONS.html */; };
-		D445F7101FBCC6DE00171402 /* ATAZANAVIR_RITONAVIR_300_100.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F11FBCC6DB00171402 /* ATAZANAVIR_RITONAVIR_300_100.html */; };
-		D445F7111FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F21FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60.html */; };
-		D445F7121FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_150_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F31FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_150_300.html */; };
-		D445F7131FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_60_30.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F41FBCC6DB00171402 /* ABACAVIR_LAMIVUDINE_60_30.html */; };
-		D445F7141FBCC6DE00171402 /* TENOFOVIR_EMTRICITABINE_300_200.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F51FBCC6DB00171402 /* TENOFOVIR_EMTRICITABINE_300_200.html */; };
-		D445F7151FBCC6DE00171402 /* ATAZANAVIR_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F61FBCC6DB00171402 /* ATAZANAVIR_300.html */; };
-		D445F7161FBCC6DE00171402 /* LOPINAVIR_RITONAVIR_100_25.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F71FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_100_25.html */; };
-		D445F7171FBCC6DE00171402 /* LAMIVUDINE_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F81FBCC6DC00171402 /* LAMIVUDINE_300.html */; };
-		D445F7181FBCC6DE00171402 /* ABACAVIR_60.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6F91FBCC6DC00171402 /* ABACAVIR_60.html */; };
-		D445F7191FBCC6DE00171402 /* ATAZANAVIR_150.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FA1FBCC6DC00171402 /* ATAZANAVIR_150.html */; };
-		D445F71A1FBCC6DE00171402 /* TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FB1FBCC6DC00171402 /* TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html */; };
-		D445F71B1FBCC6DE00171402 /* EFAVIRENZ_600.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FC1FBCC6DC00171402 /* EFAVIRENZ_600.html */; };
-		D445F71C1FBCC6DE00171402 /* LOPINAVIR_RITONAVIR_200_50.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FD1FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_200_50.html */; };
-		D445F71D1FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FE1FBCC6DD00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html */; };
-		D445F71E1FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_600_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F6FF1FBCC6DD00171402 /* ABACAVIR_LAMIVUDINE_600_300.html */; };
-		D445F71F1FBCC6DE00171402 /* ABACAVIR_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F7001FBCC6DD00171402 /* ABACAVIR_300.html */; };
-		D445F7201FBCC6DE00171402 /* ABACAVIR_600.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F7011FBCC6DD00171402 /* ABACAVIR_600.html */; };
-		D445F7211FBCC6DE00171402 /* ZIDOVUDINE_300.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F7021FBCC6DD00171402 /* ZIDOVUDINE_300.html */; };
-		D445F7221FBCC6DE00171402 /* EFAVIRENZ_50_100_200.html in Resources */ = {isa = PBXBuildFile; fileRef = D445F7031FBCC6DD00171402 /* EFAVIRENZ_50_100_200.html */; };
-		D445F7231FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html in Resources */ = {isa = PBXBuildFile; fileRef = D445F7041FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
 		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */; };
-		D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D314091F8C730C0069D113 /* Screen8ViewController.swift */; };
+		D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */; };
+		D4B9E94F1FBEA6590016A368 /* VisitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */; };
+		D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */; };
+		D4B9E9941FBF5C020016A368 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9E9931FBF5C020016A368 /* assets */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
 		D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -127,8 +97,6 @@
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
 		91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4ViewController.swift; sourceTree = "<group>"; };
-		91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
@@ -143,42 +111,14 @@
 		967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPINViewController.swift; sourceTree = "<group>"; };
 		967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPINViewController.swift; sourceTree = "<group>"; };
-		D445F6E61FBCC6D900171402 /* LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html"; sourceTree = "<group>"; };
-		D445F6E71FBCC6D900171402 /* LAMIVUDINE_150.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LAMIVUDINE_150.html; sourceTree = "<group>"; };
-		D445F6E81FBCC6D900171402 /* NEVIRAPINE_200.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = NEVIRAPINE_200.html; sourceTree = "<group>"; };
-		D445F6E91FBCC6DA00171402 /* TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html; sourceTree = "<group>"; };
-		D445F6EA1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html"; sourceTree = "<group>"; };
-		D445F6EB1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html; sourceTree = "<group>"; };
-		D445F6EC1FBCC6DA00171402 /* mystyle.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = mystyle.css; sourceTree = "<group>"; };
-		D445F6ED1FBCC6DA00171402 /* TENOFOVIR_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TENOFOVIR_300.html; sourceTree = "<group>"; };
-		D445F6EE1FBCC6DA00171402 /* RITONAVIR_100.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = RITONAVIR_100.html; sourceTree = "<group>"; };
-		D445F6EF1FBCC6DA00171402 /* TENOFOVIR_LAMIVUDINE_300_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TENOFOVIR_LAMIVUDINE_300_300.html; sourceTree = "<group>"; };
-		D445F6F01FBCC6DB00171402 /* TERMS_CONDITIONS.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TERMS_CONDITIONS.html; sourceTree = "<group>"; };
-		D445F6F11FBCC6DB00171402 /* ATAZANAVIR_RITONAVIR_300_100.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ATAZANAVIR_RITONAVIR_300_100.html; sourceTree = "<group>"; };
-		D445F6F21FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LAMIVUDINE_ZIDOVUDINE_30_60.html; sourceTree = "<group>"; };
-		D445F6F31FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_150_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LAMIVUDINE_ZIDOVUDINE_150_300.html; sourceTree = "<group>"; };
-		D445F6F41FBCC6DB00171402 /* ABACAVIR_LAMIVUDINE_60_30.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_LAMIVUDINE_60_30.html; sourceTree = "<group>"; };
-		D445F6F51FBCC6DB00171402 /* TENOFOVIR_EMTRICITABINE_300_200.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TENOFOVIR_EMTRICITABINE_300_200.html; sourceTree = "<group>"; };
-		D445F6F61FBCC6DB00171402 /* ATAZANAVIR_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ATAZANAVIR_300.html; sourceTree = "<group>"; };
-		D445F6F71FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_100_25.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LOPINAVIR_RITONAVIR_100_25.html; sourceTree = "<group>"; };
-		D445F6F81FBCC6DC00171402 /* LAMIVUDINE_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LAMIVUDINE_300.html; sourceTree = "<group>"; };
-		D445F6F91FBCC6DC00171402 /* ABACAVIR_60.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_60.html; sourceTree = "<group>"; };
-		D445F6FA1FBCC6DC00171402 /* ATAZANAVIR_150.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ATAZANAVIR_150.html; sourceTree = "<group>"; };
-		D445F6FB1FBCC6DC00171402 /* TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html; sourceTree = "<group>"; };
-		D445F6FC1FBCC6DC00171402 /* EFAVIRENZ_600.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EFAVIRENZ_600.html; sourceTree = "<group>"; };
-		D445F6FD1FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_200_50.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LOPINAVIR_RITONAVIR_200_50.html; sourceTree = "<group>"; };
-		D445F6FE1FBCC6DD00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html; sourceTree = "<group>"; };
-		D445F6FF1FBCC6DD00171402 /* ABACAVIR_LAMIVUDINE_600_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_LAMIVUDINE_600_300.html; sourceTree = "<group>"; };
-		D445F7001FBCC6DD00171402 /* ABACAVIR_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_300.html; sourceTree = "<group>"; };
-		D445F7011FBCC6DD00171402 /* ABACAVIR_600.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ABACAVIR_600.html; sourceTree = "<group>"; };
-		D445F7021FBCC6DD00171402 /* ZIDOVUDINE_300.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ZIDOVUDINE_300.html; sourceTree = "<group>"; };
-		D445F7031FBCC6DD00171402 /* EFAVIRENZ_50_100_200.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EFAVIRENZ_50_100_200.html; sourceTree = "<group>"; };
-		D445F7041FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html"; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
 		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen9ViewController.swift; sourceTree = "<group>"; };
-		D4D314091F8C730C0069D113 /* Screen8ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8ViewController.swift; sourceTree = "<group>"; };
+		D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsTableViewCell.swift; sourceTree = "<group>"; };
+		D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsViewController.swift; sourceTree = "<group>"; };
+		D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitDetailsViewController.swift; sourceTree = "<group>"; };
+		D4B9E9931FBF5C020016A368 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
 		D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -273,9 +213,6 @@
 		967B93091FA0E306006B3A91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D445F6E51FBCC6B100171402 /* MedicinesHTML */,
-				91FBF7A81FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift */,
-				91FBF7A91FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift */,
 				962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */,
 				962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */,
 				967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */,
@@ -301,11 +238,13 @@
 		967B930B1FA0E34F006B3A91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */,
+				D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */,
+				D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */,
 				6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */,
 				967C2E3F1FA7CA4D00CA4A74 /* PersistenceService.swift */,
 				91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */,
 				D44616501F8AF23500780B56 /* Screen7ViewController.swift */,
-				D4D314091F8C730C0069D113 /* Screen8ViewController.swift */,
 				D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */,
 				D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */,
 				964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */,
@@ -335,45 +274,6 @@
 			children = (
 			);
 			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		D445F6E51FBCC6B100171402 /* MedicinesHTML */ = {
-			isa = PBXGroup;
-			children = (
-				D445F6F91FBCC6DC00171402 /* ABACAVIR_60.html */,
-				D445F7001FBCC6DD00171402 /* ABACAVIR_300.html */,
-				D445F7011FBCC6DD00171402 /* ABACAVIR_600.html */,
-				D445F6F41FBCC6DB00171402 /* ABACAVIR_LAMIVUDINE_60_30.html */,
-				D445F6FF1FBCC6DD00171402 /* ABACAVIR_LAMIVUDINE_600_300.html */,
-				D445F6EA1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html */,
-				D445F6EB1FBCC6DA00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html */,
-				D445F6FA1FBCC6DC00171402 /* ATAZANAVIR_150.html */,
-				D445F6F61FBCC6DB00171402 /* ATAZANAVIR_300.html */,
-				D445F6F11FBCC6DB00171402 /* ATAZANAVIR_RITONAVIR_300_100.html */,
-				D445F7031FBCC6DD00171402 /* EFAVIRENZ_50_100_200.html */,
-				D445F6FC1FBCC6DC00171402 /* EFAVIRENZ_600.html */,
-				D445F6E71FBCC6D900171402 /* LAMIVUDINE_150.html */,
-				D445F6F81FBCC6DC00171402 /* LAMIVUDINE_300.html */,
-				D445F7041FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html */,
-				D445F6FE1FBCC6DD00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html */,
-				D445F6E61FBCC6D900171402 /* LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html */,
-				D445F6F21FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60.html */,
-				D445F6F31FBCC6DB00171402 /* LAMIVUDINE_ZIDOVUDINE_150_300.html */,
-				D445F6F71FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_100_25.html */,
-				D445F6FD1FBCC6DC00171402 /* LOPINAVIR_RITONAVIR_200_50.html */,
-				D445F6EC1FBCC6DA00171402 /* mystyle.css */,
-				D445F6E81FBCC6D900171402 /* NEVIRAPINE_200.html */,
-				D445F6EE1FBCC6DA00171402 /* RITONAVIR_100.html */,
-				D445F6ED1FBCC6DA00171402 /* TENOFOVIR_300.html */,
-				D445F6F51FBCC6DB00171402 /* TENOFOVIR_EMTRICITABINE_300_200.html */,
-				D445F6E91FBCC6DA00171402 /* TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html */,
-				D445F6EF1FBCC6DA00171402 /* TENOFOVIR_LAMIVUDINE_300_300.html */,
-				D445F6FB1FBCC6DC00171402 /* TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html */,
-				D445F6F01FBCC6DB00171402 /* TERMS_CONDITIONS.html */,
-				D445F7021FBCC6DD00171402 /* ZIDOVUDINE_300.html */,
-			);
-			name = MedicinesHTML;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,40 +384,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D445F7111FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60.html in Resources */,
-				D445F70A1FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_300_150_300.html in Resources */,
-				D445F7141FBCC6DE00171402 /* TENOFOVIR_EMTRICITABINE_300_200.html in Resources */,
-				D445F7181FBCC6DE00171402 /* ABACAVIR_60.html in Resources */,
-				D445F71A1FBCC6DE00171402 /* TENOFOVIR_LAMIVUDINE_EFAVIRENZ_300_300_600.html in Resources */,
-				D445F7051FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_30_60_(DISPERSIBLE).html in Resources */,
-				D445F71B1FBCC6DE00171402 /* EFAVIRENZ_600.html in Resources */,
-				D445F7171FBCC6DE00171402 /* LAMIVUDINE_300.html in Resources */,
-				D445F7081FBCC6DE00171402 /* TENOFOVIR_EMTRICITABINE_EFAVIRENZ_300_200_600.html in Resources */,
-				D445F7211FBCC6DE00171402 /* ZIDOVUDINE_300.html in Resources */,
-				D445F7151FBCC6DE00171402 /* ATAZANAVIR_300.html in Resources */,
-				D445F70D1FBCC6DE00171402 /* RITONAVIR_100.html in Resources */,
-				D445F70F1FBCC6DE00171402 /* TERMS_CONDITIONS.html in Resources */,
-				D445F7201FBCC6DE00171402 /* ABACAVIR_600.html in Resources */,
-				D445F71C1FBCC6DE00171402 /* LOPINAVIR_RITONAVIR_200_50.html in Resources */,
-				D445F7161FBCC6DE00171402 /* LOPINAVIR_RITONAVIR_100_25.html in Resources */,
-				D445F7131FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_60_30.html in Resources */,
-				D445F7101FBCC6DE00171402 /* ATAZANAVIR_RITONAVIR_300_100.html in Resources */,
 				914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */,
-				D445F7221FBCC6DE00171402 /* EFAVIRENZ_50_100_200.html in Resources */,
-				D445F7121FBCC6DE00171402 /* LAMIVUDINE_ZIDOVUDINE_150_300.html in Resources */,
-				D445F7071FBCC6DE00171402 /* NEVIRAPINE_200.html in Resources */,
+				D4B9E9941FBF5C020016A368 /* assets in Resources */,
 				914FFE481F7AAFAB00AB6C8D /* Assets.xcassets in Resources */,
-				D445F7091FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_ZIDOVUDINE_60_30_60_(DISPERSIBLE).html in Resources */,
-				D445F70E1FBCC6DE00171402 /* TENOFOVIR_LAMIVUDINE_300_300.html in Resources */,
-				D445F70C1FBCC6DE00171402 /* TENOFOVIR_300.html in Resources */,
-				D445F71F1FBCC6DE00171402 /* ABACAVIR_300.html in Resources */,
-				D445F7191FBCC6DE00171402 /* ATAZANAVIR_150.html in Resources */,
 				914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */,
-				D445F7231FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_60_30_50 (DISPERSIBLE).html in Resources */,
-				D445F7061FBCC6DE00171402 /* LAMIVUDINE_150.html in Resources */,
-				D445F71D1FBCC6DE00171402 /* LAMIVUDINE_NEVIRAPINE_ZIDOVUDINE_150_200_300.html in Resources */,
-				D445F70B1FBCC6DE00171402 /* mystyle.css in Resources */,
-				D445F71E1FBCC6DE00171402 /* ABACAVIR_LAMIVUDINE_600_300.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +445,6 @@
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
 				D49E3DC41FABE50800533846 /* Drug.swift in Sources */,
 				967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */,
-				D4D3140A1F8C730C0069D113 /* Screen8ViewController.swift in Sources */,
 				967C2E441FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift in Sources */,
 				D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */,
 				967B93101FA10325006B3A91 /* ConfirmPIN_VC.swift in Sources */,
@@ -583,12 +452,15 @@
 				91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
+				D4B9E94F1FBEA6590016A368 /* VisitsViewController.swift in Sources */,
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
 				91FBF7AA1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift in Sources */,
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
+				D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */,
+				D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				912D14EF1FC516C0004B0789 /* CalendarCell.swift in Sources */,

@@ -18,7 +18,13 @@ class Screen9ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let MedicineName = drugDetails[0].uppercased()
+        let index = MedicineName.index(of: ".") ?? MedicineName.endIndex
+        let beginning = MedicineName[..<index]
+        let htmlPath = Bundle.main.path(forResource: "/assets/"+beginning, ofType: "html")
+        let url = URL(fileURLWithPath: htmlPath!)
+        let request = URLRequest(url: url)
+        DrugWebView.load(request)
         
         
         // Do any additional setup after loading the view.
