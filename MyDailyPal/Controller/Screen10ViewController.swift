@@ -22,8 +22,10 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @IBOutlet weak var tabletPicker: UIPickerView!
   @IBOutlet weak var dosagePicker: UIPickerView!
   @IBOutlet weak var setTimeButton: UILabel!
+  //var medication: String
   var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var tabletArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+  var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
   override func viewDidLoad() {
         super.viewDidLoad()
         dosagePicker.delegate = self
@@ -41,7 +43,15 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
+  @IBAction func next(_ sender: Any) {
+    treatmentPlan.medication = "a"
+    treatmentPlan.attribute = "b"
+    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
+    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
+    PersistenceService.saveContext()
+    performSegue(withIdentifier: "tomytreatment", sender: self)
+  }
+  override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -79,6 +89,12 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     cancelTimeButton.isHidden = true
     transparentBackgound.isHidden = true
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let myTreatmentViewControler = segue.destination as! Screen4ViewController
+    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
+  }
+  
   @IBAction func clickCancelButton(_ sender: UIButton) {
     timePicker.isHidden = true
     timePickerBackground.isHidden = true

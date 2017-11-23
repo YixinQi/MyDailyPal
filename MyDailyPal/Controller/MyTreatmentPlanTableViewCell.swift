@@ -11,10 +11,12 @@ import UIKit
 class MyTreatmentPlanTableViewCell: UITableViewCell {
 
   @IBOutlet weak var MyTreatmentPlan: UILabel!
+  @IBOutlet weak var Description: UILabel!
   @IBOutlet weak var Icon: UIImageView!
   
   func setTreatment(treatmentplan: MyTreatmentPlan) {
     MyTreatmentPlan.text = treatmentplan.treatmentPlan
+    Description.text = treatmentplan.attribute
     Icon.image = treatmentplan.icon
   }
 }

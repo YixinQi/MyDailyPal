@@ -9,7 +9,7 @@
 import UIKit
 
 class Screen4ViewController: UIViewController {
-  var treatmentPlan: [MyTreatmentPlan] = []
+  var treatmentPlan = [TreatmentPlan]()
   @IBOutlet weak var treatmentTableView: UITableView!
   @IBOutlet weak var MyTreatmentProcess: UIImageView!
   @IBOutlet weak var line: UIImageView!
@@ -40,7 +40,6 @@ class Screen4ViewController: UIViewController {
       plusButton.addGestureRecognizer(tap)
       plusButton.isUserInteractionEnabled = true
       super.viewDidLoad()
-      treatmentPlan = creatArray()
       treatmentTableView.delegate = self
       treatmentTableView.dataSource = self
     }
@@ -50,19 +49,6 @@ class Screen4ViewController: UIViewController {
     let vc = storyboard.instantiateViewController(withIdentifier: "Screen8")
     self.present(vc, animated: true, completion: nil)
   }
-  
-  func creatArray() -> [MyTreatmentPlan] {
-    var tempTreatment: [MyTreatmentPlan] = []
-    let treatment1 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Lopinavir/ritonavir 100/25mg Tablets")
-    let treatment2 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Tenofovir/Lamivudine/Efavirenz 300/300/600mg Tablets.")
-    let treatment3 = MyTreatmentPlan(iconImage: UIImage(named: "1")!, treatmentPlan: "Lamivudine/Nevirapine/Zidovudine 30/50/60mg Dispersible Tablets")
-    tempTreatment.append(treatment1)
-    tempTreatment.append(treatment2)
-    tempTreatment.append(treatment3)
-    return tempTreatment
-  }
-  
-
 }
 
 extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -71,9 +57,10 @@ extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let treatment = treatmentPlan[indexPath.row]
     let cell = tableView.dequeueReusableCell(withIdentifier: "TreatmentCell") as! MyTreatmentPlanTableViewCell
-    cell.setTreatment(treatmentplan: treatment)
+    cell.MyTreatmentPlan.text = treatmentPlan[indexPath.row].medication
+    cell.Description.text = treatmentPlan[indexPath.row].attribute
+    cell.Icon.image = UIImage(named: "1")
     return cell
   }
   func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
