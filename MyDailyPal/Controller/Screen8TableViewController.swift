@@ -68,7 +68,7 @@ class Screen8TableViewController: UITableViewController {
     @IBAction func ScheduleButton(_ sender: Any) {
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
-        //DetailVC.Medication = drugName
+        DetailVC.Medication = drugName
         self.navigationController?.pushViewController(DetailVC, animated: true)
     }
     /*
