@@ -23,6 +23,8 @@
 		914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914FFE491F7AAFAB00AB6C8D /* LaunchScreen.storyboard */; };
 		914FFE561F7AAFAB00AB6C8D /* MyDailyPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE551F7AAFAB00AB6C8D /* MyDailyPalTests.swift */; };
 		914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */; };
+		918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */; };
+		918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */; };
 		9198B83D1FC50DD30074F583 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */; };
 		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
 		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
@@ -93,6 +95,8 @@
 		914FFE5C1F7AAFAB00AB6C8D /* MyDailyPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyDailyPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDailyPalUITests.swift; sourceTree = "<group>"; };
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 			children = (
 				962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */,
 				962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */,
+				918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */,
+				9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */,
 				967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */,
 				967C2E421FA7CD9E00CA4A74 /* Preferences+CoreDataProperties.swift */,
 				967B93131FA12385006B3A91 /* SecurityQuestion.swift */,
@@ -433,6 +439,7 @@
 				962DB3091FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift in Sources */,
 				967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */,
 				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
+				918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */,
 				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
 				962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */,
@@ -441,6 +448,7 @@
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
+				918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */,
 				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
 				D49E3DC41FABE50800533846 /* Drug.swift in Sources */,

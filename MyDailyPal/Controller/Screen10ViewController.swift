@@ -13,6 +13,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 1
   }
   
+  @IBOutlet weak var Medication: UILabel!
   @IBOutlet weak var timePicker: UIDatePicker!
   @IBOutlet weak var transparentBackgound: UIView!
   @IBOutlet weak var timePickerBackground: UIView!
