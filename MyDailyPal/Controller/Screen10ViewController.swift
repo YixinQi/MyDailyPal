@@ -49,6 +49,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //treatmentPlan.attribute = "b"
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
+    treatmentPlan.startDate = timePicker.date as NSDate
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
