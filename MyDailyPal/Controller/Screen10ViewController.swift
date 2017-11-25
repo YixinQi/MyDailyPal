@@ -45,8 +45,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
 
   @IBAction func next(_ sender: Any) {
-    treatmentPlan.medication = "a"
-    treatmentPlan.attribute = "b"
+    treatmentPlan.medication = Medication.text
+    //treatmentPlan.attribute = "b"
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     PersistenceService.saveContext()
