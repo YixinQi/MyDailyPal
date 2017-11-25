@@ -13,8 +13,6 @@
 		6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */; };
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
-		912D14EF1FC516C0004B0789 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912D14EE1FC516C0004B0789 /* CalendarCell.swift */; };
-		912D14F11FC518CC004B0789 /* Screen11ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912D14F01FC518CC004B0789 /* Screen11ViewController.swift */; };
 		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
@@ -25,7 +23,6 @@
 		914FFE611F7AAFAB00AB6C8D /* MyDailyPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE601F7AAFAB00AB6C8D /* MyDailyPalUITests.swift */; };
 		918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */; };
 		918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */; };
-		9198B83D1FC50DD30074F583 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */; };
 		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
 		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
 		91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */; };
@@ -79,8 +76,6 @@
 		6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		912D14EE1FC516C0004B0789 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
-		912D14F01FC518CC004B0789 /* Screen11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Screen11ViewController.swift; path = MyDailyPal/Controller/Screen11ViewController.swift; sourceTree = SOURCE_ROOT; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +92,7 @@
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		918845741FC904E0007FF67C /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FSCalendar; path = "../../../Downloads/FSCalendar-master/FSCalendar"; sourceTree = "<group>"; };
 		9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
@@ -132,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9198B83D1FC50DD30074F583 /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +173,7 @@
 		914FFE3F1F7AAFAB00AB6C8D /* MyDailyPal */ = {
 			isa = PBXGroup;
 			children = (
+				918845741FC904E0007FF67C /* FSCalendar */,
 				967B930B1FA0E34F006B3A91 /* Controller */,
 				967B930A1FA0E344006B3A91 /* View */,
 				967B93091FA0E306006B3A91 /* Model */,
@@ -270,8 +266,6 @@
 				6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */,
 				D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */,
 				6032371D1FC14A5800661D31 /* PreferenceViewController.swift */,
-				912D14F01FC518CC004B0789 /* Screen11ViewController.swift */,
-				912D14EE1FC516C0004B0789 /* CalendarCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -421,13 +415,13 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -444,7 +438,6 @@
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
 				962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */,
 				91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */,
-				912D14F11FC518CC004B0789 /* Screen11ViewController.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
@@ -470,7 +463,6 @@
 				D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
-				912D14EF1FC516C0004B0789 /* CalendarCell.swift in Sources */,
 				D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,
 				914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */,
