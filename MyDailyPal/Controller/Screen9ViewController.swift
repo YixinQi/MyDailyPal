@@ -35,6 +35,13 @@ class Screen9ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func Screen10NextButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name:"Main", bundle:nil)
+        let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
+        DetailVC.Medication = drugName
+        self.navigationController?.pushViewController(DetailVC, animated: true)
+    }
+    
     
 
     /*

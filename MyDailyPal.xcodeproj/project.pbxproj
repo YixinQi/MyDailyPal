@@ -48,7 +48,7 @@
 		D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */; };
 		D4B9E94F1FBEA6590016A368 /* VisitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */; };
 		D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */; };
-		D4B9E9941FBF5C020016A368 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D4B9E9931FBF5C020016A368 /* assets */; };
+		D4C76EC21FC8E5F200896EF4 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D4C76EC11FC8E5F200896EF4 /* assets */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
 		D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -118,7 +118,7 @@
 		D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsTableViewCell.swift; sourceTree = "<group>"; };
 		D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsViewController.swift; sourceTree = "<group>"; };
 		D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitDetailsViewController.swift; sourceTree = "<group>"; };
-		D4B9E9931FBF5C020016A368 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		D4C76EC11FC8E5F200896EF4 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
 		D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,6 +238,7 @@
 		967B930B1FA0E34F006B3A91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D4C76EC11FC8E5F200896EF4 /* assets */,
 				D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */,
 				D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */,
 				D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */,
@@ -384,8 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4C76EC21FC8E5F200896EF4 /* assets in Resources */,
 				914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */,
-				D4B9E9941FBF5C020016A368 /* assets in Resources */,
 				914FFE481F7AAFAB00AB6C8D /* Assets.xcassets in Resources */,
 				914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */,
 			);
@@ -439,7 +440,6 @@
 				912D14F11FC518CC004B0789 /* Screen11ViewController.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
-				91FBF7AB1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataProperties.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
@@ -456,7 +456,6 @@
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
-				91FBF7AA1FC36B5C0062BCA8 /* TreatmentPlan+CoreDataClass.swift in Sources */,
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */,
