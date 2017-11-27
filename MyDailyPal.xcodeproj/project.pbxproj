@@ -13,6 +13,8 @@
 		6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */; };
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
+		91357F571FCBE79100B0B857 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */; };
+		91357F591FCBE94600B0B857 /* CustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91357F581FCBE94600B0B857 /* CustomeCell.swift */; };
 		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
@@ -76,8 +78,9 @@
 		6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
-		607396B11FC93D430064B1DA /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FSCalendar; sourceTree = SOURCE_ROOT; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
+		91357F581FCBE94600B0B857 /* CustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeCell.swift; sourceTree = "<group>"; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,9 +97,7 @@
 		914FFE621F7AAFAB00AB6C8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TreatmentPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
-		918845741FC904E0007FF67C /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; name = FSCalendar; path = "../../../Downloads/FSCalendar-master/FSCalendar"; sourceTree = "<group>"; };
 		918845771FC93EF5007FF67C /* Screen11ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen11ViewController.swift; sourceTree = "<group>"; };
-		9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
 		91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91357F571FCBE79100B0B857 /* JTAppleCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +178,6 @@
 		914FFE3F1F7AAFAB00AB6C8D /* MyDailyPal */ = {
 			isa = PBXGroup;
 			children = (
-				607396B11FC93D430064B1DA /* FSCalendar */,
 				967B930B1FA0E34F006B3A91 /* Controller */,
 				967B930A1FA0E344006B3A91 /* View */,
 				967B93091FA0E306006B3A91 /* Model */,
@@ -208,7 +209,7 @@
 		9198B83B1FC50DD20074F583 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9198B83C1FC50DD30074F583 /* JTAppleCalendar.framework */,
+				91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -270,6 +271,7 @@
 				6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */,
 				D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */,
 				6032371D1FC14A5800661D31 /* PreferenceViewController.swift */,
+				91357F581FCBE94600B0B857 /* CustomeCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -419,13 +421,13 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/JTAppleCalendar.framework",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -446,6 +448,7 @@
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */,
+				91357F591FCBE94600B0B857 /* CustomeCell.swift in Sources */,
 				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
 				918845781FC93EF6007FF67C /* Screen11ViewController.swift in Sources */,
