@@ -14,7 +14,26 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //Table that will hold the visits
     @IBOutlet weak var visitsTableView: UITableView!
     
-//Data Structure that holds the actual data for the table
+    @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
+    var showMenu = false
+    
+    @IBAction func menuButtonAction(_ sender: Any) {
+        if(showMenu){
+            trailingConstraints.constant = 375
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingConstraints.constant = 25
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
+    }
+    //Data Structure that holds the actual data for the table
     var visits = [DoctorVisit]()
     
 //Used to determine if we are adding a new visit or editing an existing one

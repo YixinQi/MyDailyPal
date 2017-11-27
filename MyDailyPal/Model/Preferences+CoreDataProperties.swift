@@ -24,5 +24,9 @@ extension Preferences {
     @NSManaged public var answer1: String?
     @NSManaged public var answer2: String?
     @NSManaged public var pinActivated: Bool
+    @NSManaged public var notificationTime: String
+    @NSManaged public var showNotification: Bool
+    @NSManaged public var showTips: Bool
+    @NSManaged public var showTarget: String
 
 }

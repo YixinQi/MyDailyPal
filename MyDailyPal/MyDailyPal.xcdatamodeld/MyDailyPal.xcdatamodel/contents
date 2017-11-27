@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13233.4" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="DoctorVisit" representedClassName="DoctorVisit" syncable="YES">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="doctor" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,10 +9,14 @@
     <entity name="Preferences" representedClassName="Preferences" syncable="YES">
         <attribute name="answer1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="answer2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pin" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="pinActivated" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="question1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="question2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showNotification" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="showTarget" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="showTips" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="TreatmentPlan" representedClassName="TreatmentPlan" syncable="YES">
         <attribute name="attribute" optional="YES" attributeType="String" syncable="YES"/>
@@ -25,7 +29,7 @@
     </entity>
     <elements>
         <element name="DoctorVisit" positionX="-63" positionY="27" width="128" height="105"/>
-        <element name="Preferences" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Preferences" positionX="-63" positionY="-18" width="128" height="195"/>
         <element name="TreatmentPlan" positionX="-63" positionY="36" width="128" height="150"/>
     </elements>
 </model>
