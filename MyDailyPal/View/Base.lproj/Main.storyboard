@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLD-Bd-Xg6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1079,10 +1079,7 @@ tapping PIN.</string>
                                 <rect key="frame" x="87" y="66" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n% 
-on Target 
-since 
-2017-Aug-20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-BS-afB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n%  on Target  since  2017-Aug-20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-BS-afB">
                                 <rect key="frame" x="76" y="106" width="224" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1109,9 +1106,6 @@ since
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="1BE-td-bsj" kind="show" id="NcO-Ki-E40"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-Gd-Jd1">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -1123,9 +1117,6 @@ since
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="wKU-jg-A7x" kind="show" id="SsY-zf-C3y"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qn-s1-dZg">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -1137,9 +1128,6 @@ since
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="I7Z-ar-Mbm" kind="show" id="PNb-Ul-Gui"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-Cd-2nq">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -1541,7 +1529,7 @@ since
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="309" y="390" width="52" height="30"/>
+                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1570,7 +1558,7 @@ since
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="309" y="440" width="52" height="30"/>
+                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -1748,9 +1736,6 @@ since
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="1BE-td-bsj" kind="show" id="ELN-cp-Nfe"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS3-9U-bL0">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -1762,9 +1747,6 @@ since
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="wKU-jg-A7x" kind="show" id="Hmt-Ey-dA6"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-HB-qWP">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -1776,9 +1758,6 @@ since
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="I7Z-ar-Mbm" kind="show" id="NVI-aW-tcL"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-cC-e2p">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -1975,7 +1954,7 @@ since
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s44-i3-xFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4736.8000000000002" y="3312.5937031484259"/>
+            <point key="canvasLocation" x="5250" y="3280"/>
         </scene>
         <!--My Side Effects-->
         <scene sceneID="VxW-bF-XZT">
@@ -2048,9 +2027,6 @@ since
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="1BE-td-bsj" kind="show" id="vY0-AZ-Ndx"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcN-ki-tLr">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -2062,9 +2038,6 @@ since
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="wKU-jg-A7x" kind="show" id="B2U-7Y-Obm"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHS-TJ-wJf">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -2076,9 +2049,6 @@ since
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="I7Z-ar-Mbm" kind="show" id="glc-qt-68U"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSv-pX-SmR">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -2194,7 +2164,7 @@ since
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Apb-Qh-ZGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6565.6000000000004" y="3446.6266866566721"/>
+            <point key="canvasLocation" x="6904.8000000000002" y="3446.6266866566721"/>
         </scene>
         <!--My Tips and Information-->
         <scene sceneID="acg-xf-R0c">
@@ -2634,9 +2604,6 @@ since
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="1BE-td-bsj" kind="show" id="Xpx-Sf-Wg2"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mz2-Ys-cMY">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -2648,9 +2615,6 @@ since
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="wKU-jg-A7x" kind="show" id="KFA-Xh-Tgq"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gC-NW-caO">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -2662,9 +2626,6 @@ since
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="I7Z-ar-Mbm" kind="show" id="Mgp-HN-zeN"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-9f-GPM">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -2782,7 +2743,7 @@ since
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVG-nR-Jbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7236" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="7575.1999999999998" y="2718.8905547226391"/>
         </scene>
         <!--VisitDetails-->
         <scene sceneID="8lY-mS-PC7">
@@ -2866,12 +2827,11 @@ since
                         <outlet property="locationLabel" destination="Wdu-4u-geN" id="qNA-cy-zAU"/>
                         <outlet property="remindMeSwitch" destination="dTN-MU-s6l" id="nUW-4P-jq1"/>
                         <outlet property="whenLabel" destination="bPd-Xo-pNR" id="VQQ-2H-ScR"/>
-                        <segue destination="I7Z-ar-Mbm" kind="show" identifier="saveVisit" id="eWb-3s-225"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRc-7y-mPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8015.1999999999998" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="8354.3999999999996" y="2718.8905547226391"/>
         </scene>
         <!--Setup New Treatment-->
         <scene sceneID="9MB-7G-jee">
@@ -3138,8 +3098,7 @@ since
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="backButtonPressed:" destination="Ciw-vD-vL3" eventType="touchUpInside" id="QWS-v5-N29"/>
-                                                    <action selector="clickSaveButton:" destination="aLD-Bd-Xg6" eventType="touchUpInside" id="FIJ-Gg-CIg"/>
+                                                    <action selector="clickSave:" destination="aLD-Bd-Xg6" eventType="touchUpInside" id="MX7-zR-nBK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tu7-tN-aJ7">
@@ -3151,7 +3110,7 @@ since
                                                 </state>
                                                 <connections>
                                                     <action selector="backButtonPressed:" destination="Ciw-vD-vL3" eventType="touchUpInside" id="QZi-fc-3FN"/>
-                                                    <action selector="clickCancelButton:" destination="aLD-Bd-Xg6" eventType="touchUpInside" id="aa5-uz-z9a"/>
+                                                    <action selector="clickCancelButton:" destination="aLD-Bd-Xg6" eventType="touchUpInside" id="dxX-cA-w6t"/>
                                                     <action selector="clickSaveButton:" destination="aLD-Bd-Xg6" eventType="touchUpInside" id="7Ve-9N-moP"/>
                                                 </connections>
                                             </button>
@@ -3285,6 +3244,24 @@ since
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwA-cM-QkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6tk-G0-7Hi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s17-ju-7eC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f2u-OZ-5qF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="86h-et-D04" kind="relationship" relationship="rootViewController" id="xuM-JB-OGW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaZ-uG-Lao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4487" y="3231"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Loading-welcome screen image" width="3333" height="5000"/>
@@ -3302,11 +3279,10 @@ since
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dlp-wf-iWd"/>
         <segue reference="rcD-LN-hkq"/>
-        <segue reference="oU1-p0-Pua"/>
-        <segue reference="drF-mK-4BT"/>
-        <segue reference="0Hx-nR-LbK"/>
->>>>>>> dc7aa0b39bb3027fcf5a610bffb5654fcd05be98
+        <segue reference="GCy-I1-OTQ"/>
+        <segue reference="j5J-h6-Oai"/>
+        <segue reference="Uw7-eH-aiR"/>
+        <segue reference="c2W-7J-82N"/>
     </inferredMetricsTieBreakers>
 </document>
