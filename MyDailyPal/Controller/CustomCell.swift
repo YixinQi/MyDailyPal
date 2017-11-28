@@ -1,5 +1,5 @@
 //
-//  CustomeCell.swift
+//  CustomCell.swift
 //  MyDailyPal
 //
 //  Created by Yixin Qi on 11/27/17.
@@ -9,6 +9,6 @@
 import UIKit
 import JTAppleCalendar
 
-class CustomeCell: JTAppleCell {
+class CustomCell: JTAppleCell {
   @IBOutlet weak var dateLabel: UILabel!
 }

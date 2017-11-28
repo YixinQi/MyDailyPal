@@ -14,7 +14,7 @@
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
 		91357F571FCBE79100B0B857 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */; };
-		91357F591FCBE94600B0B857 /* CustomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91357F581FCBE94600B0B857 /* CustomeCell.swift */; };
+		91357F591FCBE94600B0B857 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91357F581FCBE94600B0B857 /* CustomCell.swift */; };
 		913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */; };
 		914FFE411F7AAFAB00AB6C8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */; };
 		914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914FFE421F7AAFAB00AB6C8D /* ViewController.swift */; };
@@ -80,7 +80,7 @@
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
-		91357F581FCBE94600B0B857 /* CustomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeCell.swift; sourceTree = "<group>"; };
+		91357F581FCBE94600B0B857 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 				6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */,
 				D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */,
 				6032371D1FC14A5800661D31 /* PreferenceViewController.swift */,
-				91357F581FCBE94600B0B857 /* CustomeCell.swift */,
+				91357F581FCBE94600B0B857 /* CustomCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -448,7 +448,7 @@
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */,
-				91357F591FCBE94600B0B857 /* CustomeCell.swift in Sources */,
+				91357F591FCBE94600B0B857 /* CustomCell.swift in Sources */,
 				6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */,
 				D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */,
 				918845781FC93EF6007FF67C /* Screen11ViewController.swift in Sources */,
