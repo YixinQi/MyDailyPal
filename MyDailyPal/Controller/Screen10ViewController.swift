@@ -20,7 +20,6 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @IBOutlet weak var Friday: UILabel!
   @IBOutlet weak var Saturday: UILabel!
   @IBOutlet weak var Sunday: UILabel!
-  @IBOutlet weak var everydaySwitch: UISwitch!
   
   @IBAction func EveryDay(_ sender: Any) {
     if everydaySwitch.isOn == true{
@@ -102,29 +101,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate
-    treatmentPlan.remindTime = timePicker.date as NSDate
-    if Monday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Monday,"
-    }
-    if Tuesday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Tuesday,"
-    }
-    if Wendsday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Wendsday,"
-    }
-    if Thursday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Thursday,"
-    }
-    if Friday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Friday,"
-    }
-    if Saturday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Saturday,"
-    }
-    if Sunday.textColor == UIColor.red {
-      treatmentPlan.repeate = treatmentPlan.repeate! + "Sunday,"
-    }
-
+    //treatmentPlan.remindTime = timePicker.date as NSDate
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
@@ -159,53 +136,32 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //transparentBackground.isHidden = false
   }
   @objc func tap1(gestureRecognizer: UITapGestureRecognizer){
-    if Monday.textColor == UIColor.black {
-      Monday.textColor = UIColor.red
-    } else {
-      Monday.textColor = UIColor.black
-    }
+    Monday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Monday.text!
   }
   @objc func tap2(gestureRecognizer: UITapGestureRecognizer){
-    if Tuesday.textColor == UIColor.black {
-      Tuesday.textColor = UIColor.red
-    } else {
-      Tuesday.textColor = UIColor.black
-    }
+    Tuesday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Tuesday.text!
   }
   @objc func tap3(gestureRecognizer: UITapGestureRecognizer){
-    if Wendsday.textColor == UIColor.black {
-      Wendsday.textColor = UIColor.red
-    } else {
-      Wendsday.textColor = UIColor.black
-    }
+    Wendsday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Wendsday.text!
   }
   @objc func tap4(gestureRecognizer: UITapGestureRecognizer){
-    if Thursday.textColor == UIColor.black {
-      Thursday.textColor = UIColor.red
-    } else {
-      Thursday.textColor = UIColor.black
-    }
+    Thursday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Thursday.text!
   }
   @objc func tap5(gestureRecognizer: UITapGestureRecognizer){
-    if Friday.textColor == UIColor.black {
-      Friday.textColor = UIColor.red
-    } else {
-      Friday.textColor = UIColor.black
-    }
+    Friday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Friday.text!
   }
   @objc func tap6(gestureRecognizer: UITapGestureRecognizer){
-    if Saturday.textColor == UIColor.black {
-      Saturday.textColor = UIColor.red
-    } else {
-      Saturday.textColor = UIColor.black
-    }
+    Saturday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Saturday.text!
   }
   @objc func tap7(gestureRecognizer: UITapGestureRecognizer){
-    if Sunday.textColor == UIColor.black {
-      Sunday.textColor = UIColor.red
-    } else {
-      Sunday.textColor = UIColor.black
-    }
+    Sunday.textColor = UIColor.red
+    treatmentPlan.repeate = treatmentPlan.repeate! + Sunday.text!
   }
 
   @IBAction func clickSaveButton(_ sender: UIButton) {
