@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_MODULE_NAMESPACE_PUSH("JTAppleCalendar")
 @class UICollectionViewLayout;
 @class NSCoder;
+@protocol UIViewControllerTransitionCoordinator;
 
 /// An instance of JTAppleCalendarView (or simply, a calendar view) is a
 /// means for displaying and interacting with a gridstyle layout of date-cells
@@ -196,31 +197,32 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Configures the size of your date cells
 @property (nonatomic) CGFloat cellSize;
 /// Enables/Disables the stretching of date cells. When enabled cells will stretch to fit the width of a month in case of a <= 5 row month.
-@property (nonatomic) BOOL allowsDateCellStretching SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.allowsDateCellStretching' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL allowsDateCellStretching;
 /// Alerts the calendar that range selection will be checked. If you are
 /// not using rangeSelection and you enable this,
 /// then whenever you click on a datecell, you may notice a very fast
 /// refreshing of the date-cells both left and right of the cell you
 /// just selected.
-@property (nonatomic) BOOL isRangeSelectionUsed SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.isRangeSelectionUsed' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic) BOOL isRangeSelectionUsed;
 /// Implemented by subclasses to initialize a new object (the receiver) immediately after memory for it has been allocated.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Initializes and returns a newly allocated collection view object with the specified frame and layout.
-- (nonnull instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE_MSG("Please use JTAppleCalendarView() instead. It manages its own layout.");
+- (nonnull instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 /// Initializes using decoder object
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic) UIEdgeInsets sectionInset SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.sectionInset' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) CGFloat minimumInteritemSpacing SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.minimumInteritemSpacing' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) CGFloat minimumLineSpacing SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.minimumLineSpacing' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-
-
-
-@interface JTAppleCalendarView (SWIFT_EXTENSION(JTAppleCalendar))
+/// Notifies the container that the size of its view is about to change.
+- (void)viewWillTransitionTo:(CGSize)size with:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator focusDateIndexPathAfterRotate:(NSIndexPath * _Nullable)focusDateIndexPathAfterRotate;
+/// Lays out subviews.
+- (void)layoutSubviews;
+@property (nonatomic) UIEdgeInsets sectionInset;
+@property (nonatomic) CGFloat minimumInteritemSpacing;
+@property (nonatomic) CGFloat minimumLineSpacing;
 /// A semantic description of the view’s contents, used to determine whether the view should be flipped when switching between left-to-right and right-to-left layouts.
 @property (nonatomic) UISemanticContentAttribute semanticContentAttribute;
+- (void)reloadData SWIFT_UNAVAILABLE;
 @end
+
+
 
 @class UIScrollView;
 
@@ -228,7 +230,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Inform the scrollViewDidEndDecelerating
 /// function that scrolling just occurred
 - (void)scrollViewDidScrollToTop:(UIScrollView * _Nonnull)scrollView;
-- (void)saveLastContentOffset:(CGPoint)offset SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.saveLastContentOffset(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)saveLastContentOffset:(CGPoint)offset;
 /// Tells the delegate when the user finishes scrolling the content.
 - (void)scrollViewWillEndDragging:(UIScrollView * _Nonnull)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(CGPoint * _Nonnull)targetContentOffset;
 /// Tells the delegate when a scrolling
@@ -237,11 +239,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Tells the delegate that the scroll view has
 /// ended decelerating the scrolling movement.
 - (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
-/// Tells the delegate that a scroll occured
-- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 @end
-
-
 
 @class UICollectionReusableView;
 @class UICollectionViewCell;
@@ -250,7 +248,6 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Asks your data source object to provide a
 /// supplementary view to display in the collection view.
 - (UICollectionReusableView * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView viewForSupplementaryElementOfKind:(NSString * _Nonnull)kind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView willDisplayCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 /// Asks your data source object for the cell that corresponds
 /// to the specified item in the collection view.
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -263,6 +260,11 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Asks the delegate if the specified item should be selected.
 /// true if the item should be selected or false if it should not.
 - (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Tells the delegate that the item at the specified path was deselected.
+/// The collection view calls this method when the user successfully
+/// deselects an item in the collection view.
+/// It does not call this method when you programmatically deselect items.
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 /// Asks the delegate if the specified item should be deselected.
 /// true if the item should be deselected or false if it should not.
 - (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -272,22 +274,11 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// It does not call this method when you programmatically
 /// set the selection.
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-/// Tells the delegate that the item at the specified path was deselected.
-/// The collection view calls this method when the user successfully
-/// deselects an item in the collection view.
-/// It does not call this method when you programmatically deselect items.
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (CGRect)sizeOfDecorationViewWithIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.sizeOfDecorationView(indexPath:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (CGRect)sizeOfDecorationViewWithIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
-@interface JTAppleCalendarView (SWIFT_EXTENSION(JTAppleCalendar))
-/// Lays out subviews.
-- (void)layoutSubviews;
-- (void)reloadData SWIFT_UNAVAILABLE;
-@end
 
-@protocol UIViewControllerTransitionCoordinator;
 @class UINib;
 @class JTAppleCollectionReusableView;
 @class JTAppleCell;
@@ -299,26 +290,14 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 ///     Parameter: this funciton triggers a delegate call by default. Set this to false if you do not want this
 ///   </li>
 /// </ul>
-- (void)deselectAllDatesWithTriggerSelectionDelegate:(BOOL)triggerSelectionDelegate SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.deselectAllDates(triggerSelectionDelegate:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Deselect dates
-/// <ul>
-///   <li>
-///     Parameter: Dates - The dates to deselect
-///   </li>
-///   <li>
-///     Parameter: triggerSelectionDelegate - this funciton triggers a delegate call by default. Set this to false if you do not want this
-///   </li>
-/// </ul>
-- (void)deselectWithDates:(NSArray<NSDate *> * _Nonnull)dates triggerSelectionDelegate:(BOOL)triggerSelectionDelegate SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.deselect(dates:triggerSelectionDelegate:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Notifies the container that the size of its view is about to change.
-- (void)viewWillTransitionTo:(CGSize)size with:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator anchorDate:(NSDate * _Nullable)anchorDate SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.viewWillTransition(to:with:anchorDate:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)deselectAllDatesWithTriggerSelectionDelegate:(BOOL)triggerSelectionDelegate;
 /// Generates a range of dates from from a startDate to an
 /// endDate you provide
 /// Parameter startDate: Start date to generate dates from
 /// Parameter endDate: End date to generate dates to
 /// returns:
 /// - An array of the successfully generated dates
-- (NSArray<NSDate *> * _Nonnull)generateDateRangeFrom:(NSDate * _Nonnull)startDate to:(NSDate * _Nonnull)endDate SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.generateDateRange(from:to:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (NSArray<NSDate *> * _Nonnull)generateDateRangeFrom:(NSDate * _Nonnull)startDate to:(NSDate * _Nonnull)endDate SWIFT_WARN_UNUSED_RESULT;
 /// Registers a class for use in creating supplementary views for the collection view.
 /// For now, the calendar only supports: ‘UICollectionElementKindSectionHeader’ for the forSupplementaryViewOfKind(parameter)
 - (void)registerClass:(Class _Nullable)viewClass forSupplementaryViewOfKind:(NSString * _Nonnull)elementKind withReuseIdentifier:(NSString * _Nonnull)identifier;
@@ -326,13 +305,13 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// For now, the calendar only supports: ‘UICollectionElementKindSectionHeader’ for the forSupplementaryViewOfKind(parameter)
 - (void)registerNib:(UINib * _Nullable)nib forSupplementaryViewOfKind:(NSString * _Nonnull)kind withReuseIdentifier:(NSString * _Nonnull)identifier;
 /// Dequeues re-usable calendar cells
-- (JTAppleCollectionReusableView * _Nonnull)dequeueReusableJTAppleSupplementaryViewWithReuseIdentifier:(NSString * _Nonnull)identifier for:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier:for:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (JTAppleCollectionReusableView * _Nonnull)dequeueReusableJTAppleSupplementaryViewWithReuseIdentifier:(NSString * _Nonnull)identifier for:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 /// Registers a nib for use in creating Decoration views for the collection view.
-- (void)registerDecorationViewWithNib:(UINib * _Nullable)nib SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.registerDecorationView(nib:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)registerDecorationViewWithNib:(UINib * _Nullable)nib;
 /// Registers a class for use in creating Decoration views for the collection view.
-- (void)registerWithViewClass:(Class _Nullable)className forDecorationViewOfKind:(NSString * _Nonnull)kind SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.register(viewClass:forDecorationViewOfKind:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)registerWithViewClass:(Class _Nullable)className forDecorationViewOfKind:(NSString * _Nonnull)kind;
 /// Dequeues a reuable calendar cell
-- (JTAppleCell * _Nonnull)dequeueReusableJTAppleCellWithReuseIdentifier:(NSString * _Nonnull)identifier for:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.dequeueReusableJTAppleCell(withReuseIdentifier:for:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (JTAppleCell * _Nonnull)dequeueReusableJTAppleCellWithReuseIdentifier:(NSString * _Nonnull)identifier for:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 /// \param date An anchordate that the calendar will
 /// scroll to after reload completes
 ///
@@ -341,12 +320,12 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// \param completionHandler This closure will run after
 /// the reload is complete
 ///
-- (void)reloadDataWithWithanchor:(NSDate * _Nullable)date completionHandler:(void (^ _Nullable)(void))completionHandler SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.reloadData(withanchor:completionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)reloadDataWith:(NSDate * _Nullable)anchorDate animation:(BOOL)animation completionHandler:(void (^ _Nullable)(void))completionHandler;
 /// Reload the date of specified date-cells on the calendar-view
 /// \param dates Date-cells with these specified
 /// dates will be reloaded
 ///
-- (void)reloadDates:(NSArray<NSDate *> * _Nonnull)dates SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.reloadDates(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)reloadDates:(NSArray<NSDate *> * _Nonnull)dates;
 /// Select a date-cell range
 /// \param startDate Date to start the selection from
 ///
@@ -363,9 +342,9 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// This overrides the default toggle behavior of selection.
 /// If true, selected cells will remain selected.
 ///
-- (void)selectDatesFrom:(NSDate * _Nonnull)startDate to:(NSDate * _Nonnull)endDate triggerSelectionDelegate:(BOOL)triggerSelectionDelegate keepSelectionIfMultiSelectionAllowed:(BOOL)keepSelectionIfMultiSelectionAllowed SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.selectDates(from:to:triggerSelectionDelegate:keepSelectionIfMultiSelectionAllowed:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)selectDatesFrom:(NSDate * _Nonnull)startDate to:(NSDate * _Nonnull)endDate triggerSelectionDelegate:(BOOL)triggerSelectionDelegate keepSelectionIfMultiSelectionAllowed:(BOOL)keepSelectionIfMultiSelectionAllowed;
 /// Deselect all selected dates within a range
-- (void)deselectDatesFrom:(NSDate * _Nonnull)start to:(NSDate * _Nullable)end triggerSelectionDelegate:(BOOL)triggerSelectionDelegate SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.deselectDates(from:to:triggerSelectionDelegate:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)deselectDatesFrom:(NSDate * _Nonnull)start to:(NSDate * _Nullable)end triggerSelectionDelegate:(BOOL)triggerSelectionDelegate;
 /// Select a date-cells
 /// \param date The date-cell with this date will be selected
 ///
@@ -375,7 +354,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// the delegate e.g. For instance, when youre initally setting up data
 /// in your viewDidLoad
 ///
-- (void)selectDates:(NSArray<NSDate *> * _Nonnull)dates triggerSelectionDelegate:(BOOL)triggerSelectionDelegate keepSelectionIfMultiSelectionAllowed:(BOOL)keepSelectionIfMultiSelectionAllowed SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.selectDates(_:triggerSelectionDelegate:keepSelectionIfMultiSelectionAllowed:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)selectDates:(NSArray<NSDate *> * _Nonnull)dates triggerSelectionDelegate:(BOOL)triggerSelectionDelegate keepSelectionIfMultiSelectionAllowed:(BOOL)keepSelectionIfMultiSelectionAllowed;
 /// Scrolls the calendar view to the start of a section view header.
 /// If the calendar has no headers registered, then this function does nothing
 /// <ul>
@@ -384,7 +363,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 ///     a this provided date
 ///   </li>
 /// </ul>
-- (void)scrollToHeaderForDate:(NSDate * _Nonnull)date triggerScrollToDateDelegate:(BOOL)triggerScrollToDateDelegate withAnimation:(BOOL)animation extraAddedOffset:(CGFloat)extraAddedOffset completionHandler:(void (^ _Nullable)(void))completionHandler SWIFT_DEPRECATED_OBJC("Swift method 'JTAppleCalendarView.scrollToHeaderForDate(_:triggerScrollToDateDelegate:withAnimation:extraAddedOffset:completionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)scrollToHeaderForDate:(NSDate * _Nonnull)date triggerScrollToDateDelegate:(BOOL)triggerScrollToDateDelegate withAnimation:(BOOL)animation extraAddedOffset:(CGFloat)extraAddedOffset completionHandler:(void (^ _Nullable)(void))completionHandler;
 @end
 
 
@@ -398,7 +377,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 @property (nonatomic, strong) id <UICollectionViewDelegate> _Nullable delegate;
 @property (nonatomic, strong) id <UICollectionViewDataSource> _Nullable dataSource;
 /// Returns all selected dates
-@property (nonatomic, readonly, copy) NSArray<NSDate *> * _Nonnull selectedDates SWIFT_DEPRECATED_OBJC("Swift property 'JTAppleCalendarView.selectedDates' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, readonly, copy) NSArray<NSDate *> * _Nonnull selectedDates;
 @end
 
 

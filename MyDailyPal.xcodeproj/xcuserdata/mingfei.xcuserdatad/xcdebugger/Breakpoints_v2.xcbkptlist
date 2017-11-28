@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/TipsViewController.swift"
+            timestampString = "533433456.391727"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "tipList"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/TIpsTableViewCell.swift"
+            timestampString = "531987009.655597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "9"
+            endingLineNumber = "9"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TIpsTableViewCell.__deallocating_deinit"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TIpsTableViewCell.swift"
+                  timestampString = "531940981.838276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TIpsTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDailyPal.TIpsTableViewCell"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TIpsTableViewCell.swift"
+                  timestampString = "531940981.841409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "13">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TIpsTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MyDailyPal.TIpsTableViewCell"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TIpsTableViewCell.swift"
+                  timestampString = "531940981.844734"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TIpsTableViewCell.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyDailyPal.TIpsTableViewCell&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TIpsTableViewCell.swift"
+                  timestampString = "531940981.847986"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TIpsTableViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyDailyPal.TIpsTableViewCell&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TIpsTableViewCell.swift"
+                  timestampString = "531940981.850994"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/TipDetailViewController.swift"
+            timestampString = "531987009.655907"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2"
+            endingLineNumber = "2"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TipDetailViewController.__deallocating_deinit"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TipDetailViewController.swift"
+                  timestampString = "531942059.467715"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TipDetailViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MyDailyPal.TipDetailViewController"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TipDetailViewController.swift"
+                  timestampString = "531942059.470962"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TipDetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; MyDailyPal.TipDetailViewController"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TipDetailViewController.swift"
+                  timestampString = "531942059.474239"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TipDetailViewController.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyDailyPal.TipDetailViewController&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TipDetailViewController.swift"
+                  timestampString = "531942059.477375"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyDailyPal.TipDetailViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyDailyPal.TipDetailViewController&gt;"
+                  moduleName = "MyDailyPal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/TipDetailViewController.swift"
+                  timestampString = "531942059.48051"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/TipsViewController.swift"
+            timestampString = "533433456.404779"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

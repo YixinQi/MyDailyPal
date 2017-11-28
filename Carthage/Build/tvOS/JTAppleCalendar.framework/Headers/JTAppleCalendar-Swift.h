@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_MODULE_NAMESPACE_PUSH("JTAppleCalendar")
 @class UICollectionViewLayout;
 @class NSCoder;
+@protocol UIViewControllerTransitionCoordinator;
 
 /// An instance of JTAppleCalendarView (or simply, a calendar view) is a
 /// means for displaying and interacting with a gridstyle layout of date-cells
@@ -206,21 +207,22 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Implemented by subclasses to initialize a new object (the receiver) immediately after memory for it has been allocated.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Initializes and returns a newly allocated collection view object with the specified frame and layout.
-- (nonnull instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER SWIFT_UNAVAILABLE_MSG("Please use JTAppleCalendarView() instead. It manages its own layout.");
+- (nonnull instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout * _Nonnull)layout OBJC_DESIGNATED_INITIALIZER;
 /// Initializes using decoder object
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+/// Notifies the container that the size of its view is about to change.
+- (void)viewWillTransitionTo:(CGSize)size with:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator focusDateIndexPathAfterRotate:(NSIndexPath * _Nullable)focusDateIndexPathAfterRotate;
+/// Lays out subviews.
+- (void)layoutSubviews;
 @property (nonatomic) UIEdgeInsets sectionInset;
 @property (nonatomic) CGFloat minimumInteritemSpacing;
 @property (nonatomic) CGFloat minimumLineSpacing;
-@end
-
-
-
-
-@interface JTAppleCalendarView (SWIFT_EXTENSION(JTAppleCalendar))
 /// A semantic description of the view’s contents, used to determine whether the view should be flipped when switching between left-to-right and right-to-left layouts.
 @property (nonatomic) UISemanticContentAttribute semanticContentAttribute;
+- (void)reloadData SWIFT_UNAVAILABLE;
 @end
+
+
 
 @class UIScrollView;
 
@@ -237,11 +239,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Tells the delegate that the scroll view has
 /// ended decelerating the scrolling movement.
 - (void)scrollViewDidEndDecelerating:(UIScrollView * _Nonnull)scrollView;
-/// Tells the delegate that a scroll occured
-- (void)scrollViewDidScroll:(UIScrollView * _Nonnull)scrollView;
 @end
-
-
 
 @class UICollectionReusableView;
 @class UICollectionViewCell;
@@ -250,7 +248,6 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Asks your data source object to provide a
 /// supplementary view to display in the collection view.
 - (UICollectionReusableView * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView viewForSupplementaryElementOfKind:(NSString * _Nonnull)kind atIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView willDisplayCell:(UICollectionViewCell * _Nonnull)cell forItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 /// Asks your data source object for the cell that corresponds
 /// to the specified item in the collection view.
 - (UICollectionViewCell * _Nonnull)collectionView:(UICollectionView * _Nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -263,6 +260,11 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// Asks the delegate if the specified item should be selected.
 /// true if the item should be selected or false if it should not.
 - (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+/// Tells the delegate that the item at the specified path was deselected.
+/// The collection view calls this method when the user successfully
+/// deselects an item in the collection view.
+/// It does not call this method when you programmatically deselect items.
+- (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 /// Asks the delegate if the specified item should be deselected.
 /// true if the item should be deselected or false if it should not.
 - (BOOL)collectionView:(UICollectionView * _Nonnull)collectionView shouldDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
@@ -272,22 +274,11 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// It does not call this method when you programmatically
 /// set the selection.
 - (void)collectionView:(UICollectionView * _Nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-/// Tells the delegate that the item at the specified path was deselected.
-/// The collection view calls this method when the user successfully
-/// deselects an item in the collection view.
-/// It does not call this method when you programmatically deselect items.
-- (void)collectionView:(UICollectionView * _Nonnull)collectionView didDeselectItemAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (CGRect)sizeOfDecorationViewWithIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
-@interface JTAppleCalendarView (SWIFT_EXTENSION(JTAppleCalendar))
-/// Lays out subviews.
-- (void)layoutSubviews;
-- (void)reloadData SWIFT_UNAVAILABLE;
-@end
 
-@protocol UIViewControllerTransitionCoordinator;
 @class UINib;
 @class JTAppleCollectionReusableView;
 @class JTAppleCell;
@@ -300,18 +291,6 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 ///   </li>
 /// </ul>
 - (void)deselectAllDatesWithTriggerSelectionDelegate:(BOOL)triggerSelectionDelegate;
-/// Deselect dates
-/// <ul>
-///   <li>
-///     Parameter: Dates - The dates to deselect
-///   </li>
-///   <li>
-///     Parameter: triggerSelectionDelegate - this funciton triggers a delegate call by default. Set this to false if you do not want this
-///   </li>
-/// </ul>
-- (void)deselectWithDates:(NSArray<NSDate *> * _Nonnull)dates triggerSelectionDelegate:(BOOL)triggerSelectionDelegate;
-/// Notifies the container that the size of its view is about to change.
-- (void)viewWillTransitionTo:(CGSize)size with:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator anchorDate:(NSDate * _Nullable)anchorDate;
 /// Generates a range of dates from from a startDate to an
 /// endDate you provide
 /// Parameter startDate: Start date to generate dates from
@@ -341,7 +320,7 @@ SWIFT_CLASS("_TtC15JTAppleCalendar19JTAppleCalendarView")
 /// \param completionHandler This closure will run after
 /// the reload is complete
 ///
-- (void)reloadDataWithWithanchor:(NSDate * _Nullable)date completionHandler:(void (^ _Nullable)(void))completionHandler;
+- (void)reloadDataWith:(NSDate * _Nullable)anchorDate animation:(BOOL)animation completionHandler:(void (^ _Nullable)(void))completionHandler;
 /// Reload the date of specified date-cells on the calendar-view
 /// \param dates Date-cells with these specified
 /// dates will be reloaded
