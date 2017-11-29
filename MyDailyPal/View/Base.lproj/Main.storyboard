@@ -1535,7 +1535,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="390" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1564,7 +1564,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="440" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -2742,7 +2742,7 @@ tapping PIN.</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="trailingConstraints" destination="h0V-Fc-tsH" id="7xM-zk-LId"/>
+                        <outlet property="trailingConstraints" destination="1gC-NW-caO" id="1cy-7H-amC"/>
                         <outlet property="visitsTableView" destination="qm6-kI-UFm" id="XGW-LA-d53"/>
                         <segue destination="dQy-KG-pRP" kind="show" identifier="toVisitDetails" id="dlp-wf-iWd"/>
                     </connections>
@@ -3303,8 +3303,8 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rcD-LN-hkq"/>
-        <segue reference="GCy-I1-OTQ"/>
+        <segue reference="x0N-T5-ooq"/>
+        <segue reference="11K-fs-nlt"/>
         <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>

@@ -16,6 +16,8 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var visitsTableView: UITableView!
     
     @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
+    
+    
     var showMenu = false
     
     @IBAction func menuButtonAction(_ sender: Any) {
