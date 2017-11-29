@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLD-Bd-Xg6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1106,6 +1106,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="s17-ju-7eC" kind="show" id="aLY-Li-YVw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-Gd-Jd1">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -1128,6 +1131,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="NK7-bf-IlK" kind="show" id="Grb-99-TeB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vu-Cd-2nq">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -1529,7 +1535,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="390" width="52" height="30"/>
+                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1558,7 +1564,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="440" width="52" height="30"/>
+                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -2743,7 +2749,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVG-nR-Jbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7575.1999999999998" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="7914.3999999999996" y="2718.8905547226391"/>
         </scene>
         <!--VisitDetails-->
         <scene sceneID="8lY-mS-PC7">
@@ -2831,7 +2837,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRc-7y-mPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8354.3999999999996" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="8693.6000000000004" y="2718.8905547226391"/>
         </scene>
         <!--Setup New Treatment-->
         <scene sceneID="9MB-7G-jee">
@@ -3262,6 +3268,24 @@ tapping PIN.</string>
             </objects>
             <point key="canvasLocation" x="4487" y="3231"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aYR-Wp-1ex">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NK7-bf-IlK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bmQ-uI-Wp4">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nDc-a8-1vB" kind="relationship" relationship="rootViewController" id="9mE-tn-RKj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4y3-NF-2v0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7132" y="2719"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Loading-welcome screen image" width="3333" height="5000"/>
@@ -3281,7 +3305,7 @@ tapping PIN.</string>
     <inferredMetricsTieBreakers>
         <segue reference="rcD-LN-hkq"/>
         <segue reference="GCy-I1-OTQ"/>
-        <segue reference="j5J-h6-Oai"/>
+        <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>
     </inferredMetricsTieBreakers>
