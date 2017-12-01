@@ -13,7 +13,6 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 1
   }
   var drugName = String()
-  var detail = String()
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -113,7 +112,6 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func addMyTreatment(_ sender: Any) {
     treatmentPlan.medication = drugName
-    treatmentPlan.attribute = detail
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate

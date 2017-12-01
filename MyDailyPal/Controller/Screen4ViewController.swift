@@ -66,7 +66,7 @@ extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "TreatmentCell") as! MyTreatmentPlanTableViewCell
     cell.MyTreatmentPlan.text = treatmentPlan[indexPath.row].medication
-    cell.Description.text = treatmentPlan[indexPath.row].attribute
+    cell.Description.text = treatmentPlan[indexPath.row].medication
     cell.Icon.image = UIImage(named: "1")
     return cell
   }
