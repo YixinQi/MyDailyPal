@@ -1535,7 +1535,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="390" width="52" height="30"/>
+                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1564,7 +1564,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="440" width="52" height="30"/>
+                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -2735,9 +2735,9 @@ tapping PIN.</string>
                         <viewLayoutGuide key="safeArea" id="H45-hx-p1e"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="AVQ-DE-TSH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="4Ld-6T-yNe">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="WZh-z5-6FT">
                             <connections>
-                                <action selector="menuButtonAction:" destination="nDc-a8-1vB" id="o1G-6x-g8x"/>
+                                <action selector="menuAction:" destination="nDc-a8-1vB" id="5QQ-Pf-0Xm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
