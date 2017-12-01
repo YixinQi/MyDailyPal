@@ -108,6 +108,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         Sunday.addGestureRecognizer(tap7)
         Sunday.isUserInteractionEnabled = true
         treatmentPlan.repeate = ""
+    //Medication.text =
         // Do any additional setup after loading the view.
     }
 
