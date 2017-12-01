@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZo-Zn-HSe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1525,7 +1525,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="390" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1554,7 +1554,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="440" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -2756,7 +2756,7 @@ tapping PIN.</string>
                                 <items>
                                     <navigationItem title="Add Visit" id="LHv-2E-X6k">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="rtg-Qy-LgT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
                                                 <rect key="frame" x="315" y="5.5" width="44" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -3317,7 +3317,7 @@ tapping PIN.</string>
     <inferredMetricsTieBreakers>
         <segue reference="dlU-hg-WeK"/>
         <segue reference="KdS-VW-9iT"/>
-        <segue reference="j5J-h6-Oai"/>
+        <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
