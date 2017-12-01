@@ -13,6 +13,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 1
   }
   var drugName = String()
+  var screen4: Screen4ViewController!
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -138,13 +139,12 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     if Sunday.textColor == UIColor.red {
       treatmentPlan.repeate = treatmentPlan.repeate! + "Sunday,"
     }
-    
+    screen4.treatmentPlan.append(treatmentPlan)
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let myTreatmentViewControler = segue.destination as! Screen4ViewController
-    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
+    screen4 = segue.destination as! Screen4ViewController
   }
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
