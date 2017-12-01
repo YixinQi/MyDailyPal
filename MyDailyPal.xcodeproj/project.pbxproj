@@ -52,7 +52,6 @@
 		D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */; };
 		D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */; };
 		D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */; };
-		D4C76EC21FC8E5F200896EF4 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D4C76EC11FC8E5F200896EF4 /* assets */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
 		D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +85,7 @@
 		91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		91357F581FCBE94600B0B857 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen10ViewController.swift; sourceTree = "<group>"; };
+		913F9D821FD1D5AC003E5A8C /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		914FFE3D1F7AAFAB00AB6C8D /* MyDailyPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDailyPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914FFE401F7AAFAB00AB6C8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		914FFE421F7AAFAB00AB6C8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 		D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen9ViewController.swift; sourceTree = "<group>"; };
 		D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitsTableViewCell.swift; sourceTree = "<group>"; };
 		D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitDetailsViewController.swift; sourceTree = "<group>"; };
-		D4C76EC11FC8E5F200896EF4 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen8TableViewController.swift; sourceTree = "<group>"; };
 		D4D3140D1F8C76190069D113 /* DrugsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,7 +248,7 @@
 		967B930B1FA0E34F006B3A91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D4C76EC11FC8E5F200896EF4 /* assets */,
+				913F9D821FD1D5AC003E5A8C /* assets */,
 				918845771FC93EF5007FF67C /* Screen11ViewController.swift */,
 				D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */,
 				D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */,
@@ -397,7 +396,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C76EC21FC8E5F200896EF4 /* assets in Resources */,
 				914FFE4B1F7AAFAB00AB6C8D /* LaunchScreen.storyboard in Resources */,
 				914FFE481F7AAFAB00AB6C8D /* Assets.xcassets in Resources */,
 				914FFE461F7AAFAB00AB6C8D /* Main.storyboard in Resources */,

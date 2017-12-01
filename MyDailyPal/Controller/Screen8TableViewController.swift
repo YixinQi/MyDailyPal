@@ -77,6 +77,8 @@ class Screen8TableViewController: UITableViewController {
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
         let myVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
         myVC.drugName = substringString(string: drugDet[0])
+        //TODO:
+        //myVC.detail =
         navigationController?.pushViewController(myVC, animated: true)
     }
     // to navigate to screen 4

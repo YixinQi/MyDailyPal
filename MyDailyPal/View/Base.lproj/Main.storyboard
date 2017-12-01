@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZo-Zn-HSe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -3079,9 +3079,8 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLe-PQ-2ln" userLabel="TransparentBackground">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLe-PQ-2ln" userLabel="TransparentBackground">
                                 <rect key="frame" x="0.0" y="-85" width="487" height="869"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rna-DS-Xio">
                                         <rect key="frame" x="0.0" y="270" width="375" height="280"/>
@@ -3126,10 +3125,18 @@ tapping PIN.</string>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KLe-PQ-2ln" secondAttribute="trailing" id="iBa-dE-wC5"/>
+                            <constraint firstItem="KLe-PQ-2ln" firstAttribute="top" secondItem="DmU-5H-C1y" secondAttribute="top" id="qZu-rC-aYh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kBE-RM-YeI"/>
                     </view>
                     <navigationItem key="navigationItem" id="eyT-Fp-JWb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="u9s-f3-WD9" userLabel="NEXT"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="u9s-f3-WD9" userLabel="NEXT">
+                            <connections>
+                                <action selector="addMyTreatment:" destination="aLD-Bd-Xg6" id="3oV-7v-JPG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Friday" destination="ajC-e6-GRE" id="icJ-GC-SiP"/>
@@ -3316,7 +3323,7 @@ tapping PIN.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dlU-hg-WeK"/>
-        <segue reference="KdS-VW-9iT"/>
+        <segue reference="ZiV-7C-pqW"/>
         <segue reference="j5J-h6-Oai"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="0Hx-nR-LbK"/>

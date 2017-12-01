@@ -13,6 +13,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     return 1
   }
   var drugName = String()
+  var detail = String()
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -108,18 +109,15 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         Sunday.addGestureRecognizer(tap7)
         Sunday.isUserInteractionEnabled = true
         treatmentPlan.repeate = ""
-    //Medication.text =
-        // Do any additional setup after loading the view.
     }
 
-  @IBAction func next(_ sender: Any) {
-    treatmentPlan.medication = Medication.text
-    // TODO
-    treatmentPlan.attribute = "b"
+  @IBAction func addMyTreatment(_ sender: Any) {
+    treatmentPlan.medication = drugName
+    treatmentPlan.attribute = detail
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate
-
+    
     treatmentPlan.remindTime = timePicker.date as NSDate
     if Monday.textColor == UIColor.red {
       treatmentPlan.repeate = treatmentPlan.repeate! + "Monday,"
@@ -142,11 +140,10 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     if Sunday.textColor == UIColor.red {
       treatmentPlan.repeate = treatmentPlan.repeate! + "Sunday,"
     }
-
+    
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
-  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let myTreatmentViewControler = segue.destination as! Screen4ViewController
     myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
