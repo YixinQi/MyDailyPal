@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class VisitDetailsViewController: UIViewController {
 //variable to store a DoctorVisit object
@@ -93,7 +94,71 @@ class VisitDetailsViewController: UIViewController {
             currentVisit?.title = locationLabel.text!
             currentVisit?.remindMe = remindMeSwitch.isOn
             PersistenceService.saveContext()
+            
+//If user selected to be reminded, they will schedule an in app notification for that time.
+            if currentVisit?.remindMe == true {
+                UNUserNotificationCenter.current().getNotificationSettings {(settings) in
+                    if (settings.authorizationStatus == .authorized) {
+                        self.scheduleNotification(visit: self.currentVisit!)
+                    } else {
+                        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .badge, .alert], completionHandler: { (granted, error) in
+                            if let error = error {
+                                print(error)
+                            } else {
+                                if (granted) {
+                                    self.scheduleNotification(visit: self.currentVisit!)
+                                }
+                            }
+                        })
+                    }
+                }
+            }
             performSegue(withIdentifier: "saveVisit", sender: self)
+        }
+    }
+//Method for creating in app notifications for visits
+    func scheduleNotification(visit: DoctorVisit){
+//Formatting date of visit details into string for notification
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let contentDate = dateFormatter.string(from: selectedDate!)
+        
+//Notification Body and content
+        let contentBody = "You have scheduled a visit with \(visit.doctor!) at \(visit.title!) on \(contentDate)"
+        let content = UNMutableNotificationContent()
+        content.title = "MyDailyPal"
+        content.body = contentBody
+        
+//Creating the timestamps for when the reminders should fire (day before and hour before)
+        let dayBeforeReminder = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate!)
+        let dayBeforeComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dayBeforeReminder!)
+        let hourBeforeReminder = Calendar.current.date(byAdding: .hour, value: -1, to: selectedDate!)
+        let hourBeforeComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: hourBeforeReminder!)
+
+//Creating the triggers based off of these timestamps
+        let dayBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: dayBeforeComps, repeats: false)
+        let hourBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: hourBeforeComps, repeats: false)
+
+        
+//Scheduling the day before notification
+        let dayBeforeNotificationRequest = UNNotificationRequest(identifier: "\(contentBody) dayBefore", content: content, trigger: dayBeforeTrigger)
+        UNUserNotificationCenter.current().add(dayBeforeNotificationRequest){ (error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("Day Before Notification Scheduled");
+            }
+        }
+        
+//Scheduling the hour before notification
+        let hourBeforeNotificationRequest = UNNotificationRequest(identifier: "\(contentBody) hourBefore", content: content, trigger: hourBeforeTrigger)
+        UNUserNotificationCenter.current().add(hourBeforeNotificationRequest){ (error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("Hour Before Notification Scheduled");
+            }
         }
     }
 

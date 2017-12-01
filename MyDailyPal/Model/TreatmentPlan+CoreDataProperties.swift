@@ -23,5 +23,6 @@ extension TreatmentPlan {
     @NSManaged public var noOfTablet: Int16
     @NSManaged public var startDate: NSDate?
     @NSManaged public var repeate: String?
+    @NSManaged public var remindTime: NSDate?
 
 }

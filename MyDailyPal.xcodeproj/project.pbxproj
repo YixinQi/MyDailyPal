@@ -12,6 +12,7 @@
 		6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */; };
 		6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */; };
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
+		60525B8D1FCE218F006DF3CB /* sideEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
 		91357F571FCBE79100B0B857 /* JTAppleCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */; };
 		91357F591FCBE94600B0B857 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91357F581FCBE94600B0B857 /* CustomCell.swift */; };
@@ -43,12 +44,12 @@
 		967C2E461FA7D9C900CA4A74 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */; };
 		967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */; };
 		967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */; };
+		969C83011FC9052C00784680 /* aesSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C83001FC9052C00784680 /* aesSecurity.swift */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
 		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */; };
 		D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94B1FBEA6580016A368 /* VisitsTableViewCell.swift */; };
-		D4B9E94F1FBEA6590016A368 /* VisitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94C1FBEA6580016A368 /* VisitsViewController.swift */; };
 		D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B9E94D1FBEA6590016A368 /* VisitDetailsViewController.swift */; };
 		D4C76EC21FC8E5F200896EF4 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D4C76EC11FC8E5F200896EF4 /* assets */; };
 		D4D3140C1F8C740F0069D113 /* Screen8TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D3140B1F8C740F0069D113 /* Screen8TableViewController.swift */; };
@@ -78,6 +79,7 @@
 		6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideEffectViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		91357F561FCBE79100B0B857 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JTAppleCalendar.framework; path = Carthage/Build/iOS/JTAppleCalendar.framework; sourceTree = "<group>"; };
 		91357F581FCBE94600B0B857 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPINViewController.swift; sourceTree = "<group>"; };
 		967C2E491FA7F65800CA4A74 /* ForgotPINViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPINViewController.swift; sourceTree = "<group>"; };
+		969C83001FC9052C00784680 /* aesSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aesSecurity.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
 		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
@@ -228,6 +231,7 @@
 				D49E3DC11FABE25700533846 /* DrugBank.swift */,
 				D49E3DC31FABE50800533846 /* Drug.swift */,
 				91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */,
+				969C83001FC9052C00784680 /* aesSecurity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -261,6 +265,7 @@
 				60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */,
 				967B930F1FA10325006B3A91 /* ConfirmPIN_VC.swift */,
 				967B93111FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift */,
+				60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */,
 				913BCF021FA654CE0006AA67 /* Screen10ViewController.swift */,
 				967C2E451FA7D9C900CA4A74 /* LoadingScreenViewController.swift */,
 				967C2E471FA7E57C00CA4A74 /* EnterPINViewController.swift */,
@@ -352,7 +357,7 @@
 				TargetAttributes = {
 					914FFE3C1F7AAFAB00AB6C8D = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					914FFE501F7AAFAB00AB6C8D = {
 						CreatedOnToolsVersion = 9.0;
@@ -438,6 +443,7 @@
 			files = (
 				962DB3091FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift in Sources */,
 				967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */,
+				60525B8D1FCE218F006DF3CB /* sideEffectViewController.swift in Sources */,
 				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
 				918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */,
 				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
@@ -445,6 +451,7 @@
 				962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */,
 				91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */,
 				967C2E4A1FA7F65800CA4A74 /* ForgotPINViewController.swift in Sources */,
+				969C83011FC9052C00784680 /* aesSecurity.swift in Sources */,
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */,
@@ -461,7 +468,6 @@
 				91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
-				D4B9E94F1FBEA6590016A368 /* VisitsViewController.swift in Sources */,
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
@@ -640,7 +646,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -649,6 +656,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.com.MyDailyPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -658,7 +666,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -667,6 +676,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.com.MyDailyPal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

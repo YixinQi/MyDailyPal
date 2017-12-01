@@ -8,13 +8,33 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
 //Table that will hold the visits
     @IBOutlet weak var visitsTableView: UITableView!
     
-//Data Structure that holds the actual data for the table
+    @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
+    var showMenu = false
+    
+    @IBAction func menuButtonAction(_ sender: Any) {
+        if(showMenu){
+            trailingConstraints.constant = 375
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingConstraints.constant = 25
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
+    }
+    //Data Structure that holds the actual data for the table
     var visits = [DoctorVisit]()
     
 //Used to determine if we are adding a new visit or editing an existing one
@@ -77,6 +97,15 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //If user says "yes" then it deletes it from the devices local storage and reloads the table
         let yes = UIAlertAction(title: "Yes", style: .default, handler: { (action) -> Void in
             PersistenceService.context.delete(self.visits[sender.tag])
+            let visit = self.visits[sender.tag]
+            let selectedDate = visit.dateTime! as Date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.short
+            dateFormatter.timeStyle = DateFormatter.Style.short
+            let contentDate = dateFormatter.string(from: selectedDate)
+            
+            let contentBody = "You have scheduled a visit with \(visit.doctor!) at \(visit.title!) on \(contentDate)"
+            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(contentBody) dayBefore","\(contentBody) hourBefore"])
             PersistenceService.saveContext()
             self.visits.remove(at: sender.tag)
             self.visitsTableView.reloadData()

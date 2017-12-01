@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Screen4ViewController: UIViewController {
   var treatmentPlan = [TreatmentPlan]()
@@ -33,6 +34,12 @@ class Screen4ViewController: UIViewController {
         showMenu = !showMenu
     }
     override func viewDidLoad() {
+      let fetchRequest: NSFetchRequest<TreatmentPlan> = TreatmentPlan.fetchRequest()
+      do {
+        let visits = try PersistenceService.context.fetch(fetchRequest)
+        self.treatmentPlan = visits
+        self.treatmentTableView.reloadData()
+      } catch {}
       MyTreatmentProcess.image = UIImage(named: "1")
       line.image = UIImage(named: "line")
       plusButton.image = UIImage(named: "plusButton")

@@ -20,7 +20,28 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @IBOutlet weak var Friday: UILabel!
   @IBOutlet weak var Saturday: UILabel!
   @IBOutlet weak var Sunday: UILabel!
+
+  @IBOutlet weak var everydaySwitch: UISwitch!
   
+  @IBAction func EveryDay(_ sender: Any) {
+    if everydaySwitch.isOn == true{
+      Monday.textColor = UIColor.red
+      Tuesday.textColor = UIColor.red
+      Wendsday.textColor = UIColor.red
+      Thursday.textColor = UIColor.red
+      Friday.textColor = UIColor.red
+      Saturday.textColor = UIColor.red
+      Sunday.textColor = UIColor.red
+    } else {
+      Monday.textColor = UIColor.black
+      Tuesday.textColor = UIColor.black
+      Wendsday.textColor = UIColor.black
+      Thursday.textColor = UIColor.black
+      Friday.textColor = UIColor.black
+      Saturday.textColor = UIColor.black
+      Sunday.textColor = UIColor.black
+    }
+  }
   @IBOutlet weak var Medication: UILabel!
   @IBOutlet weak var timePicker: UIDatePicker!
   @IBOutlet weak var transparentBackgound: UIView!
@@ -32,8 +53,22 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   @IBOutlet weak var tabletPicker: UIPickerView!
   @IBOutlet weak var dosagePicker: UIPickerView!
   @IBOutlet weak var setTimeButton: UILabel!
-  //var medication: String
-  var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+  @IBAction func clickSave(_ sender: Any) {
+        timePicker.isHidden = true
+        timePickerBackground.isHidden = true
+        saveTimeButton.isHidden = true
+        cancelTimeButton.isHidden = true
+        transparentBackgound.isHidden = true
+    }
+    //var medication: String
+    @IBAction func clickCancelButton(_ sender: Any) {
+        timePicker.isHidden = true
+        timePickerBackground.isHidden = true
+        saveTimeButton.isHidden = true
+        cancelTimeButton.isHidden = true
+        transparentBackgound.isHidden = true
+    }
+    var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var tabletArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
   override func viewDidLoad() {
@@ -77,18 +112,47 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func next(_ sender: Any) {
     treatmentPlan.medication = Medication.text
-    //treatmentPlan.attribute = "b"
+    // TODO
+    treatmentPlan.attribute = "b"
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate
-    //treatmentPlan.remindTime = timePicker.date as NSDate
+
+    treatmentPlan.remindTime = timePicker.date as NSDate
+    if Monday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Monday,"
+    }
+    if Tuesday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Tuesday,"
+    }
+    if Wendsday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Wendsday,"
+    }
+    if Thursday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Thursday,"
+    }
+    if Friday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Friday,"
+    }
+    if Saturday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Saturday,"
+    }
+    if Sunday.textColor == UIColor.red {
+      treatmentPlan.repeate = treatmentPlan.repeate! + "Sunday,"
+    }
+
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let myTreatmentViewControler = segue.destination as! Screen4ViewController
+    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
   }
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+  }
   
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     if (pickerView == dosagePicker) {
@@ -116,54 +180,57 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     //transparentBackground.isHidden = false
   }
   @objc func tap1(gestureRecognizer: UITapGestureRecognizer){
-    Monday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Monday.text!
+    if Monday.textColor == UIColor.black {
+      Monday.textColor = UIColor.red
+    } else {
+      Monday.textColor = UIColor.black
+    }
   }
   @objc func tap2(gestureRecognizer: UITapGestureRecognizer){
-    Tuesday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Tuesday.text!
+    if Tuesday.textColor == UIColor.black {
+      Tuesday.textColor = UIColor.red
+    } else {
+      Tuesday.textColor = UIColor.black
+    }
   }
   @objc func tap3(gestureRecognizer: UITapGestureRecognizer){
-    Wendsday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Wendsday.text!
+    if Wendsday.textColor == UIColor.black {
+      Wendsday.textColor = UIColor.red
+    } else {
+      Wendsday.textColor = UIColor.black
+    }
   }
   @objc func tap4(gestureRecognizer: UITapGestureRecognizer){
-    Thursday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Thursday.text!
+    if Thursday.textColor == UIColor.black {
+      Thursday.textColor = UIColor.red
+    } else {
+      Thursday.textColor = UIColor.black
+    }
   }
   @objc func tap5(gestureRecognizer: UITapGestureRecognizer){
-    Friday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Friday.text!
+    if Friday.textColor == UIColor.black {
+      Friday.textColor = UIColor.red
+    } else {
+      Friday.textColor = UIColor.black
+    }
   }
   @objc func tap6(gestureRecognizer: UITapGestureRecognizer){
-    Saturday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Saturday.text!
+    if Saturday.textColor == UIColor.black {
+      Saturday.textColor = UIColor.red
+    } else {
+      Saturday.textColor = UIColor.black
+    }
   }
   @objc func tap7(gestureRecognizer: UITapGestureRecognizer){
-    Sunday.textColor = UIColor.red
-    treatmentPlan.repeate = treatmentPlan.repeate! + Sunday.text!
-  }
+    if Sunday.textColor == UIColor.black {
+      Sunday.textColor = UIColor.red
+    } else {
+      Sunday.textColor = UIColor.black
 
-  @IBAction func clickSaveButton(_ sender: UIButton) {
-    timePicker.isHidden = true
-    timePickerBackground.isHidden = true
-    saveTimeButton.isHidden = true
-    cancelTimeButton.isHidden = true
-    transparentBackgound.isHidden = true
   }
+    
   
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let myTreatmentViewControler = segue.destination as! Screen4ViewController
-    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
-  }
-  
-  @IBAction func clickCancelButton(_ sender: UIButton) {
-    timePicker.isHidden = true
-    timePickerBackground.isHidden = true
-    saveTimeButton.isHidden = true
-    cancelTimeButton.isHidden = true
-    transparentBackgound.isHidden = true
-  }
+
   /*
     // MARK: - Navigation
 
@@ -174,4 +241,5 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     */
 
+    }
 }
