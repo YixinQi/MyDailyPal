@@ -12,7 +12,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
-
+  var drugName = String()
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -73,6 +73,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
   override func viewDidLoad() {
         super.viewDidLoad()
+        Medication.text = drugName
         dosagePicker.delegate = self
         dosagePicker.dataSource = self
         tabletPicker.delegate = self
@@ -107,6 +108,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         Sunday.addGestureRecognizer(tap7)
         Sunday.isUserInteractionEnabled = true
         treatmentPlan.repeate = ""
+    //Medication.text =
         // Do any additional setup after loading the view.
     }
 
@@ -144,10 +146,15 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let myTreatmentViewControler = segue.destination as! Screen4ViewController
+    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
+  }
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+  }
   
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     if (pickerView == dosagePicker) {
@@ -222,13 +229,6 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     } else {
       Sunday.textColor = UIColor.black
 
-  }
-
-  
-  
-  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    let myTreatmentViewControler = segue.destination as! Screen4ViewController
-    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
   }
     
   

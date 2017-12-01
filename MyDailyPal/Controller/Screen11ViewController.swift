@@ -12,6 +12,7 @@ class Screen11ViewController: UIViewController {
   @IBOutlet weak var calendarView: JTAppleCalendarView!
   @IBOutlet weak var Year: UILabel!
   @IBOutlet weak var Month: UILabel!
+  var selectedDate = Date();
   //let formatter = DateFormatter()
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -96,6 +97,7 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
   }
   
   func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-    //performSegue(withIdentifier: "tomytreatment", sender: self)
+    selectedDate = cellState.date
+    //performSegue(withIdentifier: "", sender: self)
   }
 }

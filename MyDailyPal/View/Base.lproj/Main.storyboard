@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IZo-Zn-HSe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -26,8 +26,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mCH-Me-dp4">
-                                <rect key="frame" x="0.0" y="35" width="375" height="161"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="86"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.83792954704724076" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shY-4k-why">
@@ -66,16 +66,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Setup New Treatment" id="FGa-LP-FsU">
                         <barButtonItem key="backBarButtonItem" title="Back" id="25H-8b-Vdf"/>
-                        <barButtonItem key="rightBarButtonItem" title="Next" style="plain" id="Cvg-kF-cGF">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zER-2z-PU6">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <connections>
-                                <action selector="Screen10NextButton:" destination="wlA-He-WXO" id="2YR-yH-RIR"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="DrugWebView" destination="96t-Ys-KVM" id="CEk-UW-Hgr"/>
@@ -85,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0nO-Dt-bzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1634.4000000000001" y="901.79910044977521"/>
+            <point key="canvasLocation" x="-1634.4000000000001" y="901.47783251231533"/>
         </scene>
         <!--Screen11 View Controller-->
         <scene sceneID="DnB-Gc-E9A">
@@ -1022,7 +1012,7 @@ tapping PIN.</string>
         <!--My Treatment Plan-->
         <scene sceneID="d17-gw-30L">
             <objects>
-                <viewController id="tM6-5p-iul" customClass="Screen4ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Screen4ViewController" id="tM6-5p-iul" customClass="Screen4ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QpJ-HK-pkR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1258,7 +1248,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhW-fP-drE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7426.3999999999996" y="1456.8215892053975"/>
+            <point key="canvasLocation" x="7765.6000000000004" y="1456.8215892053975"/>
         </scene>
         <!--My Treatment Plan-->
         <scene sceneID="71E-jk-woD">
@@ -2383,7 +2373,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOF-wC-kpi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4398" y="2239"/>
+            <point key="canvasLocation" x="4736.8000000000002" y="2238.530734632684"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="pQd-nd-rwq">
@@ -2514,7 +2504,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdC-je-QMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5650" y="2312"/>
+            <point key="canvasLocation" x="5988" y="2311.394302848576"/>
         </scene>
         <!--VisitsViewController-->
         <scene sceneID="sUc-Yq-3nP">
@@ -2749,7 +2739,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVG-nR-Jbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7914.3999999999996" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="8253.6000000000004" y="2718.8905547226391"/>
         </scene>
         <!--VisitDetails-->
         <scene sceneID="8lY-mS-PC7">
@@ -2760,11 +2750,26 @@ tapping PIN.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zkf-7E-3hS">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="0.089999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Add Visit" id="LHv-2E-X6k"/>
+                                    <navigationItem title="Add Visit" id="LHv-2E-X6k">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="rtg-Qy-LgT">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
+                                                <rect key="frame" x="315" y="5.5" width="44" height="33"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="SAVE">
+                                                    <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="SaveButtonPressed:" destination="dQy-KG-pRP" eventType="touchUpInside" id="VQd-fY-Nn4"/>
+                                                    <action selector="nextButtonPressed:" destination="Ciw-vD-vL3" eventType="touchUpInside" id="Cu4-4z-I1I"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU7-3m-D5P">
@@ -2777,18 +2782,6 @@ tapping PIN.</string>
                                 <connections>
                                     <action selector="BackButtonPressed:" destination="dQy-KG-pRP" eventType="touchUpInside" id="EW2-hE-CtL"/>
                                     <action selector="backButtonPressed:" destination="Ciw-vD-vL3" eventType="touchUpInside" id="YZ0-79-a7M"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dex-6y-NxD">
-                                <rect key="frame" x="296" y="26" width="79" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="SaveButtonPressed:" destination="dQy-KG-pRP" eventType="touchUpInside" id="VQd-fY-Nn4"/>
-                                    <action selector="nextButtonPressed:" destination="Ciw-vD-vL3" eventType="touchUpInside" id="Cu4-4z-I1I"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ART Center / Hospital / Clinic" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wdu-4u-geN">
@@ -2837,12 +2830,12 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRc-7y-mPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8693.6000000000004" y="2718.8905547226391"/>
+            <point key="canvasLocation" x="9032.7999999999993" y="2718.8905547226391"/>
         </scene>
         <!--Setup New Treatment-->
         <scene sceneID="9MB-7G-jee">
             <objects>
-                <tableViewController storyboardIdentifier="Screen8" id="viy-TQ-tDL" customClass="Screen8TableViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="viy-TQ-tDL" customClass="Screen8TableViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B1q-Ng-jJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2881,13 +2874,11 @@ tapping PIN.</string>
                                                 <accessibilityTraits key="traits" button="YES" image="YES"/>
                                             </accessibility>
                                             <state key="normal" title="Button" backgroundImage="timer"/>
-                                            <connections>
-                                                <action selector="ScheduleButton:" destination="viy-TQ-tDL" eventType="touchUpInside" id="Rfe-8J-5Ha"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ToScreen10ScheduleButton" destination="Lfw-vm-U9L" id="L30-zs-kFq"/>
                                     <outlet property="drugLabel" destination="Hey-JY-NFx" id="XWm-eD-XJj"/>
                                     <outlet property="drugLabelMini" destination="P3F-Og-cZk" id="RgC-LA-j7M"/>
                                     <outlet property="drugScheduler" destination="EPw-rd-IbC" id="1YM-wC-ayV"/>
@@ -2903,7 +2894,7 @@ tapping PIN.</string>
                         <barButtonItem key="backBarButtonItem" title="Back" id="OuC-pA-TYf"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="aLD-Bd-Xg6" kind="show" identifier="ToScreen10Segue" id="GnT-Ia-FlT"/>
+                        <segue destination="D5j-lV-WlI" kind="show" identifier="ToScreen10Segue" id="GnT-Ia-FlT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x3u-ie-T4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2918,6 +2909,13 @@ tapping PIN.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-IB-F5g">
+                                <rect key="frame" x="8" y="147" width="367" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-43-l2w">
                                 <rect key="frame" x="249" y="186" width="110" height="63"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -3025,13 +3023,6 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNG-IB-F5g">
-                                <rect key="frame" x="166" y="277" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Aq-Hc-973">
                                 <rect key="frame" x="16" y="531" width="62" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -3121,7 +3112,7 @@ tapping PIN.</string>
                                                 </connections>
                                             </button>
                                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="30" translatesAutoresizingMaskIntoConstraints="NO" id="Hnf-2u-clK">
-                                                <rect key="frame" x="18" y="67" width="339" height="147"/>
+                                                <rect key="frame" x="18" y="45" width="339" height="147"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="531075369.950279">
                                                     <!--2017-10-30 16:56:09 +0000-->
@@ -3137,6 +3128,9 @@ tapping PIN.</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="kBE-RM-YeI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eyT-Fp-JWb">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="u9s-f3-WD9" userLabel="NEXT"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="Friday" destination="ajC-e6-GRE" id="icJ-GC-SiP"/>
                         <outlet property="Medication" destination="YNG-IB-F5g" id="g6m-ni-2Hr"/>
@@ -3162,7 +3156,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snz-En-jA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.8000000000002" y="2095.5022488755626"/>
+            <point key="canvasLocation" x="2684" y="2094.6026986506749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yDA-TS-IYg">
@@ -3180,7 +3174,7 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9r2-Hk-eAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6399.1999999999998" y="1491.0044977511245"/>
+            <point key="canvasLocation" x="6738.3999999999996" y="1491.0044977511245"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uC7-WZ-7km">
@@ -3198,12 +3192,12 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Re-Ff-sby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3419.1999999999998" y="2238.08095952024"/>
+            <point key="canvasLocation" x="3757.5999999999999" y="2237.6311844077964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTw-yX-AEa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xpl-T4-JaI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Screen8" automaticallyAdjustsScrollViewInsets="NO" id="Xpl-T4-JaI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mah-Dr-H2z">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -3284,7 +3278,25 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4y3-NF-2v0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7132" y="2719"/>
+            <point key="canvasLocation" x="7471.1999999999998" y="2718.8905547226391"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QTm-EJ-Ffk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D5j-lV-WlI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0FQ-xK-jx5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aLD-Bd-Xg6" kind="relationship" relationship="rootViewController" id="y3s-FE-sFN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-i7-jVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2344" y="2094.1529235382309"/>
         </scene>
     </scenes>
     <resources>
@@ -3303,10 +3315,10 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x0N-T5-ooq"/>
-        <segue reference="11K-fs-nlt"/>
-        <segue reference="drF-mK-4BT"/>
+        <segue reference="dlU-hg-WeK"/>
+        <segue reference="KdS-VW-9iT"/>
+        <segue reference="j5J-h6-Oai"/>
         <segue reference="Uw7-eH-aiR"/>
-        <segue reference="c2W-7J-82N"/>
+        <segue reference="0Hx-nR-LbK"/>
     </inferredMetricsTieBreakers>
 </document>
