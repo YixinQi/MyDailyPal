@@ -19,8 +19,16 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     var showMenu = false
+
     
-    @IBAction func menuButtonAction(_ sender: Any) {
+    //Data Structure that holds the actual data for the table
+    var visits = [DoctorVisit]()
+    
+//Used to determine if we are adding a new visit or editing an existing one
+    var passData : Bool = false
+    var visitToEdit : DoctorVisit?
+
+    @IBAction func menuAction(_ sender: Any) {
         if(showMenu){
             trailingConstraints.constant = 375
             UIView.animate(withDuration: 0.3,
@@ -36,13 +44,6 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         showMenu = !showMenu
     }
-    //Data Structure that holds the actual data for the table
-    var visits = [DoctorVisit]()
-    
-//Used to determine if we are adding a new visit or editing an existing one
-    var passData : Bool = false
-    var visitToEdit : DoctorVisit?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
