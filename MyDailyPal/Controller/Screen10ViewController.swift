@@ -12,7 +12,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
-
+  var drugName = String()
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -73,6 +73,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
   override func viewDidLoad() {
         super.viewDidLoad()
+        Medication.text = drugName
         dosagePicker.delegate = self
         dosagePicker.dataSource = self
         tabletPicker.delegate = self

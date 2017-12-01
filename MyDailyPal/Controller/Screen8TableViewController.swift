@@ -13,10 +13,11 @@ class Screen8TableViewController: UITableViewController {
     
     var drugBank = DrugBank()
     var drugs = [[String]]()
+    var drug = [String]()
     //var sImage = UIImage(named: "timer")
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
         
         
     }
@@ -47,30 +48,45 @@ class Screen8TableViewController: UITableViewController {
         // Configure the cell...
         let drug = drugs[indexPath.row]
         if drug[0] != "mystyle.css" {
-        cell.drugLabel.text = drug[0]
-        cell.drugLabelMini.text = drug[0]
-        //cell.scheduleImage.image = sImage
-        cell.drugScheduler.backgroundColor = UIColor.lightGray
+            cell.drugLabel.text = substringString(string: drug[0])
+            cell.drugLabelMini.text = substringString(string: drug[0])
+            //cell.scheduleImage.image = sImage
+            cell.ToScreen10ScheduleButton.tag = indexPath.row
+            cell.ToScreen10ScheduleButton.addTarget(self, action: #selector(toScreen10(sender: )), for: UIControlEvents.touchUpInside)
+            cell.drugScheduler.backgroundColor = UIColor.lightGray
         }
         return cell
+    }
+    func substringString(string: String) -> String {
+        let index = string.index(of: ".") ?? string.endIndex
+        let beginning = string[..<index]
+        return String(beginning)
     }
     var drugName = String()
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen9ViewController") as! Screen9ViewController
         let drug = drugs[indexPath.row]
-        drugName = drug[0]
         DetailVC.drugDetails = drug
         self.navigationController?.pushViewController(DetailVC, animated: true)
         
     }
-    
-    @IBAction func ScheduleButton(_ sender: Any) {
+    @objc func toScreen10(sender: UIButton){
+        //print("in screen 8 toScreen10")
+        let drugDet = self.drugs[sender.tag]
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
-        let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
-        //DetailVC.Medication = drugName
-        self.navigationController?.pushViewController(DetailVC, animated: true)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "Screen10ViewController") as! Screen10ViewController
+        myVC.drugName = substringString(string: drugDet[0])
+        navigationController?.pushViewController(myVC, animated: true)
     }
+    // to navigate to screen 4
+    @objc func addTapped(sender:UIBarButtonItem){
+        //print("in screen 9 toScreen10")
+        let storyboard = UIStoryboard(name:"Main", bundle:nil)
+        let myVC = storyboard.instantiateViewController(withIdentifier: "Screen4ViewController") as! Screen4ViewController
+        navigationController?.pushViewController(myVC, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

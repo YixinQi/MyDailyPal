@@ -18,6 +18,7 @@ class DrugsTableViewCell: UITableViewCell {
     @IBOutlet weak var drugLabel: UILabel!
     
  
+    @IBOutlet weak var ToScreen10ScheduleButton: UIButton!
     
     @IBOutlet weak var drugLabelMini: UILabel!
     

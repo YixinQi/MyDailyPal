@@ -43,6 +43,16 @@ class VisitDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+//    override func viewWillAppear(_ animated: Bool){
+//        super.viewWillAppear(true)
+//        navigationController?.setNavigationBarHidden(true, animated: true)
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool){
+//        super.viewWillAppear(true)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -113,8 +123,24 @@ class VisitDetailsViewController: UIViewController {
                     }
                 }
             }
-            performSegue(withIdentifier: "saveVisit", sender: self)
+            confirmNewAppointment()
+            //performSegue(withIdentifier: "saveVisit", sender: self)
         }
+    }
+    func confirmNewAppointment() {
+        let alert = UIAlertController(title: "Visit Scheduled", message: "Your visit details have been saved! You can now add another visit or return to your list of visits", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        
+        // change to desired number of seconds (in this case 5 seconds)
+        let when = DispatchTime.now() + 2
+        DispatchQueue.main.asyncAfter(deadline: when){
+            // your code with delay
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+        whenLabel.text = ""
+        doctorLabel.text = ""
+        locationLabel.text = ""
     }
 //Method for creating in app notifications for visits
     func scheduleNotification(visit: DoctorVisit){

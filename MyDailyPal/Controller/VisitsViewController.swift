@@ -16,6 +16,8 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var visitsTableView: UITableView!
     
     @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
+    
+    
     var showMenu = false
     
     @IBAction func menuButtonAction(_ sender: Any) {
@@ -56,6 +58,17 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         visitsTableView.dataSource = self
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        let fetchRequest: NSFetchRequest<DoctorVisit> = DoctorVisit.fetchRequest()
+        do {
+            let visits = try PersistenceService.context.fetch(fetchRequest)
+            self.visits = visits
+            self.visitsTableView.reloadData()
+        } catch {}
+    }
+    
 
 //Used to comform as a subclass of TableView
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
