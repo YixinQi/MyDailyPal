@@ -19,10 +19,10 @@ class DrugBank {
         let fileManager = FileManager.default
         
         // Get contents in directory: '.' (current one)
-        
         do {
         // tried relative path
-        let files = try fileManager.contentsOfDirectory(atPath: "/Users/mingfei/Documents/MyDailyPal/MyDailyPal/Controller/assets")
+            let path = Bundle.main.path(forResource: "assets", ofType: nil)
+            let files = try fileManager.contentsOfDirectory(atPath: path!)
             for file in files{
                 filename = file
                 drugList.append([filename])

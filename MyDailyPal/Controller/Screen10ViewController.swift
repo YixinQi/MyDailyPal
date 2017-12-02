@@ -75,10 +75,11 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var tabletArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-  var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
+  
   override func viewDidLoad() {
         super.viewDidLoad()
-        Medication.text = drugName
+        let view: Screen8TableViewController = Screen8TableViewController()
+        Medication.text = String(view.substringString(string: drugName))
         dosagePicker.delegate = self
         dosagePicker.dataSource = self
         tabletPicker.delegate = self
@@ -112,13 +113,15 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let tap7 = UITapGestureRecognizer(target: self, action: #selector(tap7(gestureRecognizer:)))
         Sunday.addGestureRecognizer(tap7)
         Sunday.isUserInteractionEnabled = true
-        treatmentPlan.repeate = ""
+//        treatmentPlan.repeate = ""
     }
 
   @IBAction func addMyTreatment(_ sender: Any) {
-    treatmentPlan.medication = drugName
-    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))+1
-    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))+1
+    let treatmentPlan = TreatmentPlan(context: PersistenceService.context)
+    let view: Screen8TableViewController = Screen8TableViewController()
+    treatmentPlan.medication = String(view.substringString(string: drugName))
+    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
+    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate
     
     treatmentPlan.remindTime = timePicker.date as NSDate
@@ -146,6 +149,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let storyboard = UIStoryboard(name:"Main", bundle:nil)
     let screen4 = storyboard.instantiateViewController(withIdentifier: "Screen4ViewController") as! Screen4ViewController
     screen4.treatmentPlan.append(treatmentPlan)
+    print("!!!")
     PersistenceService.saveContext()
     
     // push notification
