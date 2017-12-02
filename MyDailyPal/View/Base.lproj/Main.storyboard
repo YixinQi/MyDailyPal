@@ -2856,7 +2856,7 @@ tapping PIN.</string>
                                 <items>
                                     <navigationItem title="Add Visit" id="LHv-2E-X6k">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="rtg-Qy-LgT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
                                                 <rect key="frame" x="315" y="5.5" width="44" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -3459,7 +3459,7 @@ tapping PIN.</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="rcD-LN-hkq"/>
-        <segue reference="ZiV-7C-pqW"/>
+        <segue reference="AAy-rd-YxM"/>
         <segue reference="j5J-h6-Oai"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>

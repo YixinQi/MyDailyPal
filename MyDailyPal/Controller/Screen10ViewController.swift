@@ -120,8 +120,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let treatmentPlan = TreatmentPlan(context: PersistenceService.context)
     let view: Screen8TableViewController = Screen8TableViewController()
     treatmentPlan.medication = String(view.substringString(string: drugName))
-    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
-    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
+    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))+1
+    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))+1
     treatmentPlan.startDate = datePicker.date as NSDate
     
     treatmentPlan.remindTime = timePicker.date as NSDate
@@ -151,7 +151,6 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     screen4.treatmentPlan.append(treatmentPlan)
     print("!!!")
     PersistenceService.saveContext()
-    
     // push notification
     self.appDelegate?.scheduleNotification(treatment: treatmentPlan)
     // perform segue

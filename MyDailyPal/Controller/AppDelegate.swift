@@ -12,9 +12,7 @@ import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
-
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -45,15 +43,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let record = AdherenceRecord(context: PersistenceService.context)
+        let body = response.notification.request.content.body
+        let body_array = body.split(separator: " ")
+        record.treatmentName = String(body_array[8])
+        record.date = NSDate()
+        //record.sideEffects = [SideEffect]()
         if response.actionIdentifier == "clickYes"{
             //TODO
-        }else if response.actionIdentifier == "clickNo"{
+            let body = response.notification.request.content.body
+            print("****Body of notification: "+body)
+            print("TREATMENT NAME: "+record.treatmentName!)
+            record.didTake = true
             
+        }else if response.actionIdentifier == "clickNo"{
+            record.didTake = false
         }
+        PersistenceService.saveContext()
+        completionHandler()
     }
     
     // set notification of treatment plan
     func scheduleNotification(treatment: TreatmentPlan){
+        UNUserNotificationCenter.current().delegate = self
         var selectedDate = treatment.startDate as! Date
         //Formatting date of visit details into string for notification
         let dateFormatter = DateFormatter()
@@ -66,8 +78,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // notification 2: You are scheduled to take 1 tablet(s) of ABACAVIR 600 at 2:30 PM With Meal.
         // did you take this medication today?
         let contentBody_before = "You are scheduled to take \(treatment.noOfTablet) tablet(s) of \(treatment.medication ?? "") at \(treatment.startDate!)"
-        print("number of tablets:\(treatment.noOfTablet)")
-        print("medication\(treatment.medication)")
         
         let contentBody_now = contentBody_before+" Did you take this medication today?"
         let content_before = UNMutableNotificationContent()
