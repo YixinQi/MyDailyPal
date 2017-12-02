@@ -19,10 +19,10 @@ class DrugBank {
         let fileManager = FileManager.default
         
         // Get contents in directory: '.' (current one)
-        
         do {
         // tried relative path
-        let files = try fileManager.contentsOfDirectory(atPath: "/Users/rodshangari/Documents/CapstoneDec1/MyDailyPal/MyDailyPal/Controller/assets")
+           
+            let files = try fileManager.contentsOfDirectory(atPath: "")
             for file in files{
                 filename = file
                 drugList.append([filename])
