@@ -10,7 +10,11 @@ import UIKit
 import CoreData
 
 class Screen4ViewController: UIViewController {
+  var startDate = Date()
   var treatmentPlan = [TreatmentPlan]()
+  var adherenceRecords = [AdherenceRecord]()
+  var progressPercentage = 100
+  @IBOutlet weak var myAdherence: UILabel!
   @IBOutlet weak var treatmentTableView: UITableView!
   @IBOutlet weak var MyTreatmentProcess: UIImageView!
   @IBOutlet weak var line: UIImageView!
@@ -34,11 +38,16 @@ class Screen4ViewController: UIViewController {
         showMenu = !showMenu
     }
     override func viewDidLoad() {
-      let fetchRequest: NSFetchRequest<TreatmentPlan> = TreatmentPlan.fetchRequest()
+      let treatmentPlanFetchRequest: NSFetchRequest<TreatmentPlan> = TreatmentPlan.fetchRequest()
+      let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
       do {
-        let visits = try PersistenceService.context.fetch(fetchRequest)
+        let visits = try PersistenceService.context.fetch(treatmentPlanFetchRequest)
         self.treatmentPlan = visits
         self.treatmentTableView.reloadData()
+      } catch {}
+      do {
+        let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
+        self.adherenceRecords = adherence
       } catch {}
       MyTreatmentProcess.image = UIImage(named: "1")
       line.image = UIImage(named: "line")
@@ -46,6 +55,7 @@ class Screen4ViewController: UIViewController {
       let tap = UITapGestureRecognizer(target: self, action: #selector(tap(gestureRecognizer:)))
       plusButton.addGestureRecognizer(tap)
       plusButton.isUserInteractionEnabled = true
+      myAdherence.text = String(progressPercentage) + "% on Target since 2017-Aug-20"
       super.viewDidLoad()
       treatmentTableView.delegate = self
       treatmentTableView.dataSource = self
@@ -55,6 +65,21 @@ class Screen4ViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
     let vc = storyboard.instantiateViewController(withIdentifier: "Screen8")
     self.present(vc, animated: true, completion: nil)
+  }
+  
+  func getProgress() {
+    var total = 0
+    var adherence = 0
+    for record in adherenceRecords {
+      if record.didTake == true {
+        adherence = adherence + 1
+      }
+      total = total + 1
+      if (record.date! as Date) < startDate {
+        startDate = record.date! as Date
+      }
+    }
+    progressPercentage = adherence / total
   }
 }
 
