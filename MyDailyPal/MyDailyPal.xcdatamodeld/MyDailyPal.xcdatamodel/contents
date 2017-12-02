@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13233.4" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AdherenceRecord" representedClassName="AdherenceRecord" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="didTake" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sideEffects" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="treatmentName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="DoctorVisit" representedClassName="DoctorVisit" syncable="YES">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="doctor" optional="YES" attributeType="String" syncable="YES"/>
@@ -30,5 +36,6 @@
         <element name="DoctorVisit" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Preferences" positionX="-63" positionY="-18" width="128" height="195"/>
         <element name="TreatmentPlan" positionX="-63" positionY="36" width="128" height="135"/>
+        <element name="AdherenceRecord" positionX="-63" positionY="54" width="128" height="105"/>
     </elements>
 </model>
