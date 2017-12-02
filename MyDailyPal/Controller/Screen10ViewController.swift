@@ -70,7 +70,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     var dosageArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
   var tabletArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-  var treatmentPlan = TreatmentPlan(context: PersistenceService.context)
+  
   override func viewDidLoad() {
         super.viewDidLoad()
         Medication.text = drugName
@@ -107,10 +107,11 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let tap7 = UITapGestureRecognizer(target: self, action: #selector(tap7(gestureRecognizer:)))
         Sunday.addGestureRecognizer(tap7)
         Sunday.isUserInteractionEnabled = true
-        treatmentPlan.repeate = ""
+//        treatmentPlan.repeate = ""
     }
 
   @IBAction func addMyTreatment(_ sender: Any) {
+    let treatmentPlan = TreatmentPlan(context: PersistenceService.context)
     treatmentPlan.medication = drugName
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
@@ -141,6 +142,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let storyboard = UIStoryboard(name:"Main", bundle:nil)
     let screen4 = storyboard.instantiateViewController(withIdentifier: "Screen4ViewController") as! Screen4ViewController
     screen4.treatmentPlan.append(treatmentPlan)
+    print("!!!")
     PersistenceService.saveContext()
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }

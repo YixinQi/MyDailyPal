@@ -84,6 +84,8 @@ extension Screen4ViewController: UITableViewDataSource, UITableViewDelegate {
       alertController.addAction(cancelAction)
       
       present(alertController, animated: true, completion: nil)
+      PersistenceService.context.delete(self.treatmentPlan[indexPath.row])
+      PersistenceService.saveContext()
     }
   }
   
