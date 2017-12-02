@@ -2748,7 +2748,7 @@ tapping PIN.</string>
                                 <items>
                                     <navigationItem title="Add Visit" id="LHv-2E-X6k">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="rtg-Qy-LgT">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dex-6y-NxD">
                                                 <rect key="frame" x="315" y="5.5" width="44" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
@@ -3295,7 +3295,7 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebN-i7-jVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="2094.1529235382309"/>
+            <point key="canvasLocation" x="1849" y="2095"/>
         </scene>
     </scenes>
     <resources>
@@ -3314,9 +3314,9 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1ml-Am-aFS"/>
-        <segue reference="sTT-BE-1CU"/>
-        <segue reference="drF-mK-4BT"/>
+        <segue reference="RG1-Dw-oWb"/>
+        <segue reference="a8O-ih-Zbb"/>
+        <segue reference="j5J-h6-Oai"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>
     </inferredMetricsTieBreakers>

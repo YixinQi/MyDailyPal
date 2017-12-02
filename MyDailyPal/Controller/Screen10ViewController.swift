@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import UserNotifications
 
-class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate{
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1
   }
+  var appDelegate = UIApplication.shared.delegate as? AppDelegate
   var drugName = String()
+  var selectedDate : Date?
+  var currentTreatment:TreatmentPlan?
+    
   @IBOutlet weak var Monday: UILabel!
   @IBOutlet weak var Tuesday: UILabel!
   @IBOutlet weak var Wendsday: UILabel!
@@ -112,8 +117,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func addMyTreatment(_ sender: Any) {
     treatmentPlan.medication = drugName
-    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
-    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
+    treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))+1
+    treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))+1
     treatmentPlan.startDate = datePicker.date as NSDate
     
     treatmentPlan.remindTime = timePicker.date as NSDate
@@ -142,12 +147,21 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     let screen4 = storyboard.instantiateViewController(withIdentifier: "Screen4ViewController") as! Screen4ViewController
     screen4.treatmentPlan.append(treatmentPlan)
     PersistenceService.saveContext()
+    
+    // push notification
+    self.appDelegate?.scheduleNotification(treatment: treatmentPlan)
+    // perform segue
     performSegue(withIdentifier: "tomytreatment", sender: self)
   }
+    
+    
+
 //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //    let myTreatmentViewControler = segue.destination as! Screen4ViewController
 //    myTreatmentViewControler.treatmentPlan.append(treatmentPlan)
 //  }
+    
+
   override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -227,6 +241,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
       Sunday.textColor = UIColor.black
 
   }
+    
+    
     
   
 

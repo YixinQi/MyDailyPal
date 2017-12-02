@@ -8,16 +8,107 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate{
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // push notification
+        UNUserNotificationCenter.current().getNotificationSettings {(settings) in
+            if (settings.authorizationStatus == .authorized) {
+                print("Notification authorized!")
+            } else {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .badge, .alert], completionHandler: { (granted, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        if (granted) {
+                            print("granted!")
+                        }
+                    }
+                })
+            }
+        }
+        
+        // define actions
+        let yesAction = UNNotificationAction(identifier: "clickYes", title: "Yes", options: [])
+        let noAction = UNNotificationAction(identifier: "clickNo", title: "No", options: [])
+        // add actions to category
+        let category = UNNotificationCategory(identifier: "yesnoCategory", actions:[yesAction,noAction],intentIdentifiers: [], options: [])
+        // add category to notification framework
+        UNUserNotificationCenter.current().setNotificationCategories([category])
         return true
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        if response.actionIdentifier == "clickYes"{
+            //TODO
+        }else if response.actionIdentifier == "clickNo"{
+            
+        }
+    }
+    
+    // set notification of treatment plan
+    func scheduleNotification(treatment: TreatmentPlan){
+        var selectedDate = treatment.startDate as! Date
+        //Formatting date of visit details into string for notification
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let contentDate = dateFormatter.string(from: selectedDate)
+        
+        //Notification Body and content
+        // notification 1: You are scheduled to take 1 tablet(s) of ABACAVIR 600 at 2:30 PM With Meal.
+        // notification 2: You are scheduled to take 1 tablet(s) of ABACAVIR 600 at 2:30 PM With Meal.
+        // did you take this medication today?
+        let contentBody_before = "You are scheduled to take \(treatment.noOfTablet) tablet(s) of \(treatment.medication ?? "") at \(treatment.startDate!)"
+        print("number of tablets:\(treatment.noOfTablet)")
+        print("medication\(treatment.medication)")
+        
+        let contentBody_now = contentBody_before+" Did you take this medication today?"
+        let content_before = UNMutableNotificationContent()
+        content_before.title = "MyDailyPal"
+        content_before.body = contentBody_before
+        
+        let content_onTime = UNMutableNotificationContent()
+        content_onTime.title = "MyDailyPal"
+        content_onTime.body = contentBody_now
+        content_onTime.categoryIdentifier = "yesnoCategory"
+        
+        //Creating the timestamps for when the reminders should fire (day before and hour before)
+        let minutesBeforeReminder = Calendar.current.date(byAdding: .minute, value: -15, to: selectedDate)
+        let minutesBeforeComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: minutesBeforeReminder!)
+        let onTimeReminder = Calendar.current.date(byAdding: .hour, value: 0, to: selectedDate)
+        let onTimeComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: onTimeReminder!)
+        
+        //Creating the triggers based off of these timestamps
+        let minutesBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: minutesBeforeComps, repeats: false)
+        let onTimeTrigger = UNCalendarNotificationTrigger(dateMatching: onTimeComps, repeats: false)
+        
+        
+        //Scheduling 15 minutes before medication
+        let minutesBeforeNotificationRequest = UNNotificationRequest(identifier: "minutesBeforeTreatment", content: content_before, trigger: minutesBeforeTrigger)
+        UNUserNotificationCenter.current().add(minutesBeforeNotificationRequest){ (error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("minutes Before Notification Scheduled");
+            }
+        }
+        
+        //Scheduling on time medication
+        let onTimeNotificationRequest = UNNotificationRequest(identifier: "onTimeTreatment", content: content_onTime, trigger: onTimeTrigger)
+        UNUserNotificationCenter.current().add(onTimeNotificationRequest){ (error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("ontime Before Notification Scheduled");
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
