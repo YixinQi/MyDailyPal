@@ -73,7 +73,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
   
   override func viewDidLoad() {
         super.viewDidLoad()
-        Medication.text = drugName
+        let view: Screen8TableViewController = Screen8TableViewController()
+        Medication.text = String(view.substringString(string: drugName))
         dosagePicker.delegate = self
         dosagePicker.dataSource = self
         tabletPicker.delegate = self
@@ -112,7 +113,8 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func addMyTreatment(_ sender: Any) {
     let treatmentPlan = TreatmentPlan(context: PersistenceService.context)
-    treatmentPlan.medication = drugName
+    let view: Screen8TableViewController = Screen8TableViewController()
+    treatmentPlan.medication = String(view.substringString(string: drugName))
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))
     treatmentPlan.noOfTablet = Int16(tabletPicker.selectedRow(inComponent: 0))
     treatmentPlan.startDate = datePicker.date as NSDate
