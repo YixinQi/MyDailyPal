@@ -52,6 +52,8 @@
 		969C83011FC9052C00784680 /* aesSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C83001FC9052C00784680 /* aesSecurity.swift */; };
 		D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44616501F8AF23500780B56 /* Screen7ViewController.swift */; };
 		D47526101FD344B4009DC839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D475260F1FD344B3009DC839 /* assets */; };
+		D47526121FD36332009DC839 /* Screen12TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47526111FD36331009DC839 /* Screen12TableViewCell.swift */; };
+		D47526141FD365D9009DC839 /* Screen12TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47526131FD365D9009DC839 /* Screen12TableViewController.swift */; };
 		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
 		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */; };
@@ -129,6 +131,8 @@
 		969C83001FC9052C00784680 /* aesSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aesSecurity.swift; sourceTree = "<group>"; };
 		D44616501F8AF23500780B56 /* Screen7ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen7ViewController.swift; sourceTree = "<group>"; };
 		D475260F1FD344B3009DC839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		D47526111FD36331009DC839 /* Screen12TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12TableViewCell.swift; sourceTree = "<group>"; };
+		D47526131FD365D9009DC839 /* Screen12TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12TableViewController.swift; sourceTree = "<group>"; };
 		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
 		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen9ViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +292,8 @@
 				D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */,
 				6032371D1FC14A5800661D31 /* PreferenceViewController.swift */,
 				91357F581FCBE94600B0B857 /* CustomCell.swift */,
+				D47526111FD36331009DC839 /* Screen12TableViewCell.swift */,
+				D47526131FD365D9009DC839 /* Screen12TableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				602F7ACE1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift in Sources */,
 				6040EB381FD3664500AF6B25 /* SideEffect.swift in Sources */,
 				918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */,
+				D47526141FD365D9009DC839 /* Screen12TableViewController.swift in Sources */,
 				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
 				913BCF031FA654CE0006AA67 /* Screen10ViewController.swift in Sources */,
 				962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */,
@@ -492,6 +499,7 @@
 				D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */,
 				602F7ACF1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
+				D47526121FD36332009DC839 /* Screen12TableViewCell.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,

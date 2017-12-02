@@ -1293,7 +1293,7 @@ tapping PIN.</string>
         <!--Calendar-->
         <scene sceneID="9Ks-t4-4fp">
             <objects>
-                <viewController id="5hd-hB-oci" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Screen12TableViewController" id="5hd-hB-oci" customClass="Screen12TableViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Zm-qJ-PHm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1307,7 +1307,7 @@ tapping PIN.</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="1qC-rv-RXB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="1qC-rv-RXB" customClass="Screen12TableViewCell" customModule="MyDailyPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qC-rv-RXB" id="tM0-4Y-S8s">
@@ -1339,6 +1339,12 @@ tapping PIN.</string>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="DrugName" destination="aQx-Ai-9W8" id="0q9-bI-pHi"/>
+                                            <outlet property="drugScheduledTime" destination="WJL-8X-AF8" id="xAa-ba-UgW"/>
+                                            <outlet property="roundImg" destination="cNr-YH-ZSI" id="hB1-FB-Yo7"/>
+                                            <outlet property="sideEffectsButton" destination="UBr-Mj-WBs" id="tLJ-Yc-gYF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1349,11 +1355,23 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-hg-ofV">
+                                <rect key="frame" x="112" y="97" width="150" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SkY-sw-zkY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="Hdc-Er-9Zt"/>
+                    <connections>
+                        <outlet property="date" destination="jHj-IX-eWX" id="duz-nW-JJR"/>
+                        <outlet property="onTrack" destination="rE5-hg-ofV" id="0mp-GI-GUW"/>
+                        <outlet property="roundImg" destination="g29-6a-WPq" id="hKZ-tG-Q9s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWl-VF-op5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
