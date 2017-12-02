@@ -14,10 +14,6 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
 //Table that will hold the visits
     @IBOutlet weak var visitsTableView: UITableView!
-    
-    @IBOutlet weak var trailingConstraints: NSLayoutConstraint!
-    
-    
     var showMenu = false
 
     
@@ -28,15 +24,17 @@ class VisitsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var passData : Bool = false
     var visitToEdit : DoctorVisit?
 
-    @IBAction func menuAction(_ sender: Any) {
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    
+    @IBAction func showMenu(_ sender: Any) {
         if(showMenu){
-            trailingConstraints.constant = 375
+            trailingConstraint.constant = 375
             UIView.animate(withDuration: 0.3,
                            animations: {
                             self.view.layoutIfNeeded()
             })
         }else{
-            trailingConstraints.constant = 25
+            trailingConstraint.constant = 25
             UIView.animate(withDuration: 0.3,
                            animations: {
                             self.view.layoutIfNeeded()
