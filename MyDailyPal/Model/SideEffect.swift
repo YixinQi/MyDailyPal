@@ -7,10 +7,12 @@
 //
 
 import Foundation
-class SideEffect{
-    var treatmentName: String?
-    var effectName: String?
-    var details: String?
-    var date: NSDate?
-    var adherenceRecord: AdherenceRecord?
+import CoreData
+
+public class SideEffect: NSManagedObject{
+    @NSManaged var treatmentName: String?
+    @NSManaged var effectName: String?
+    @NSManaged var details: String?
+    @NSManaged var date: NSDate?
+    @NSManaged var adherenceRecord: AdherenceRecord?
 }
