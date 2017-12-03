@@ -15,7 +15,26 @@ class Screen11ViewController: UIViewController {
   @IBOutlet weak var calendarView: JTAppleCalendarView!
   @IBOutlet weak var Year: UILabel!
   @IBOutlet weak var Month: UILabel!
-  var selectedDate = Date();
+    
+  @IBOutlet weak var trailingContraint: NSLayoutConstraint!
+  var showMenu = false
+    @IBAction func showMenu(_ sender: Any) {
+        if(showMenu){
+            trailingContraint.constant = 375
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }else{
+            trailingContraint.constant = 25
+            UIView.animate(withDuration: 0.3,
+                           animations: {
+                            self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
+    }
+    var selectedDate = Date();
   //let formatter = DateFormatter()
   override func viewDidLoad() {
     let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
