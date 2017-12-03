@@ -16,7 +16,9 @@ class Screen12TableViewController: UITableViewController {
     @IBOutlet weak var roundImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        date.text = "My Medicine history for "
+        let formatter = DateFormatter()
+        date.text = "My Medicine history for "+formatter.string(from: adherenceRecords[0].date! as Date)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -53,14 +55,15 @@ class Screen12TableViewController: UITableViewController {
         let adherenceRecord = adherenceRecords[indexPath.row]
         cell.DrugName.text = adherenceRecord.treatmentName;
         if adherenceRecord.didTake == true {
+            
             let formatter = DateFormatter()
-            cell.drugScheduledTime.text = "Taken at "+formatter.string(from: adherenceRecord.date as! Date)
+            cell.drugScheduledTime.text = "Taken at "+formatter.string(from: adherenceRecord.date! as Date)
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
             cell.roundImg.clipsToBounds = true
             cell.roundImg.backgroundColor = UIColor.green
         }else {
             let formatter = DateFormatter()
-            cell.drugScheduledTime.text = "Missed dose at "+formatter.string(from: adherenceRecord.date as! Date)
+            cell.drugScheduledTime.text = "Missed dose at "+formatter.string(from: adherenceRecord.date! as Date)
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
             cell.roundImg.clipsToBounds = true
             cell.roundImg.backgroundColor = UIColor.red
