@@ -118,6 +118,7 @@ class Screen10ViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
   @IBAction func addMyTreatment(_ sender: Any) {
     let treatmentPlan = TreatmentPlan(context: PersistenceService.context)
+    treatmentPlan.repeate = ""
     let view: Screen8TableViewController = Screen8TableViewController()
     treatmentPlan.medication = String(view.substringString(string: drugName))
     treatmentPlan.noOfDosage = Int16(dosagePicker.selectedRow(inComponent: 0))+1

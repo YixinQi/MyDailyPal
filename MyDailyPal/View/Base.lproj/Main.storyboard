@@ -1076,6 +1076,13 @@ tapping PIN.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n%  on Target  since  2017-Aug-20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-BS-afB">
+                                <rect key="frame" x="109" y="93" width="156" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOI-VI-Ufw">
                                 <rect key="frame" x="400" y="21" width="350" height="646"/>
                                 <subviews>
@@ -1213,13 +1220,6 @@ tapping PIN.</string>
                                     <constraint firstItem="o5D-HR-H9p" firstAttribute="top" secondItem="T3X-KB-Cc8" secondAttribute="bottom" constant="5" id="xfF-SF-ZEL"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="n%  on Target  since  2017-Aug-20" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9e-BS-afB">
-                                <rect key="frame" x="109" y="93" width="156" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1652,7 +1652,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="390" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1681,7 +1681,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="440" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -3251,7 +3251,7 @@ tapping PIN.</string>
                         <viewLayoutGuide key="safeArea" id="kBE-RM-YeI"/>
                     </view>
                     <navigationItem key="navigationItem" id="eyT-Fp-JWb">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="u9s-f3-WD9" userLabel="NEXT">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="u9s-f3-WD9" userLabel="NEXT">
                             <connections>
                                 <action selector="addMyTreatment:" destination="aLD-Bd-Xg6" id="3oV-7v-JPG"/>
                             </connections>

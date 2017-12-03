@@ -7,14 +7,23 @@
 //
 import UIKit
 import JTAppleCalendar
+import CoreData
 
 class Screen11ViewController: UIViewController {
+  var adherenceRecords = [AdherenceRecord]()
   @IBOutlet weak var calendarView: JTAppleCalendarView!
   @IBOutlet weak var Year: UILabel!
   @IBOutlet weak var Month: UILabel!
   var selectedDate = Date();
   //let formatter = DateFormatter()
   override func viewDidLoad() {
+    let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
+    do {
+      let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
+      self.adherenceRecords = adherence
+      
+    } catch {}
+    calendarView.scrollToDate(Date())
     super.viewDidLoad()
     calendarView.calendarDataSource = self
     calendarView.calendarDelegate = self
@@ -51,21 +60,9 @@ class Screen11ViewController: UIViewController {
 }
 
 extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
-  
-//  func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-//    formatter.dateFormat = "yyyy MM dd"
-//    formatter.timeZone = Calendar.current.timeZone
-//    formatter.locale = Calendar.current.locale
-//    let startDate = formatter.date(from: "2017 01 01")!
-//    let endDate = formatter.date(from: "2017 12 31")!
-//    let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
-//    return parameters
-//  }
-  
   func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy MM dd"
-    
     let startDate = formatter.date(from: "2016 02 01")! // You can use date generated from a formatter
     let endDate = Date()                                // You can also use dates created from this function
     let parameters = ConfigurationParameters(startDate: startDate,
@@ -77,13 +74,33 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
       firstDayOfWeek: .sunday)
     return parameters
   }
-  
+
+  func checkAdherence(date: Date) -> Int {
+    for record in adherenceRecords {
+      if Calendar.current.compare(record.date! as Date, to: date, toGranularity: .day) == .orderedSame {
+        print("found")
+        if record.didTake  {
+          return 1
+        } else {
+          return 2
+        }
+      }
+    }
+    return 3
+  }
   func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
     let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
     cell.dateLabel.text = cellState.text
     if cellState.dateBelongsTo == .thisMonth {
       cell.dateLabel.textColor = UIColor.black
-    } else {
+    }
+    if checkAdherence(date: date) == 1 {
+      cell.dateLabel.textColor = UIColor.green
+    }
+    if checkAdherence(date: date) == 2{
+      cell.dateLabel.textColor = UIColor.red
+    }
+    if cellState.dateBelongsTo != .thisMonth {
       cell.dateLabel.textColor = UIColor.white
     }
     if cellState.isSelected {
