@@ -7,23 +7,38 @@
 //
 
 import UIKit
+import CoreData
 
-class Screen12TableViewController: UITableViewController {
+class Screen12TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var adherenceRecords = [AdherenceRecord]()
     
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
     @IBOutlet weak var roundImg: UIImageView!
+    @IBOutlet weak var adherenceRecordsTableVIew: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let formatter = DateFormatter()
-        date.text = "My Medicine history for "+formatter.string(from: adherenceRecords[0].date! as Date)
+        
+        //This block may be replaced if yixin passes you the actual array of adhrerenceRecords that you need. otherwise you would do this fetch request and loop through all the records and pull only the ones with the same date as the date you need.
+        let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
+        do {
+            let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
+            self.adherenceRecords = adherence
+            
+        } catch {}
+        
+        if (adherenceRecords.count > 0){
+                    date.text = "My Medicine history for "+formatter.string(from: adherenceRecords[0].date! as Date)
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+        adherenceRecordsTableVIew.delegate = self
+        adherenceRecordsTableVIew.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,18 +48,18 @@ class Screen12TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return adherenceRecords.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Screen12TableViewCell", for: indexPath)
             as? Screen12TableViewCell else {
                 fatalError("The dequed cell is not an instance of Screen12TableViewController")

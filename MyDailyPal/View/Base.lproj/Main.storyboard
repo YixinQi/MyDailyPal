@@ -1114,7 +1114,7 @@ tapping PIN.</string>
                                 <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <pickerView opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D68-81-OPg">
-                                <rect key="frame" x="-160.5" y="318" width="320" height="216"/>
+                                <rect key="frame" x="-160" y="318" width="320" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="06e-WC-jUU"/>
                                     <constraint firstAttribute="height" constant="216" id="M40-BY-b01"/>
@@ -1546,6 +1546,7 @@ tapping PIN.</string>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="Hdc-Er-9Zt"/>
                     <connections>
+                        <outlet property="adherenceRecordsTableVIew" destination="U9O-Q9-VrB" id="SKi-Ax-Kw5"/>
                         <outlet property="date" destination="jHj-IX-eWX" id="duz-nW-JJR"/>
                         <outlet property="onTrack" destination="rE5-hg-ofV" id="0mp-GI-GUW"/>
                         <outlet property="roundImg" destination="g29-6a-WPq" id="hKZ-tG-Q9s"/>
@@ -1830,7 +1831,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="390" width="52" height="30"/>
+                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1859,7 +1860,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="440" width="52" height="30"/>
+                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -3786,7 +3787,7 @@ tapping PIN.</string>
         <segue reference="kyn-aq-311"/>
         <segue reference="azi-0B-B9z"/>
         <segue reference="d7v-9Z-alJ"/>
-        <segue reference="vJj-aD-TmC"/>
+        <segue reference="oU1-p0-Pua"/>
         <segue reference="j5J-h6-Oai"/>
         <segue reference="xcx-YQ-xEO"/>
         <segue reference="89a-Ve-q4l"/>
