@@ -1250,10 +1250,10 @@ tapping PIN.</string>
             </objects>
             <point key="canvasLocation" x="7765.6000000000004" y="1456.8215892053975"/>
         </scene>
-        <!--View Controller-->
+        <!--Screen13 View Controller-->
         <scene sceneID="HIh-Wa-VJ2">
             <objects>
-                <viewController id="mgX-Y4-2TP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Screen13ViewController" id="mgX-Y4-2TP" customClass="Screen13ViewController" customModule="MyDailyPal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o2s-GR-yFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1284,6 +1284,11 @@ tapping PIN.</string>
                         <viewLayoutGuide key="safeArea" id="P6Y-5K-sa2"/>
                     </view>
                     <navigationItem key="navigationItem" id="4en-Y3-S4o"/>
+                    <connections>
+                        <outlet property="date" destination="icJ-xB-rpi" id="mU7-Us-LMx"/>
+                        <outlet property="sideEffects" destination="CYr-JI-yjz" id="M0U-1O-EQo"/>
+                        <outlet property="treatmentName" destination="lFM-OP-A4J" id="oyh-xg-an3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tG-4g-sF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1651,7 +1656,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="390" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -1680,7 +1685,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
+                                <rect key="frame" x="307" y="440" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>

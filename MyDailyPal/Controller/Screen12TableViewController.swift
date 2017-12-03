@@ -9,7 +9,8 @@
 import UIKit
 
 class Screen12TableViewController: UITableViewController {
-
+    var adherenceRecords = [AdherenceRecord]()
+    
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
     @IBOutlet weak var roundImg: UIImageView!
@@ -33,23 +34,54 @@ class Screen12TableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return adherenceRecords.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Screen12TableViewCell", for: indexPath)
+            as? Screen12TableViewCell else {
+                fatalError("The dequed cell is not an instance of Screen12TableViewController")
+        }
+        
         // Configure the cell...
-
+        let adherenceRecord = adherenceRecords[indexPath.row]
+        cell.DrugName.text = adherenceRecord.treatmentName;
+        if adherenceRecord.didTake == true {
+            let formatter = DateFormatter()
+            cell.drugScheduledTime.text = "Taken at "+formatter.string(from: adherenceRecord.date as! Date)
+            cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
+            cell.roundImg.clipsToBounds = true
+            cell.roundImg.backgroundColor = UIColor.green
+        }else {
+            let formatter = DateFormatter()
+            cell.drugScheduledTime.text = "Missed dose at "+formatter.string(from: adherenceRecord.date as! Date)
+            cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
+            cell.roundImg.clipsToBounds = true
+            cell.roundImg.backgroundColor = UIColor.red
+        }
+        cell.sideEffectsButton.tag = indexPath.row
+        cell.sideEffectsButton.addTarget(self, action: #selector(AlertWindow(sender: )), for: UIControlEvents.touchUpInside)
         return cell
     }
-    */
+    @objc func AlertWindow(sender: UIButton){
+        let alert = UIAlertController(title: "", message: "This facility is to record side effects on your phone for your doctor", preferredStyle: UIAlertControllerStyle.alert)
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) -> Void in
+//            let adherenceRecord = self.adherenceRecords[sender.tag]
+//            let storyboard = UIStoryboard(name:"Main", bundle:nil)
+//            let myVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
+//            myVC.adherenceRecord= adherenceRecord
+//            navigationController?.pushViewController(myVC, animated: true)
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.

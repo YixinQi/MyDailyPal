@@ -54,6 +54,7 @@
 		D47526101FD344B4009DC839 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = D475260F1FD344B3009DC839 /* assets */; };
 		D47526121FD36332009DC839 /* Screen12TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47526111FD36331009DC839 /* Screen12TableViewCell.swift */; };
 		D47526141FD365D9009DC839 /* Screen12TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47526131FD365D9009DC839 /* Screen12TableViewController.swift */; };
+		D47526161FD37DB1009DC839 /* Screen13ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47526151FD37DB1009DC839 /* Screen13ViewController.swift */; };
 		D49E3DC21FABE25800533846 /* DrugBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC11FABE25700533846 /* DrugBank.swift */; };
 		D49E3DC41FABE50800533846 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49E3DC31FABE50800533846 /* Drug.swift */; };
 		D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */; };
@@ -133,6 +134,7 @@
 		D475260F1FD344B3009DC839 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		D47526111FD36331009DC839 /* Screen12TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12TableViewCell.swift; sourceTree = "<group>"; };
 		D47526131FD365D9009DC839 /* Screen12TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen12TableViewController.swift; sourceTree = "<group>"; };
+		D47526151FD37DB1009DC839 /* Screen13ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen13ViewController.swift; sourceTree = "<group>"; };
 		D49E3DC11FABE25700533846 /* DrugBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugBank.swift; sourceTree = "<group>"; };
 		D49E3DC31FABE50800533846 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
 		D4B4252A1FB98C2D000DEC90 /* Screen9ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen9ViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				91357F581FCBE94600B0B857 /* CustomCell.swift */,
 				D47526111FD36331009DC839 /* Screen12TableViewCell.swift */,
 				D47526131FD365D9009DC839 /* Screen12TableViewController.swift */,
+				D47526151FD37DB1009DC839 /* Screen13ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */,
 				967C2E401FA7CA4D00CA4A74 /* PersistenceService.swift in Sources */,
 				D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */,
+				D47526161FD37DB1009DC839 /* Screen13ViewController.swift in Sources */,
 				D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */,
 				602F7ACF1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
