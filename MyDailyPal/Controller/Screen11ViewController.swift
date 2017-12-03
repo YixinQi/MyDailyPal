@@ -37,6 +37,8 @@ class Screen11ViewController: UIViewController {
     var selectedDate = Date();
   //let formatter = DateFormatter()
   override func viewDidLoad() {
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName:"AdherenceRecord")
+    request.returnsObjectsAsFaults = false
     let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
     do {
       let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
