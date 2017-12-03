@@ -95,9 +95,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let onTimeReminder = Calendar.current.date(byAdding: .hour, value: 0, to: selectedDate)
         let onTimeComps = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: onTimeReminder!)
         
+        var minutesBeforeTrigger: UNCalendarNotificationTrigger
+        var onTimeTrigger: UNCalendarNotificationTrigger
         //Creating the triggers based off of these timestamps
-        let minutesBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: minutesBeforeComps, repeats: false)
-        let onTimeTrigger = UNCalendarNotificationTrigger(dateMatching: onTimeComps, repeats: false)
+        if (treatment.repeate != "" || treatment.repeate != nil){
+            minutesBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: minutesBeforeComps, repeats: true)
+            onTimeTrigger = UNCalendarNotificationTrigger(dateMatching: onTimeComps, repeats: true)
+        } else {
+            minutesBeforeTrigger = UNCalendarNotificationTrigger(dateMatching: minutesBeforeComps, repeats: false)
+            onTimeTrigger = UNCalendarNotificationTrigger(dateMatching: onTimeComps, repeats: false)
+        }
         
         
         //Scheduling 15 minutes before medication
