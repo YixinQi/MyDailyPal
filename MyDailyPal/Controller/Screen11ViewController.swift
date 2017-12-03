@@ -11,6 +11,7 @@ import CoreData
 
 class Screen11ViewController: UIViewController {
   var adherenceRecords = [AdherenceRecord]()
+  var visitRecords = [DoctorVisit]()
   @IBOutlet weak var calendarView: JTAppleCalendarView!
   @IBOutlet weak var Year: UILabel!
   @IBOutlet weak var Month: UILabel!
@@ -22,6 +23,11 @@ class Screen11ViewController: UIViewController {
       let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
       self.adherenceRecords = adherence
       
+    } catch {}
+    let visitRecordFetchRequest: NSFetchRequest<DoctorVisit> = DoctorVisit.fetchRequest()
+    do {
+      let visits = try PersistenceService.context.fetch(visitRecordFetchRequest)
+      self.visitRecords = visits
     } catch {}
     calendarView.scrollToDate(Date())
     super.viewDidLoad()
@@ -88,6 +94,16 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
     }
     return 3
   }
+  
+  func checkVisit(date: Date) -> Bool {
+    for record in visitRecords {
+      if Calendar.current.compare(record.dateTime! as Date, to: date, toGranularity: .day) == .orderedSame {
+        return true
+      }
+    }
+    return false
+  }
+  
   func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
     let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
     cell.dateLabel.text = cellState.text
@@ -102,6 +118,9 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
     }
     if cellState.dateBelongsTo != .thisMonth {
       cell.dateLabel.textColor = UIColor.white
+    }
+    if checkVisit(date: date) {
+      cell.backgroundColor = UIColor(red: 66/255.0, green: 209/255.0, blue: 244/255.0, alpha: 1.0)
     }
     if cellState.isSelected {
       
