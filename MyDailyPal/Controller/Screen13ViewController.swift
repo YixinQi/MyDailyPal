@@ -10,14 +10,19 @@ import UIKit
 
 class Screen13ViewController: UIViewController {
     var adherenceRecord = AdherenceRecord()
+    var getText = String()
     @IBOutlet weak var sideEffects: UITextView!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var treatmentName: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        treatmentName.text = adherenceRecord.treatmentName;
-        let formatter = DateFormatter()
-        date.text = formatter.string(from: adherenceRecord.date! as Date)
+        if !getText.isEmpty{
+            treatmentName.text = getText
+        }else{
+            treatmentName.text = adherenceRecord.treatmentName;
+            let formatter = DateFormatter()
+            date.text = formatter.string(from: adherenceRecord.date! as Date)
+        }
         // Do any additional setup after loading the view.
     }
 

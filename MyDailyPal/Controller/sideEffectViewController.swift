@@ -22,6 +22,13 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
         return(cell)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
+        DetailVC.getText = sideEffects[indexPath.row] as! String
+        self.navigationController?.pushViewController(DetailVC, animated: true)
+    }
+    
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     var showMenu = false
     var sideEffects = [String]()
@@ -55,7 +62,8 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
             } else {
                 self.adherence = adherenceRecords[adherenceRecords.count-1]
                 var title = "unassigned"
-                self.sideEffects.append("For test")
+                self.sideEffects.append("For test1")
+                self.sideEffects.append("For test2")
                 for sideEffect in (self.adherence?.sideEffects!)!{
                     title = sideEffect.effectName!
                     self.sideEffects.append(title)
