@@ -20,6 +20,6 @@ extension AdherenceRecord {
     @NSManaged public var treatmentName: String?
     @NSManaged public var date: NSDate?
     @NSManaged public var didTake: Bool
-    //@NSManaged public var sideEffects: [SideEffect]?
+    @NSManaged public var sideEffects: [SideEffect]?
 
 }

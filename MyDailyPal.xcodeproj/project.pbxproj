@@ -15,6 +15,7 @@
 		602F7ACF1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F7ACD1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift */; };
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
 		6040EB381FD3664500AF6B25 /* SideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040EB371FD3664500AF6B25 /* SideEffect.swift */; };
+		6040EB3A1FD37A3800AF6B25 /* SideEffectsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040EB391FD37A3700AF6B25 /* SideEffectsTableViewCell.swift */; };
 		60525B8D1FCE218F006DF3CB /* sideEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */; };
 		606378361FCE58AB001C2A7F /* VisitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606378351FCE58AB001C2A7F /* VisitsViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
@@ -90,6 +91,7 @@
 		602F7ACD1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdherenceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		6040EB371FD3664500AF6B25 /* SideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideEffect.swift; sourceTree = "<group>"; };
+		6040EB391FD37A3700AF6B25 /* SideEffectsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideEffectsTableViewCell.swift; sourceTree = "<group>"; };
 		60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideEffectViewController.swift; sourceTree = "<group>"; };
 		606378351FCE58AB001C2A7F /* VisitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				D4D3140E1F8C76190069D113 /* DrugsTableViewCell.swift in Sources */,
 				91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
+				6040EB3A1FD37A3800AF6B25 /* SideEffectsTableViewCell.swift in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
