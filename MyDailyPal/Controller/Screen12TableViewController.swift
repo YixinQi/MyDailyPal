@@ -18,10 +18,9 @@ class Screen12TableViewController: UITableViewController {
         super.viewDidLoad()
         let formatter = DateFormatter()
         date.text = "My Medicine history for "+formatter.string(from: adherenceRecords[0].date! as Date)
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
@@ -70,17 +69,18 @@ class Screen12TableViewController: UITableViewController {
         }
         cell.sideEffectsButton.tag = indexPath.row
         cell.sideEffectsButton.addTarget(self, action: #selector(AlertWindow(sender: )), for: UIControlEvents.touchUpInside)
+        print("reached here")
         return cell
     }
     @objc func AlertWindow(sender: UIButton){
         let alert = UIAlertController(title: "", message: "This facility is to record side effects on your phone for your doctor", preferredStyle: UIAlertControllerStyle.alert)
         // add an action (button)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) -> Void in
-//            let adherenceRecord = self.adherenceRecords[sender.tag]
-//            let storyboard = UIStoryboard(name:"Main", bundle:nil)
-//            let myVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
-//            myVC.adherenceRecord= adherenceRecord
-//            navigationController?.pushViewController(myVC, animated: true)
+            let adherenceRecord = self.adherenceRecords[sender.tag]
+            let storyboard = UIStoryboard(name:"Main", bundle:nil)
+            let myVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
+            myVC.adherenceRecord = adherenceRecord
+            self.navigationController?.pushViewController(myVC, animated: true)
             
         }))
         self.present(alert, animated: true, completion: nil)
