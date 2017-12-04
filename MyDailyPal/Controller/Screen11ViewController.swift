@@ -158,7 +158,7 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
     let myVC = storyboard.instantiateViewController(withIdentifier: "Screen12TableViewController") as! Screen12TableViewController
     //navigationController?.pushViewController(myVC, animated: true)
     selectedDate = cellState.date
-    myVC.selectedDate = selectedDate
+    myVC.dateSelected = selectedDate as NSDate
     performSegue(withIdentifier: "Screen12TableViewController", sender: self)
   }
 }

@@ -11,7 +11,7 @@ import CoreData
 
 class Screen12TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var adherenceRecords = [AdherenceRecord]()
-    var selectedDate = Date();
+    var dateSelected = NSDate();
     var record = [AdherenceRecord]()
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
