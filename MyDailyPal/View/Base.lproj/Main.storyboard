@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5hd-hB-oci">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXT-cV-4Ah">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2189,6 +2189,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="s17-ju-7eC" kind="show" id="bXC-nq-liw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS3-9U-bL0">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -2200,6 +2203,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Bra-b9-nGD" kind="show" id="eZT-g8-Jrx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRR-HB-qWP">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -2211,6 +2217,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="NK7-bf-IlK" kind="show" id="QV2-Pc-SCG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-cC-e2p">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -2222,6 +2231,9 @@ tapping PIN.</string>
                                         <state key="normal" title="     Calendar" image="calendar_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="uQq-6i-G2q" kind="show" id="zTS-jq-vJe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuj-sm-QXa">
                                         <rect key="frame" x="0.0" y="294" width="350" height="45"/>
@@ -2466,6 +2478,9 @@ tapping PIN.</string>
                                     <constraint firstAttribute="height" constant="46" id="uJm-XM-UPF"/>
                                 </constraints>
                                 <state key="normal" title="My Calendar"/>
+                                <connections>
+                                    <segue destination="AXT-cV-4Ah" kind="show" id="FU4-KX-xjm"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdk-ht-QvU">
                                 <rect key="frame" x="400" y="21" width="350" height="646"/>
@@ -2513,6 +2528,9 @@ tapping PIN.</string>
                                         <state key="normal" title="     Calendar" image="calendar_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="uQq-6i-G2q" kind="show" id="hFd-2a-Eq8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ykw-JG-WOn">
                                         <rect key="frame" x="0.0" y="294" width="350" height="45"/>
@@ -2697,6 +2715,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      Preferences" image="setting_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="s17-ju-7eC" kind="show" id="fAs-tm-TB9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-DJ-no5">
                                         <rect key="frame" x="0.0" y="444" width="350" height="45"/>
@@ -2708,6 +2729,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Side Effects" image="sideeffect_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="Bra-b9-nGD" kind="show" id="Czb-d2-M4O"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arj-rW-1z3">
                                         <rect key="frame" x="0.0" y="394" width="350" height="45"/>
@@ -2719,6 +2743,9 @@ tapping PIN.</string>
                                         <state key="normal" title="      My Visits" image="list_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="NK7-bf-IlK" kind="show" id="S07-C8-4Da"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSQ-ul-TGb">
                                         <rect key="frame" x="0.0" y="344" width="350" height="45"/>
@@ -2730,6 +2757,9 @@ tapping PIN.</string>
                                         <state key="normal" title="     Calendar" image="calendar_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="uQq-6i-G2q" kind="show" id="ypy-wY-cmG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="El6-JL-42V">
                                         <rect key="frame" x="0.0" y="294" width="350" height="45"/>
@@ -3143,6 +3173,9 @@ tapping PIN.</string>
                                         <state key="normal" title="     Calendar" image="calendar_icon">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="uQq-6i-G2q" kind="show" id="c5D-bw-ZMX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOT-DP-ywY">
                                         <rect key="frame" x="0.0" y="294" width="350" height="45"/>
@@ -3948,12 +3981,12 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2HK-Gh-bdT"/>
-        <segue reference="q18-Id-8ny"/>
-        <segue reference="69G-Dn-8dk"/>
-        <segue reference="Js2-Tx-69I"/>
-        <segue reference="RG1-Dw-oWb"/>
-        <segue reference="oU1-p0-Pua"/>
+        <segue reference="ypy-wY-cmG"/>
+        <segue reference="Czb-d2-M4O"/>
+        <segue reference="S07-C8-4Da"/>
+        <segue reference="fAs-tm-TB9"/>
+        <segue reference="a2N-mc-jF8"/>
+        <segue reference="etO-aC-p2M"/>
         <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>
