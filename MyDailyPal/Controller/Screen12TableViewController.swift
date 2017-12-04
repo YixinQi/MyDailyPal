@@ -21,7 +21,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("The date that is being passed is: \(dateSelected)")
+        //print("The date that is being passed is: \(dateSelected)")
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.short
         //dateFormatter.timeStyle = DateFormatter.Style.short
@@ -90,7 +90,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("in table cell creation")
+        //print("in table cell creation")
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Screen12TableViewCell", for: indexPath)
             as? Screen12TableViewCell else {
                 fatalError("The dequed cell is not an instance of Screen12TableViewController")
