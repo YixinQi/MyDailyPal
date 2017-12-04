@@ -2424,33 +2424,23 @@ tapping PIN.</string>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sideEffectCell" rowHeight="60" id="t89-cN-2hM" customClass="SideEffectsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t89-cN-2hM" id="EMr-fO-QJd" customClass="SideEffectsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t89-cN-2hM" id="EMr-fO-QJd" customClass="SideEffectsTableViewCell" customModule="MyDailyPal" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-Wg-cBy">
-                                                    <rect key="frame" x="118" y="3" width="219" height="43.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5f-Wg-cBy">
+                                                    <rect key="frame" x="99" y="7" width="268" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-ns-6kU">
-                                                    <rect key="frame" x="28" y="3" width="50" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDr-ns-6kU">
+                                                    <rect key="frame" x="25" y="9" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="FfZ-tW-1VQ"/>
-                                                    </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="I5f-Wg-cBy" firstAttribute="bottom" secondItem="SDr-ns-6kU" secondAttribute="bottom" id="3To-0n-1ee"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="SDr-ns-6kU" secondAttribute="bottom" constant="5" id="4xC-VB-qGQ"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="I5f-Wg-cBy" secondAttribute="trailing" constant="30" id="VMO-af-fOa"/>
-                                                <constraint firstItem="SDr-ns-6kU" firstAttribute="leading" secondItem="EMr-fO-QJd" secondAttribute="leadingMargin" constant="20" id="h5G-fE-TRV"/>
-                                                <constraint firstItem="I5f-Wg-cBy" firstAttribute="top" secondItem="SDr-ns-6kU" secondAttribute="top" id="hf8-RN-QMk"/>
-                                                <constraint firstItem="I5f-Wg-cBy" firstAttribute="leading" secondItem="SDr-ns-6kU" secondAttribute="trailing" constant="40" id="qmK-tr-ce5"/>
-                                                <constraint firstItem="SDr-ns-6kU" firstAttribute="top" secondItem="EMr-fO-QJd" secondAttribute="topMargin" constant="-5" id="xG7-6i-TnA"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="roundImg" destination="SDr-ns-6kU" id="oGp-sY-jft"/>
