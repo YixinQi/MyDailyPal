@@ -11,7 +11,8 @@ import CoreData
 
 class Screen12TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var adherenceRecords = [AdherenceRecord]()
-    
+    var record = [AdherenceRecord]()
+    var dateSelected = NSDate()
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
     @IBOutlet weak var roundImg: UIImageView!
@@ -30,7 +31,12 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         } catch {}
         
         if (adherenceRecords.count > 0){
-                    date.text = "My Medicine history for "+formatter.string(from: adherenceRecords[0].date! as Date)
+            for adhRecord in adherenceRecords{
+                if adhRecord.date == dateSelected{
+                    record.append(adhRecord)
+                }
+            }
+            date.text = "My Medicine history for "+formatter.string(from: record[0].date! as Date)
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -55,7 +61,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return adherenceRecords.count
+        return record.count
     }
 
     
@@ -69,13 +75,18 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         let adherenceRecord = adherenceRecords[indexPath.row]
         cell.DrugName.text = adherenceRecord.treatmentName;
         if adherenceRecord.didTake == true {
-            
+            roundImg.layer.cornerRadius = roundImg.frame.size.width/2
+            roundImg.clipsToBounds = true
+            roundImg.backgroundColor = UIColor.green
             let formatter = DateFormatter()
             cell.drugScheduledTime.text = "Taken at "+formatter.string(from: adherenceRecord.date! as Date)
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
             cell.roundImg.clipsToBounds = true
             cell.roundImg.backgroundColor = UIColor.green
         }else {
+            roundImg.layer.cornerRadius = roundImg.frame.size.width/2
+            roundImg.clipsToBounds = true
+            roundImg.backgroundColor = UIColor.red
             let formatter = DateFormatter()
             cell.drugScheduledTime.text = "Missed dose at "+formatter.string(from: adherenceRecord.date! as Date)
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
@@ -91,7 +102,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         let alert = UIAlertController(title: "", message: "This facility is to record side effects on your phone for your doctor", preferredStyle: UIAlertControllerStyle.alert)
         // add an action (button)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (action) -> Void in
-            let adherenceRecord = self.adherenceRecords[sender.tag]
+            let adherenceRecord = self.record[sender.tag]
             let storyboard = UIStoryboard(name:"Main", bundle:nil)
             let myVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
             myVC.adherenceRecord = adherenceRecord
