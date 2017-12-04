@@ -11,7 +11,7 @@ import CoreData
 
 class Screen12TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var adherenceRecords = [AdherenceRecord]()
-    
+    var selectedDate = Date();
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
     @IBOutlet weak var roundImg: UIImageView!
