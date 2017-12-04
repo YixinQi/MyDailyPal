@@ -1584,21 +1584,28 @@ tapping PIN.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Drug Name" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-OP-A4J">
-                                <rect key="frame" x="16" y="64" width="343" height="67"/>
+                                <rect key="frame" x="16" y="64" width="343" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icJ-xB-rpi">
-                                <rect key="frame" x="16" y="139" width="240" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Side Effects Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icJ-xB-rpi">
+                                <rect key="frame" x="16" y="132" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your Effect Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVH-ll-yUG">
+                                <rect key="frame" x="16" y="161" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Describe side effects" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CYr-JI-yjz">
-                                <rect key="frame" x="16" y="174" width="343" height="311"/>
+                                <rect key="frame" x="16" y="207" width="343" height="311"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1611,6 +1618,7 @@ tapping PIN.</string>
                     <navigationItem key="navigationItem" id="4en-Y3-S4o"/>
                     <connections>
                         <outlet property="date" destination="icJ-xB-rpi" id="mU7-Us-LMx"/>
+                        <outlet property="effectName" destination="EVH-ll-yUG" id="SrH-k2-A6E"/>
                         <outlet property="sideEffects" destination="CYr-JI-yjz" id="M0U-1O-EQo"/>
                         <outlet property="treatmentName" destination="lFM-OP-A4J" id="oyh-xg-an3"/>
                     </connections>

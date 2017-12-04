@@ -9,8 +9,13 @@
 import UIKit
 
 class Screen13ViewController: UIViewController {
+    
+    
     var adherenceRecord = AdherenceRecord()
     var getText = String()
+    
+    @IBOutlet weak var effectName: UITextField!
+    
     @IBOutlet weak var sideEffects: UITextView!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var treatmentName: UITextView!
@@ -24,6 +29,15 @@ class Screen13ViewController: UIViewController {
             date.text = formatter.string(from: adherenceRecord.date! as Date)
         }
         // Do any additional setup after loading the view.
+        
+        let sEffects = SideEffect()
+            sEffects.treatmentName = adherenceRecord.treatmentName
+            sEffects.date = adherenceRecord.date
+            sEffects.effectName = effectName.text
+            sEffects.details = sideEffects.text
+            sEffects.adherenceRecord = adherenceRecord
+        adherenceRecord.sideEffects?.append(sEffects)
+        PersistenceService.saveContext()
     }
 
     override func didReceiveMemoryWarning() {
