@@ -142,7 +142,6 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="hWp-8r-q0T" id="fRW-4B-9vm"/>
-                                            <segue destination="5hd-hB-oci" kind="show" identifier="Screen12TableViewController" id="5QD-ib-SMe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1626,7 +1625,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tG-4g-sF4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9200.7999999999993" y="1127.5862068965519"/>
+            <point key="canvasLocation" x="8604" y="1128"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="9Ks-t4-4fp">
@@ -1636,12 +1635,15 @@ tapping PIN.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g29-6a-WPq">
-                                <rect key="frame" x="67" y="64" width="240" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g29-6a-WPq">
+                                <rect key="frame" x="107.5" y="68" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="UgE-lJ-KUi"/>
+                                    <constraint firstAttribute="width" constant="160" id="brI-K8-Hid"/>
+                                </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U9O-Q9-VrB">
-                                <rect key="frame" x="0.0" y="268" width="375" height="399"/>
+                                <rect key="frame" x="0.0" y="296" width="375" height="371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -1652,9 +1654,12 @@ tapping PIN.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-YH-ZSI">
-                                                    <rect key="frame" x="8" y="0.0" width="48" height="42"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cNr-YH-ZSI">
+                                                    <rect key="frame" x="8" y="0.0" width="42" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="iIb-Kx-Uvs"/>
+                                                        <constraint firstAttribute="height" constant="42" id="saH-UQ-aSn"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQx-Ai-9W8">
                                                     <rect key="frame" x="64" y="0.0" width="241" height="21"/>
@@ -1671,11 +1676,15 @@ tapping PIN.</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBr-Mj-WBs">
-                                                    <rect key="frame" x="335" y="6" width="32" height="30"/>
+                                                    <rect key="frame" x="320" y="8" width="32" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button" image="plusButton"/>
+                                                    <state key="normal" title="Button" image="ic_add_side_effect_gray"/>
                                                 </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cNr-YH-ZSI" firstAttribute="top" secondItem="tM0-4Y-S8s" secondAttribute="top" id="g04-Q2-Prm"/>
+                                                <constraint firstItem="cNr-YH-ZSI" firstAttribute="leading" secondItem="tM0-4Y-S8s" secondAttribute="leading" constant="8" id="sdm-OT-IAf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="DrugName" destination="aQx-Ai-9W8" id="0q9-bI-pHi"/>
@@ -1687,21 +1696,35 @@ tapping PIN.</string>
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHj-IX-eWX">
-                                <rect key="frame" x="0.0" y="239" width="359" height="21"/>
+                                <rect key="frame" x="0.0" y="247" width="359" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-hg-ofV">
-                                <rect key="frame" x="112" y="97" width="150" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rE5-hg-ofV">
+                                <rect key="frame" x="112.5" y="97" width="150" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="2rq-RF-4Pc"/>
+                                    <constraint firstAttribute="height" constant="101" id="WOe-bH-ytm"/>
+                                    <constraint firstAttribute="width" constant="150" id="d7w-oq-MXX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="centerX" secondItem="2Zm-qJ-PHm" secondAttribute="centerX" id="83O-7V-gI3"/>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="top" secondItem="SkY-sw-zkY" secondAttribute="top" constant="33" id="MYS-C4-D2G"/>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="top" secondItem="SkY-sw-zkY" secondAttribute="top" constant="33" id="eXN-BC-t1Z"/>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="centerX" secondItem="2Zm-qJ-PHm" secondAttribute="centerX" id="g9I-Lx-e7f"/>
+                            <constraint firstItem="g29-6a-WPq" firstAttribute="centerX" secondItem="2Zm-qJ-PHm" secondAttribute="centerX" id="hbG-Ql-IzB"/>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="centerX" secondItem="2Zm-qJ-PHm" secondAttribute="centerX" id="lPM-eM-cBe"/>
+                            <constraint firstItem="g29-6a-WPq" firstAttribute="top" secondItem="SkY-sw-zkY" secondAttribute="top" constant="4" id="lyb-Vy-Rjy"/>
+                            <constraint firstItem="rE5-hg-ofV" firstAttribute="centerX" secondItem="2Zm-qJ-PHm" secondAttribute="centerX" id="zF3-fb-8gu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SkY-sw-zkY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="Hdc-Er-9Zt"/>
@@ -1714,7 +1737,7 @@ tapping PIN.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWl-VF-op5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10698.4" y="1127.5862068965519"/>
+            <point key="canvasLocation" x="9436" y="1127.5862068965519"/>
         </scene>
         <!--My Treatment Plan-->
         <scene sceneID="71E-jk-woD">
@@ -1991,7 +2014,7 @@ tapping PIN.</string>
                                 </constraints>
                             </imageView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S4g-bf-iOq">
-                                <rect key="frame" x="307" y="390" width="52" height="30"/>
+                                <rect key="frame" x="307" y="389.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IUD-Ss-H6Z"/>
                                     <constraint firstAttribute="height" constant="30" id="XSz-LM-oxw"/>
@@ -2020,7 +2043,7 @@ tapping PIN.</string>
                                 </state>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-g3-aqU">
-                                <rect key="frame" x="307" y="440" width="52" height="30"/>
+                                <rect key="frame" x="307" y="439.5" width="52" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QVM-BK-hFc"/>
                                     <constraint firstAttribute="width" constant="50" id="iTk-sl-eC0"/>
@@ -3917,7 +3940,7 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZx-MK-bIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10359.200000000001" y="279.31034482758622"/>
+            <point key="canvasLocation" x="9468" y="233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oFp-do-n6A">
@@ -3935,7 +3958,7 @@ tapping PIN.</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d5S-vS-iqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9540" y="278.41079460269867"/>
+            <point key="canvasLocation" x="8604" y="233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ach-mQ-O5M">
@@ -3981,6 +4004,7 @@ tapping PIN.</string>
         <image name="check_icon" width="30" height="30"/>
         <image name="edit_query" width="36" height="36"/>
         <image name="home-icon" width="30" height="30"/>
+        <image name="ic_add_side_effect_gray" width="32" height="32"/>
         <image name="ic_menu_delete" width="36" height="36"/>
         <image name="line" width="694" height="74"/>
         <image name="list_icon" width="30" height="30"/>
@@ -3996,7 +4020,6 @@ tapping PIN.</string>
         <segue reference="azi-0B-B9z"/>
         <segue reference="d7v-9Z-alJ"/>
         <segue reference="ASh-Vq-4le"/>
-        <segue reference="5QD-ib-SMe"/>
         <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>

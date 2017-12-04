@@ -11,22 +11,28 @@ import CoreData
 
 class Screen12TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var adherenceRecords = [AdherenceRecord]()
-    var dateSelected = NSDate();
+    var dateSelected: NSDate = NSDate()
     var record = [AdherenceRecord]()
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var onTrack: UILabel!
     @IBOutlet weak var roundImg: UIImageView!
     @IBOutlet weak var adherenceRecordsTableVIew: UITableView!
+    var adherenceReport: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let formatter = DateFormatter()
-        //This block may be replaced if yixin passes you the actual array of adhrerenceRecords that you need. otherwise you would do this fetch request and loop through all the records and pull only the ones with the same date as the date you need.
+        print("The date that is being passed is: \(dateSelected)")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        //dateFormatter.timeStyle = DateFormatter.Style.short
+        let dateAsText = dateFormatter.string(from: self.dateSelected as Date)
+        date.text = "My Medication History for \(dateAsText)"
+
         let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
         do {
             let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
             self.adherenceRecords = adherence
-            print("Number of adh   ",adherenceRecords.count)
+           // print("Number of adh   ",adherenceRecords.count)
             
         } catch {}
         if (adherenceRecords.count > 0){
@@ -34,11 +40,26 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
             for adhRecord in adherenceRecords{
                 if Calendar.current.compare(adhRecord.date! as Date, to:dateSelected as Date , toGranularity: .day) == .orderedSame
                 {
-                    print("dates checked fine")
+                    //print("dates checked fine")
                     self.record.append(adhRecord)
                 }
             }
-            date.text = "My Medicine history for "+formatter.string(from: dateSelected as Date)
+        }
+        for rec in self.record{
+            if rec.didTake == false {
+                self.adherenceReport = false
+            }
+        }
+        
+        roundImg.layer.cornerRadius = roundImg.frame.size.width/2
+        roundImg.clipsToBounds = true
+        
+        if self.adherenceReport == true {
+            self.onTrack.text = "On Track"
+            self.roundImg.backgroundColor = UIColor.green
+        } else {
+            self.onTrack.text = "Missed"
+            self.roundImg.backgroundColor = UIColor.red
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -63,7 +84,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("Number of records ",record.count)
+        //print("Number of records ",record.count)
         return record.count
     }
 
@@ -76,33 +97,41 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         }
         
         // Configure the cell...
-        let adherenceRecord = adherenceRecords[indexPath.row]
+        let adherenceRecord = record[indexPath.row]
         cell.DrugName.text = adherenceRecord.treatmentName;
+        var sideEffectButtonimage: UIImage?
+        if adherenceRecord.sideEffects!.count > 0 {
+            sideEffectButtonimage = UIImage(named: "ic_add_side_effect_red") as UIImage?
+            cell.sideEffectsButton.setImage(sideEffectButtonimage, for: .normal)
+        } else {
+            sideEffectButtonimage = UIImage(named: "ic_add_side_effect_gray") as UIImage?
+            cell.sideEffectsButton.setImage(sideEffectButtonimage, for: .normal)
+        }
+        
+        let dateFormatter = DateFormatter()
+        //dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        let takenTimeAsText = dateFormatter.string(from: adherenceRecord.date! as Date)
         
         if adherenceRecord.didTake == true {
-            roundImg.layer.cornerRadius = roundImg.frame.size.width/2
-            roundImg.clipsToBounds = true
-            roundImg.backgroundColor = UIColor.green
-            let formatter = DateFormatter()
-            cell.drugScheduledTime.text = "Taken at "+formatter.string(from: adherenceRecord.date! as Date)
+            cell.drugScheduledTime.text = "Taken at \(takenTimeAsText)"
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
             cell.roundImg.clipsToBounds = true
             cell.roundImg.backgroundColor = UIColor.green
         }else {
-            roundImg.layer.cornerRadius = roundImg.frame.size.width/2
-            roundImg.clipsToBounds = true
-            roundImg.backgroundColor = UIColor.red
-            let formatter = DateFormatter()
-            cell.drugScheduledTime.text = "Missed dose at "+formatter.string(from: adherenceRecord.date! as Date)
+            cell.drugScheduledTime.text = "Missed dose at \(takenTimeAsText)"
             cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
             cell.roundImg.clipsToBounds = true
             cell.roundImg.backgroundColor = UIColor.red
         }
         cell.sideEffectsButton.tag = indexPath.row
         cell.sideEffectsButton.addTarget(self, action: #selector(AlertWindow(sender: )), for: UIControlEvents.touchUpInside)
-        print("reached here")
+        //print("reached here")
         return cell
     }
+    
+
+    
     @objc func AlertWindow(sender: UIButton){
         let alert = UIAlertController(title: "", message: "This facility is to record side effects on your phone for your doctor", preferredStyle: UIAlertControllerStyle.alert)
         // add an action (button)

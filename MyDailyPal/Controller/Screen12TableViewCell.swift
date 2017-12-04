@@ -10,6 +10,7 @@ import UIKit
 
 class Screen12TableViewCell: UITableViewCell {
     
+
     @IBOutlet weak var sideEffectsButton: UIButton!
     @IBOutlet weak var drugScheduledTime: UILabel!
     @IBOutlet weak var DrugName: UILabel!
