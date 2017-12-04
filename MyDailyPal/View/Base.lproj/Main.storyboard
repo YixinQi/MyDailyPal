@@ -1645,7 +1645,7 @@ tapping PIN.</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Screen12TableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="1qC-rv-RXB" customClass="Screen12TableViewCell" customModule="MyDailyPal" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Screen12TableViewCell" rowHeight="59" id="1qC-rv-RXB" customClass="Screen12TableViewCell" customModule="MyDailyPal" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="59"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1qC-rv-RXB" id="tM0-4Y-S8s">
@@ -3990,12 +3990,12 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zTS-jq-vJe"/>
-        <segue reference="eZT-g8-Jrx"/>
-        <segue reference="QV2-Pc-SCG"/>
-        <segue reference="bXC-nq-liw"/>
-        <segue reference="1ml-Am-aFS"/>
-        <segue reference="sTT-BE-1CU"/>
+        <segue reference="c5D-bw-ZMX"/>
+        <segue reference="ZNx-gU-oax"/>
+        <segue reference="kyn-aq-311"/>
+        <segue reference="azi-0B-B9z"/>
+        <segue reference="d7v-9Z-alJ"/>
+        <segue reference="ASh-Vq-4le"/>
         <segue reference="5QD-ib-SMe"/>
         <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>

@@ -26,12 +26,14 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         do {
             let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
             self.adherenceRecords = adherence
+            print("Number of adh   ",adherenceRecords.count)
             
         } catch {}
         if (adherenceRecords.count > 0){
             
             for adhRecord in adherenceRecords{
-                if adhRecord.date == dateSelected{
+                if Calendar.current.compare(adhRecord.date! as Date, to:dateSelected as Date , toGranularity: .day) == .orderedSame
+                {
                     print("dates checked fine")
                     self.record.append(adhRecord)
                 }

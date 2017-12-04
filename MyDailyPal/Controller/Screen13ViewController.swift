@@ -24,12 +24,13 @@ class Screen13ViewController: UIViewController {
         if !getText.isEmpty{
             treatmentName.text = getText
         }else{
+            print("In else")
             treatmentName.text = adherenceRecord.treatmentName;
             let formatter = DateFormatter()
             date.text = formatter.string(from: adherenceRecord.date! as Date)
         }
         // Do any additional setup after loading the view.
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveTapped))
         
     }
     
@@ -38,19 +39,21 @@ class Screen13ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @objc func saveTapped(sender:UIBarButtonItem){
+    @objc func saveTapped(sender: UIBarButtonItem){
         //print("in screen 9 toScreen10")
-        let sEffects = SideEffect()
-        sEffects.treatmentName = adherenceRecord.treatmentName
-        sEffects.date = adherenceRecord.date
-        sEffects.effectName = effectName.text
-        sEffects.details = sideEffects.text
-        sEffects.adherenceRecord = adherenceRecord
-        adherenceRecord.sideEffects?.append(sEffects)
-        PersistenceService.saveContext()
+        
+        //let sEffects = SideEffect()
+//        sEffects.treatmentName = adherenceRecord.treatmentName
+//            sEffects.date = adherenceRecord.date
+//            sEffects.effectName = effectName.text
+//            sEffects.details = sideEffects.text
+//        sEffects.adherenceRecord = adherenceRecord
+//        adherenceRecord.sideEffects?.append(sEffects)
+//        PersistenceService.saveContext()
+        print("working till here")
         let storyboard = UIStoryboard(name:"Main", bundle:nil)
         let myVC = storyboard.instantiateViewController(withIdentifier: "Screen12TableViewController") as! Screen12TableViewController
-        navigationController?.pushViewController(myVC, animated: true)
+        self.navigationController?.pushViewController(myVC, animated: true)
     }
     /*
     // MARK: - Navigation

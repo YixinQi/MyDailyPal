@@ -10,45 +10,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyDailyPal/Controller/Screen12TableViewController.swift"
-            timestampString = "534058391.356986"
+            timestampString = "534097981.330728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "AlertWindow(sender:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "MyDailyPal.Screen12TableViewController.AlertWindow(sender: __ObjC.UIButton) -&gt; ()"
                   moduleName = "MyDailyPal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rodshangari/Documents/CapstoneDec1/MyDailyPal/MyDailyPal/Controller/Screen12TableViewController.swift"
-                  timestampString = "534052887.459928"
+                  timestampString = "534096060.464784"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "104"
-                  endingLineNumber = "104"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
                   offsetFromSymbolStart = "208">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (__ObjC.UIAlertAction) -&gt; () in MyDailyPal.Screen12TableViewController.AlertWindow(sender: __ObjC.UIButton) -&gt; ()"
                   moduleName = "MyDailyPal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rodshangari/Documents/CapstoneDec1/MyDailyPal/MyDailyPal/Controller/Screen12TableViewController.swift"
-                  timestampString = "534052887.511549"
+                  timestampString = "534096060.469839"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
                   offsetFromSymbolStart = "25">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyDailyPal/Controller/Screen12TableViewController.swift"
+            timestampString = "534097981.384744"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
