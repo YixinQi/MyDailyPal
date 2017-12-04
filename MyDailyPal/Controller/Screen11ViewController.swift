@@ -154,7 +154,11 @@ extension Screen11ViewController: JTAppleCalendarViewDelegate, JTAppleCalendarVi
   }
   
   func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+    let storyboard = UIStoryboard(name:"Main", bundle:nil)
+    let myVC = storyboard.instantiateViewController(withIdentifier: "Screen12TableViewController") as! Screen12TableViewController
+    //navigationController?.pushViewController(myVC, animated: true)
     selectedDate = cellState.date
-    //performSegue(withIdentifier: "", sender: self)
+    myVC.dateSelected = selectedDate as NSDate
+    performSegue(withIdentifier: "Screen12TableViewController", sender: self)
   }
 }
