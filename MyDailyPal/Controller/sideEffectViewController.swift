@@ -19,6 +19,7 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.sideEffectLabel.text = sideEffects[indexPath.row]
         cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
         cell.roundImg.clipsToBounds = true
+        cell.roundImg.backgroundColor = UIColor(red: 66/255.0, green: 209/255.0, blue: 244/255.0, alpha: 1.0)
         return(cell)
     }
     

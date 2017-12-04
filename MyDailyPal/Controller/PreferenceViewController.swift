@@ -145,7 +145,7 @@ class PreferenceViewController: UIViewController, UITextFieldDelegate, UIPickerV
             let preferences = try PersistenceService.context.fetch(fetchRequest)
             if preferences.count <= 0 {
                 print("No data loaded")
-                
+                newPinView.isHidden = false
             } else {
                 self.preferences = preferences[preferences.count-1]
                 print(self.preferences!)
@@ -164,9 +164,10 @@ class PreferenceViewController: UIViewController, UITextFieldDelegate, UIPickerV
                 }
                 
                 if self.preferences!.pinActivated == true {
-                    print("Here is their PIN: " + self.preferences!.pin!)
+                    print("**********Here is their PIN: " + self.preferences!.pin!)
                     currentPwd = self.preferences!.pin!
                 } else {
+                    print("*********No pin for now")
                     newPinView.isHidden = false
                 }
                 notifySwitch.setOn(self.preferences!.showNotification, animated: true)
