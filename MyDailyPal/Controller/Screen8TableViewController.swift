@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Screen8TableViewController: UITableViewController {
     
@@ -14,11 +15,17 @@ class Screen8TableViewController: UITableViewController {
     var drugBank = DrugBank()
     var drugs = [[String]]()
     var drug = [String]()
+    var treatmentPlan = [TreatmentPlan]()
     //var sImage = UIImage(named: "timer")
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(addTapped))
-        
+        let treatmentPlanFetchRequest: NSFetchRequest<TreatmentPlan> = TreatmentPlan.fetchRequest()
+        do {
+            let treatments = try PersistenceService.context.fetch(treatmentPlanFetchRequest)
+            self.treatmentPlan = treatments
+            
+        } catch {}
         
     }
 
@@ -44,7 +51,7 @@ class Screen8TableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "DrugsTableViewCell", for: indexPath) as? DrugsTableViewCell else {
             fatalError("The dequed cell is not an instance of DrugsTableViewCell")
         }
-
+        var blueColor = false
         // Configure the cell...
         let drug = drugs[indexPath.row]
         if drug[0] != "mystyle.css" {
@@ -53,7 +60,18 @@ class Screen8TableViewController: UITableViewController {
             //cell.scheduleImage.image = sImage
             cell.ToScreen10ScheduleButton.tag = indexPath.row
             cell.ToScreen10ScheduleButton.addTarget(self, action: #selector(toScreen10(sender: )), for: UIControlEvents.touchUpInside)
-            cell.drugScheduler.backgroundColor = UIColor.lightGray
+            for record in treatmentPlan {
+                if record.medication == substringString(string: drug[0]){
+                    blueColor = true
+                }
+            }
+            
+            if blueColor == true {
+                cell.drugScheduler.backgroundColor = UIColor(red: 66/255.0, green: 209/255.0, blue: 244/255.0, alpha: 1.0)
+            } else {
+                cell.drugScheduler.backgroundColor = UIColor.lightGray
+            }
+            
         }
         return cell
     }
