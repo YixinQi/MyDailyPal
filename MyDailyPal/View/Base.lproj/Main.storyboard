@@ -2684,6 +2684,7 @@ tapping PIN.</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sideEffectTableView" destination="YMO-r6-ov3" id="TnO-ko-pOQ"/>
                         <outlet property="trailingConstraint" destination="V7L-GL-RHQ" id="n5I-hg-HxM"/>
                     </connections>
                 </viewController>
@@ -4028,12 +4029,12 @@ tapping PIN.</string>
         <image name="timer" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c5D-bw-ZMX"/>
+        <segue reference="hFd-2a-Eq8"/>
         <segue reference="ZNx-gU-oax"/>
         <segue reference="kyn-aq-311"/>
         <segue reference="azi-0B-B9z"/>
-        <segue reference="d7v-9Z-alJ"/>
-        <segue reference="ASh-Vq-4le"/>
+        <segue reference="RG1-Dw-oWb"/>
+        <segue reference="a8O-ih-Zbb"/>
         <segue reference="drF-mK-4BT"/>
         <segue reference="Uw7-eH-aiR"/>
         <segue reference="c2W-7J-82N"/>

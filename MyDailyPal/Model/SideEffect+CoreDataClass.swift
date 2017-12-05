@@ -1,5 +1,5 @@
 //
-//  AdherenceRecord+CoreDataClass.swift
+//  SideEffect+CoreDataClass.swift
 //  MyDailyPal
 //
 //  Created by Paul Verardi on 12/4/17.
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class AdherenceRecord: NSManagedObject {
+public class SideEffect: NSManagedObject {
 
 }

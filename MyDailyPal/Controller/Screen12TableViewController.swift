@@ -19,6 +19,50 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var adherenceRecordsTableVIew: UITableView!
     var adherenceReport: Bool = true
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateStyle = DateFormatter.Style.short
+//        //dateFormatter.timeStyle = DateFormatter.Style.short
+//        let dateAsText = dateFormatter.string(from: self.dateSelected as Date)
+//        date.text = "My Medication History for \(dateAsText)"
+//
+//        let adherenceRecordFetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
+//        do {
+//            let adherence = try PersistenceService.context.fetch(adherenceRecordFetchRequest)
+//            self.adherenceRecords = adherence
+//            // print("Number of adh   ",adherenceRecords.count)
+//
+//        } catch {}
+//        if (adherenceRecords.count > 0){
+//
+//            for adhRecord in adherenceRecords{
+//                if Calendar.current.compare(adhRecord.date! as Date, to:dateSelected as Date , toGranularity: .day) == .orderedSame
+//                {
+//                    //print("dates checked fine")
+//                    self.record.append(adhRecord)
+//                }
+//            }
+//        }
+//        for rec in self.record{
+//            if rec.didTake == false {
+//                self.adherenceReport = false
+//            }
+//        }
+//
+//        roundImg.layer.cornerRadius = roundImg.frame.size.width/2
+//        roundImg.clipsToBounds = true
+//
+//        if self.adherenceReport == true {
+//            self.onTrack.text = "On Track"
+//            self.roundImg.backgroundColor = UIColor.green
+//        } else {
+//            self.onTrack.text = "Missed"
+//            self.roundImg.backgroundColor = UIColor.red
+//        }
+        self.adherenceRecordsTableVIew.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //print("The date that is being passed is: \(dateSelected)")
@@ -100,7 +144,7 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
         let adherenceRecord = record[indexPath.row]
         cell.DrugName.text = adherenceRecord.treatmentName;
         var sideEffectButtonimage: UIImage?
-        if adherenceRecord.sideEffects!.count > 0 {
+        if adherenceRecord.sideEffects != nil {
             sideEffectButtonimage = UIImage(named: "ic_add_side_effect_red") as UIImage?
             cell.sideEffectsButton.setImage(sideEffectButtonimage, for: .normal)
         } else {
@@ -140,6 +184,11 @@ class Screen12TableViewController: UIViewController, UITableViewDelegate, UITabl
             let storyboard = UIStoryboard(name:"Main", bundle:nil)
             let myVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
             myVC.adherenceRecord = adherenceRecord
+            if (adherenceRecord.sideEffects != nil){
+                myVC.sideEffect = adherenceRecord.sideEffects
+            } else {
+                myVC.sideEffect = nil
+            }
             self.navigationController?.pushViewController(myVC, animated: true)
             
         }))

@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         let body_array = body.split(separator: " ")
         record.treatmentName = String(body_array[8])
         record.date = NSDate()
-        record.sideEffects = [SideEffect]()
+        //record.sideEffects = [SideEffect]()
         if response.actionIdentifier == "clickYes"{
             //TODO
             let body = response.notification.request.content.body

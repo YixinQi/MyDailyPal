@@ -13,6 +13,7 @@ class Screen13ViewController: UIViewController {
     
     
     var adherenceRecord: AdherenceRecord?
+    var sideEffect: SideEffect?
     var getText = String()
     
 
@@ -24,8 +25,9 @@ class Screen13ViewController: UIViewController {
         super.viewDidLoad()
         sideEffectDetails.layer.borderWidth = 1.0
         
-        if !getText.isEmpty{
-            treatmentName.text = getText
+        if sideEffect != nil{
+            sideEffectName.text = sideEffect?.effectName
+            sideEffectDetails.text = sideEffect?.details
         }else{
             print("In else")
             treatmentName.text = adherenceRecord!.treatmentName;
@@ -35,6 +37,7 @@ class Screen13ViewController: UIViewController {
             let dateAsText = dateFormatter.string(from: adherenceRecord!.date! as Date)
             date.text = dateAsText
         }
+        
 
         // Do any additional setup after loading the view.
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SAVE", style: .plain, target: self, action: #selector(saveTapped))
@@ -49,13 +52,19 @@ class Screen13ViewController: UIViewController {
     @objc func saveTapped(sender: UIBarButtonItem){
         //print("in screen 9 toScreen10")
         print("Starting Save Method")
-//        let sEffects = NSEntityDescription.insertNewObject(forEntityName: "SideEffect", into: PersistenceService.context) as! SideEffect
-//        sEffects.treatmentName = adherenceRecord!.treatmentName
-//            sEffects.date = adherenceRecord!.date
-//            sEffects.effectName = sideEffectName.text
-//            sEffects.details = sideEffectDetails.text
-//        sEffects.adherenceRecord = adherenceRecord
-//        adherenceRecord!.sideEffects?.append(sEffects)
+        if (sideEffect != nil){
+            
+        }else {
+            sideEffect = SideEffect(context: PersistenceService.context)
+            sideEffect!.treatmentName = adherenceRecord!.treatmentName
+            sideEffect!.date = adherenceRecord!.date
+            sideEffect!.occurence = adherenceRecord
+            adherenceRecord!.sideEffects = sideEffect
+        }
+
+        sideEffect!.effectName = sideEffectName.text
+        sideEffect!.details = sideEffectDetails.text
+
         PersistenceService.saveContext()
         print("working till here")
         self.navigationController?.popViewController(animated: true)

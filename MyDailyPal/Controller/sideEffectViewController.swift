@@ -16,7 +16,7 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideEffectCell", for: indexPath) as! SideEffectsTableViewCell
-        cell.sideEffectLabel.text = sideEffects[indexPath.row]
+        cell.sideEffectLabel.text = sideEffects[indexPath.row].effectName
         cell.roundImg.layer.cornerRadius = cell.roundImg.frame.size.width/2
         cell.roundImg.clipsToBounds = true
         cell.roundImg.backgroundColor = UIColor(red: 66/255.0, green: 209/255.0, blue: 244/255.0, alpha: 1.0)
@@ -26,7 +26,7 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "Screen13ViewController") as! Screen13ViewController
-        DetailVC.getText = sideEffects[indexPath.row] as! String
+        DetailVC.sideEffect = sideEffects[indexPath.row]
         self.navigationController?.pushViewController(DetailVC, animated: true)
     }
     
@@ -49,9 +49,10 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
+    @IBOutlet weak var sideEffectTableView: UITableView!
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     var showMenu = false
-    var sideEffects = [String]()
+    var sideEffects = [SideEffect]()
     @IBAction func showMenu(_ sender: Any) {
         if(showMenu){
             trailingConstraint.constant = 375
@@ -71,30 +72,30 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
     var adherence: AdherenceRecord?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"AdherenceRecord")
-        request.returnsObjectsAsFaults = false
-        let fetchRequest: NSFetchRequest<AdherenceRecord> = AdherenceRecord.fetchRequest()
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"SideEffect")
+//        request.returnsObjectsAsFaults = false
+        let fetchRequest: NSFetchRequest<SideEffect> = SideEffect.fetchRequest()
         do {
-            let adherenceRecords = try PersistenceService.context.fetch(fetchRequest)
-            if adherenceRecords.count <= 0 {
+            sideEffects = try PersistenceService.context.fetch(fetchRequest)
+            if sideEffects.count <= 0 {
                 print("No data loaded")
                 
             } else {
-                self.adherence = adherenceRecords[adherenceRecords.count-1]
-                var title = "unassigned"
-                self.sideEffects.append("For test1")
-                self.sideEffects.append("For test2")
-                // for testing
-                for record in adherenceRecords{
-                    sideEffects.append(record.treatmentName!)
-                }
-                // for adding data
-                for record in adherenceRecords{
-                    var sideEffectArray = record.sideEffects
-                    for effect in sideEffectArray!{
-                        sideEffects.append(effect.effectName!)
-                    }
-                }
+//                self.adherence = adherenceRecords[adherenceRecords.count-1]
+//                var title = "unassigned"
+//                self.sideEffects.append("For test1")
+//                self.sideEffects.append("For test2")
+//                // for testing
+//                for record in adherenceRecords{
+//                    sideEffects.append(record.treatmentName!)
+//                }
+//                // for adding data
+//                for record in adherenceRecords{
+//                    var sideEffectArray = record.sideEffects
+//                    for effect in sideEffectArray!{
+//                        sideEffects.append(effect.effectName!)
+//                    }
+//                }
             }
         } catch {
             print("ERRORR!")
@@ -102,6 +103,11 @@ class sideEffectViewController: UIViewController, UITableViewDelegate, UITableVi
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        self.sideEffectTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {

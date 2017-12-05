@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="AdherenceRecord" representedClassName="AdherenceRecord" syncable="YES">
+    <entity name="AdherenceRecord" representedClassName=".AdherenceRecord" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="didTake" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="sideEffects" optional="YES" attributeType="Transformable" customClassName="[SideEffect]" syncable="YES"/>
         <attribute name="treatmentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sideEffects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SideEffect" inverseName="occurence" inverseEntity="SideEffect" syncable="YES"/>
     </entity>
     <entity name="DoctorVisit" representedClassName="DoctorVisit" syncable="YES">
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -24,6 +24,13 @@
         <attribute name="showTarget" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="showTips" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="SideEffect" representedClassName=".SideEffect" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="effectName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="treatmentName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="occurence" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AdherenceRecord" inverseName="sideEffects" inverseEntity="AdherenceRecord" syncable="YES"/>
+    </entity>
     <entity name="TreatmentPlan" representedClassName="TreatmentPlan" syncable="YES">
         <attribute name="medication" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="noOfDosage" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -36,6 +43,7 @@
         <element name="AdherenceRecord" positionX="-63" positionY="54" width="128" height="105"/>
         <element name="DoctorVisit" positionX="-63" positionY="27" width="128" height="105"/>
         <element name="Preferences" positionX="-63" positionY="-18" width="128" height="195"/>
+        <element name="SideEffect" positionX="-54" positionY="63" width="128" height="120"/>
         <element name="TreatmentPlan" positionX="-63" positionY="36" width="128" height="135"/>
     </elements>
 </model>

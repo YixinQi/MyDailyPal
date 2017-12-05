@@ -11,10 +11,7 @@
 		6004A46A1FACF63200A7CCF5 /* TIpsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */; };
 		6004A46C1FAD00A600A7CCF5 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */; };
 		6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */; };
-		602F7ACE1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F7ACC1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift */; };
-		602F7ACF1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602F7ACD1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift */; };
 		6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6032371D1FC14A5800661D31 /* PreferenceViewController.swift */; };
-		6040EB381FD3664500AF6B25 /* SideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040EB371FD3664500AF6B25 /* SideEffect.swift */; };
 		60525B8D1FCE218F006DF3CB /* sideEffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */; };
 		606378361FCE58AB001C2A7F /* VisitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606378351FCE58AB001C2A7F /* VisitsViewController.swift */; };
 		60E28D6B1F8BCA3300D9F753 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */; };
@@ -35,6 +32,10 @@
 		91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */; };
 		91D84E5A1FB15700003D1DE0 /* MyTreatmentPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */; };
 		91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */; };
+		960A5E421FD5FFA0002306AE /* SideEffect+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A5E3E1FD5FFA0002306AE /* SideEffect+CoreDataClass.swift */; };
+		960A5E431FD5FFA0002306AE /* SideEffect+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A5E3F1FD5FFA0002306AE /* SideEffect+CoreDataProperties.swift */; };
+		960A5E441FD5FFA0002306AE /* AdherenceRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A5E401FD5FFA0002306AE /* AdherenceRecord+CoreDataClass.swift */; };
+		960A5E451FD5FFA0002306AE /* AdherenceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960A5E411FD5FFA0002306AE /* AdherenceRecord+CoreDataProperties.swift */; };
 		962DB3081FBB700600A5553B /* DoctorVisit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */; };
 		962DB3091FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */; };
 		964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */; };
@@ -87,10 +88,7 @@
 		6004A4691FACF63200A7CCF5 /* TIpsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIpsTableViewCell.swift; sourceTree = "<group>"; };
 		6004A46B1FAD00A600A7CCF5 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6004A46F1FB4C7BD00A7CCF5 /* TipDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
-		602F7ACC1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdherenceRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
-		602F7ACD1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdherenceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6032371D1FC14A5800661D31 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
-		6040EB371FD3664500AF6B25 /* SideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideEffect.swift; sourceTree = "<group>"; };
 		60525B8C1FCE218F006DF3CB /* sideEffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideEffectViewController.swift; sourceTree = "<group>"; };
 		606378351FCE58AB001C2A7F /* VisitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitsViewController.swift; sourceTree = "<group>"; };
 		60E28D6A1F8BCA3300D9F753 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +114,10 @@
 		91D84E571FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlanTableViewCell.swift; sourceTree = "<group>"; };
 		91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTreatmentPlan.swift; sourceTree = "<group>"; };
 		91D84E5B1FB158D7003D1DE0 /* Screen4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen4ViewController.swift; sourceTree = "<group>"; };
+		960A5E3E1FD5FFA0002306AE /* SideEffect+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideEffect+CoreDataClass.swift"; sourceTree = "<group>"; };
+		960A5E3F1FD5FFA0002306AE /* SideEffect+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SideEffect+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		960A5E401FD5FFA0002306AE /* AdherenceRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdherenceRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		960A5E411FD5FFA0002306AE /* AdherenceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdherenceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DoctorVisit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		964E7A391F8928D6009ACD16 /* Screen18ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen18ViewController.swift; sourceTree = "<group>"; };
@@ -236,10 +238,12 @@
 		967B93091FA0E306006B3A91 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				960A5E3E1FD5FFA0002306AE /* SideEffect+CoreDataClass.swift */,
+				960A5E3F1FD5FFA0002306AE /* SideEffect+CoreDataProperties.swift */,
+				960A5E401FD5FFA0002306AE /* AdherenceRecord+CoreDataClass.swift */,
+				960A5E411FD5FFA0002306AE /* AdherenceRecord+CoreDataProperties.swift */,
 				962DB3061FBB700600A5553B /* DoctorVisit+CoreDataClass.swift */,
 				962DB3071FBB700600A5553B /* DoctorVisit+CoreDataProperties.swift */,
-				602F7ACC1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift */,
-				602F7ACD1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift */,
 				918845701FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift */,
 				9188456F1FC8F7C5007FF67C /* TreatmentPlan+CoreDataProperties.swift */,
 				967C2E411FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift */,
@@ -250,7 +254,6 @@
 				D49E3DC31FABE50800533846 /* Drug.swift */,
 				91D84E591FB15700003D1DE0 /* MyTreatmentPlan.swift */,
 				969C83001FC9052C00784680 /* aesSecurity.swift */,
-				6040EB371FD3664500AF6B25 /* SideEffect.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -469,8 +472,6 @@
 				967C2E431FA7CD9E00CA4A74 /* Preferences+CoreDataClass.swift in Sources */,
 				60525B8D1FCE218F006DF3CB /* sideEffectViewController.swift in Sources */,
 				967C2E481FA7E57C00CA4A74 /* EnterPINViewController.swift in Sources */,
-				602F7ACE1FD357C0001F1B49 /* AdherenceRecord+CoreDataClass.swift in Sources */,
-				6040EB381FD3664500AF6B25 /* SideEffect.swift in Sources */,
 				918845711FC8F7C6007FF67C /* TreatmentPlan+CoreDataProperties.swift in Sources */,
 				D47526141FD365D9009DC839 /* Screen12TableViewController.swift in Sources */,
 				6004A4681FACE28F00A7CCF5 /* TipsViewController.swift in Sources */,
@@ -482,6 +483,8 @@
 				D44616511F8AF23500780B56 /* Screen7ViewController.swift in Sources */,
 				967B93161FA1241B006B3A91 /* SecurityQuestionBank.swift in Sources */,
 				918845721FC8F7C6007FF67C /* TreatmentPlan+CoreDataClass.swift in Sources */,
+				960A5E421FD5FFA0002306AE /* SideEffect+CoreDataClass.swift in Sources */,
+				960A5E441FD5FFA0002306AE /* AdherenceRecord+CoreDataClass.swift in Sources */,
 				D424FFBA1FD475D400AEAAED /* SideEffectsTableViewCell.swift in Sources */,
 				91357F591FCBE94600B0B857 /* CustomCell.swift in Sources */,
 				606378361FCE58AB001C2A7F /* VisitsViewController.swift in Sources */,
@@ -497,6 +500,7 @@
 				91D84E5C1FB158D7003D1DE0 /* Screen4ViewController.swift in Sources */,
 				967C2E3E1FA792FF00CA4A74 /* MyDailyPal.xcdatamodeld in Sources */,
 				964E7A3A1F8928D6009ACD16 /* Screen18ViewController.swift in Sources */,
+				960A5E451FD5FFA0002306AE /* AdherenceRecord+CoreDataProperties.swift in Sources */,
 				6004A4701FB4C7BD00A7CCF5 /* TipDetailViewController.swift in Sources */,
 				967B93121FA10C2F006B3A91 /* SecurityQuestionsSetup_VC.swift in Sources */,
 				6032371E1FC14A5800661D31 /* PreferenceViewController.swift in Sources */,
@@ -505,9 +509,9 @@
 				D4B9E9501FBEA6590016A368 /* VisitDetailsViewController.swift in Sources */,
 				D47526161FD37DB1009DC839 /* Screen13ViewController.swift in Sources */,
 				D4B9E94E1FBEA6590016A368 /* VisitsTableViewCell.swift in Sources */,
-				602F7ACF1FD357C0001F1B49 /* AdherenceRecord+CoreDataProperties.swift in Sources */,
 				91D84E581FB153CC003D1DE0 /* MyTreatmentPlanTableViewCell.swift in Sources */,
 				D47526121FD36332009DC839 /* Screen12TableViewCell.swift in Sources */,
+				960A5E431FD5FFA0002306AE /* SideEffect+CoreDataProperties.swift in Sources */,
 				914FFE431F7AAFAB00AB6C8D /* ViewController.swift in Sources */,
 				D4B4252B1FB98C2D000DEC90 /* Screen9ViewController.swift in Sources */,
 				967B93141FA12385006B3A91 /* SecurityQuestion.swift in Sources */,

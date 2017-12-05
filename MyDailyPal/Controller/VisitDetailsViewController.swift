@@ -123,7 +123,8 @@ class VisitDetailsViewController: UIViewController {
                     }
                 }
             }
-            confirmNewAppointment()
+            self.navigationController?.popViewController(animated: true)
+            //confirmNewAppointment()
             //performSegue(withIdentifier: "saveVisit", sender: self)
         }
     }
